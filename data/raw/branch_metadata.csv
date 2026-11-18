@@ -1,0 +1,6 @@
+branch_id,name,cluster,total_counters,peak_window
+BR_001,Downtown Financial Hub,Metro Central,10,11:00-14:00
+BR_002,Suburban Tech Park,Metro Central,8,12:00-15:00
+BR_003,Old Town Commercial,Metro Central,6,10:30-13:30
+BR_004,Green Valley Residential,East Suburbs,5,09:30-12:00
+BR_005,Airport Transit Branch,West Suburbs,7,14:00-17:30

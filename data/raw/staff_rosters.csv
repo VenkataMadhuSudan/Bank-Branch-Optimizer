@@ -1,0 +1,47 @@
+staff_id,staff_name,branch_id,primary_skill,secondary_skills,shift_start,shift_end,efficiency_factor,preferred_counter
+EMP_101,Aisha Khan (BR_001-1),BR_001,Cash Deposit/Withdrawal,Wealth & Investment Planning,09:00,17:30,0.96,1
+EMP_102,David Miller (BR_001-2),BR_001,Account Services & KYC,Cash Deposit/Withdrawal;Card Services & Pin Reset;Wealth & Investment Planning,09:00,17:30,1.09,2
+EMP_103,Sarah Jenkins (BR_001-3),BR_001,Cash Deposit/Withdrawal,Passbook / Statement Printing,09:00,17:30,0.94,3
+EMP_104,James O'Connor (BR_001-4),BR_001,Cash Deposit/Withdrawal,Passbook / Statement Printing;Card Services & Pin Reset;Forex & Trade Finance,09:00,17:30,0.94,4
+EMP_105,James O'Connor (BR_001-5),BR_001,Passbook / Statement Printing,Account Services & KYC,09:00,17:30,1.13,5
+EMP_106,Marcus Vance (BR_001-6),BR_001,Passbook / Statement Printing,Account Services & KYC,09:00,17:30,1.23,6
+EMP_107,Marcus Vance (BR_001-7),BR_001,Cash Deposit/Withdrawal,Forex & Trade Finance,09:00,17:30,0.89,7
+EMP_108,Marcus Vance (BR_001-8),BR_001,Forex & Trade Finance,Cash Deposit/Withdrawal;Loan & Mortgage Advisory,09:00,17:30,1.06,8
+EMP_109,Anita Desai (BR_001-9),BR_001,Cash Deposit/Withdrawal,Loan & Mortgage Advisory;Card Services & Pin Reset;Wealth & Investment Planning,09:00,17:30,1.08,9
+EMP_110,Robert Chen (BR_001-10),BR_001,Cash Deposit/Withdrawal,Wealth & Investment Planning,09:00,17:30,0.94,10
+EMP_111,Elena Rostova (BR_001-11),BR_001,Cash Deposit/Withdrawal,Account Services & KYC,09:00,17:30,1.0,1
+EMP_112,Carlos Gomez (BR_001-12),BR_001,Card Services & Pin Reset,Account Services & KYC;Passbook / Statement Printing,09:00,17:30,0.99,2
+EMP_113,Aisha Khan (BR_002-1),BR_002,Passbook / Statement Printing,Wealth & Investment Planning;Cash Deposit/Withdrawal;Account Services & KYC,09:00,17:30,1.06,1
+EMP_114,David Miller (BR_002-2),BR_002,Account Services & KYC,Forex & Trade Finance;Loan & Mortgage Advisory,09:00,17:30,1.25,2
+EMP_115,Aisha Khan (BR_002-3),BR_002,Card Services & Pin Reset,Account Services & KYC;Passbook / Statement Printing;Cash Deposit/Withdrawal,09:00,17:30,0.94,3
+EMP_116,Sarah Jenkins (BR_002-4),BR_002,Wealth & Investment Planning,Loan & Mortgage Advisory;Passbook / Statement Printing,09:00,17:30,0.88,4
+EMP_117,James O'Connor (BR_002-5),BR_002,Card Services & Pin Reset,Account Services & KYC;Loan & Mortgage Advisory,09:00,17:30,1.01,5
+EMP_118,Aisha Khan (BR_002-6),BR_002,Loan & Mortgage Advisory,Passbook / Statement Printing,09:00,17:30,0.91,6
+EMP_119,Robert Chen (BR_002-7),BR_002,Forex & Trade Finance,Passbook / Statement Printing;Card Services & Pin Reset;Loan & Mortgage Advisory,09:00,17:30,1.21,7
+EMP_120,Anita Desai (BR_002-8),BR_002,Passbook / Statement Printing,Account Services & KYC,09:00,17:30,1.05,8
+EMP_121,Michael Chang (BR_002-9),BR_002,Wealth & Investment Planning,Cash Deposit/Withdrawal,09:00,17:30,0.91,1
+EMP_122,Priya Sharma (BR_002-10),BR_002,Wealth & Investment Planning,Loan & Mortgage Advisory;Forex & Trade Finance;Cash Deposit/Withdrawal,09:00,17:30,1.0,2
+EMP_123,James O'Connor (BR_003-1),BR_003,Loan & Mortgage Advisory,Passbook / Statement Printing;Card Services & Pin Reset;Cash Deposit/Withdrawal,09:00,17:30,1.12,1
+EMP_124,Michael Chang (BR_003-2),BR_003,Card Services & Pin Reset,Passbook / Statement Printing;Wealth & Investment Planning;Cash Deposit/Withdrawal,09:00,17:30,0.97,2
+EMP_125,Priya Sharma (BR_003-3),BR_003,Loan & Mortgage Advisory,Wealth & Investment Planning,09:00,17:30,1.2,3
+EMP_126,Elena Rostova (BR_003-4),BR_003,Forex & Trade Finance,Card Services & Pin Reset,09:00,17:30,1.22,4
+EMP_127,Aisha Khan (BR_003-5),BR_003,Passbook / Statement Printing,Card Services & Pin Reset;Wealth & Investment Planning;Account Services & KYC,09:00,17:30,0.91,5
+EMP_128,Priya Sharma (BR_003-6),BR_003,Forex & Trade Finance,Cash Deposit/Withdrawal;Card Services & Pin Reset;Passbook / Statement Printing,09:00,17:30,1.05,6
+EMP_129,Michael Chang (BR_003-7),BR_003,Passbook / Statement Printing,Account Services & KYC;Cash Deposit/Withdrawal,09:00,17:30,0.95,1
+EMP_130,James O'Connor (BR_003-8),BR_003,Cash Deposit/Withdrawal,Wealth & Investment Planning,09:00,17:30,1.04,2
+EMP_131,Michael Chang (BR_004-1),BR_004,Wealth & Investment Planning,Account Services & KYC;Card Services & Pin Reset;Loan & Mortgage Advisory,09:00,17:30,1.23,1
+EMP_132,Priya Sharma (BR_004-2),BR_004,Passbook / Statement Printing,Card Services & Pin Reset;Forex & Trade Finance;Account Services & KYC,09:00,17:30,1.22,2
+EMP_133,Robert Chen (BR_004-3),BR_004,Card Services & Pin Reset,Wealth & Investment Planning,09:00,17:30,0.97,3
+EMP_134,Aisha Khan (BR_004-4),BR_004,Card Services & Pin Reset,Loan & Mortgage Advisory;Forex & Trade Finance,09:00,17:30,1.03,4
+EMP_135,David Miller (BR_004-5),BR_004,Account Services & KYC,Loan & Mortgage Advisory,09:00,17:30,0.86,5
+EMP_136,Fatima Al-Sayed (BR_004-6),BR_004,Account Services & KYC,Passbook / Statement Printing;Cash Deposit/Withdrawal;Card Services & Pin Reset,09:00,17:30,1.13,1
+EMP_137,Sarah Jenkins (BR_004-7),BR_004,Account Services & KYC,Cash Deposit/Withdrawal,09:00,17:30,1.19,2
+EMP_138,Michael Chang (BR_005-1),BR_005,Forex & Trade Finance,Passbook / Statement Printing,09:00,17:30,1.12,1
+EMP_139,David Miller (BR_005-2),BR_005,Forex & Trade Finance,Wealth & Investment Planning,09:00,17:30,1.22,2
+EMP_140,James O'Connor (BR_005-3),BR_005,Forex & Trade Finance,Account Services & KYC;Loan & Mortgage Advisory,09:00,17:30,1.17,3
+EMP_141,David Miller (BR_005-4),BR_005,Cash Deposit/Withdrawal,Wealth & Investment Planning,09:00,17:30,1.02,4
+EMP_142,Anita Desai (BR_005-5),BR_005,Loan & Mortgage Advisory,Wealth & Investment Planning;Cash Deposit/Withdrawal,09:00,17:30,1.12,5
+EMP_143,Aisha Khan (BR_005-6),BR_005,Cash Deposit/Withdrawal,Forex & Trade Finance,09:00,17:30,1.14,6
+EMP_144,Michael Chang (BR_005-7),BR_005,Account Services & KYC,Passbook / Statement Printing,09:00,17:30,1.06,7
+EMP_145,Priya Sharma (BR_005-8),BR_005,Loan & Mortgage Advisory,Passbook / Statement Printing,09:00,17:30,1.04,1
+EMP_146,Michael Chang (BR_005-9),BR_005,Loan & Mortgage Advisory,Cash Deposit/Withdrawal;Wealth & Investment Planning;Card Services & Pin Reset,09:00,17:30,1.24,2

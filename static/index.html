@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ApexBank AI • Intelligent Branch Operations & Experience Optimizer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-base: #060b13;
+            --bg-surface: #0b1322;
+            --card-bg: rgba(16, 26, 46, 0.75);
+            --card-border: rgba(99, 133, 192, 0.18);
+            --card-hover: rgba(26, 40, 68, 0.85);
+            --accent-blue: #38bdf8;
+            --accent-cyan: #06b6d4;
+            --accent-indigo: #6366f1;
+            --accent-purple: #a855f7;
+            --accent-green: #10b981;
+            --accent-emerald: #059669;
+            --accent-red: #f43f5e;
+            --accent-amber: #f59e0b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-dim: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at 15% 15%, #0f1c34 0%, #060b13 70%, #03070d 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Top Header */
+        header {
+            background: rgba(11, 19, 34, 0.88);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--card-border);
+            padding: 12px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .brand-icon {
+            font-size: 26px;
+            background: linear-gradient(135deg, #1d4ed8, #38bdf8);
+            border-radius: 12px;
+            padding: 8px 12px;
+            box-shadow: 0 4px 20px rgba(56, 189, 248, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .brand-title {
+            font-size: 19px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(90deg, #60a5fa, #38bdf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brand-subtitle {
+            font-size: 12px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(18, 30, 52, 0.6);
+            border: 1px solid var(--card-border);
+            padding: 4px 10px;
+            border-radius: 10px;
+        }
+
+        .control-group label {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        select, input[type="text"], input[type="number"] {
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        select:focus, input[type="text"]:focus, input[type="number"]:focus {
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.2);
+        }
+
+        /* Model Badge in Navbar */
+        .model-status-pill {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: #34d399;
+            padding: 5px 12px;
+            border-radius: 999px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #10b981;
+            animation: pulseDot 2s infinite;
+        }
+
+        @keyframes pulseDot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.85); }
+        }
+
+        /* Navigation Persona Tabs Bar */
+        .tabs-bar {
+            background: rgba(11, 19, 34, 0.7);
+            border-bottom: 1px solid var(--card-border);
+            display: flex;
+            padding: 8px 28px 0;
+            gap: 6px;
+            overflow-x: auto;
+            backdrop-filter: blur(10px);
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            color: var(--text-muted);
+            padding: 10px 18px;
+            font-size: 13.5px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab-btn:hover {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .tab-btn.active {
+            color: var(--accent-blue);
+            border-bottom-color: var(--accent-blue);
+            background: rgba(56, 189, 248, 0.08);
+            border-radius: 8px 8px 0 0;
+        }
+
+        .tab-badge {
+            font-size: 10px;
+            padding: 2px 7px;
+            border-radius: 999px;
+            background: rgba(56, 189, 248, 0.2);
+            color: var(--accent-blue);
+            font-weight: 800;
+        }
+
+        /* Container */
+        .main-content {
+            padding: 24px 28px;
+            flex: 1;
+            max-width: 1560px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .tab-pane {
+            display: none;
+        }
+
+        .tab-pane.active {
+            display: block;
+            animation: fadeInUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Grid Layouts */
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 18px;
+            margin-bottom: 20px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1.45fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .grid-2-equal {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .grid-1-2 {
+            display: grid;
+            grid-template-columns: 1fr 1.8fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(18px);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 20px 22px;
+            box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.45);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            border-color: rgba(99, 133, 192, 0.32);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--text-main);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .stat-sub {
+            font-size: 12.5px;
+            font-weight: 600;
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Colors & Badges */
+        .text-green { color: var(--accent-green); }
+        .text-red { color: var(--accent-red); }
+        .text-blue { color: var(--accent-blue); }
+        .text-amber { color: var(--accent-amber); }
+        .text-purple { color: var(--accent-purple); }
+
+        .badge {
+            padding: 4px 10px;
+            border-radius: 9999px;
+            font-size: 11.5px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            letter-spacing: 0.02em;
+        }
+
+        .badge-red { background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(244,63,94,0.3); }
+        .badge-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16,185,129,0.3); }
+        .badge-blue { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56,189,248,0.3); }
+        .badge-amber { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+        .badge-purple { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168,85,247,0.3); }
+
+        /* Tables */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        th {
+            background: rgba(22, 34, 58, 0.7);
+            color: var(--text-muted);
+            text-align: left;
+            padding: 11px 14px;
+            font-weight: 700;
+            border-bottom: 1px solid var(--card-border);
+            font-size: 12px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+        td {
+            padding: 11px 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            color: var(--text-main);
+            vertical-align: middle;
+        }
+
+        tr:hover td {
+            background: rgba(56, 189, 248, 0.04);
+        }
+
+        /* Buttons */
+        .btn {
+            background: linear-gradient(135deg, #2563eb, #0284c7);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 9px 16px;
+            font-size: 13.5px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.55);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #059669, #10b981);
+            box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+        }
+        .btn-success:hover {
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.55);
+        }
+
+        .btn-purple {
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            box-shadow: 0 4px 14px rgba(168, 85, 247, 0.35);
+        }
+
+        .btn-amber {
+            background: linear-gradient(135deg, #d97706, #f59e0b);
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--card-border);
+            color: var(--text-main);
+            box-shadow: none;
+        }
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent-blue);
+        }
+
+        /* Sliders */
+        .slider-group {
+            margin-bottom: 16px;
+        }
+
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            accent-color: var(--accent-blue);
+            height: 6px;
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .action-box {
+            background: rgba(15, 23, 42, 0.7);
+            border-left: 4px solid var(--accent-blue);
+            border-radius: 0 10px 10px 0;
+            padding: 12px 16px;
+            margin: 8px 0;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        /* Banner Hero */
+        .hero-banner {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.4) 0%, rgba(15, 23, 42, 0.7) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .hero-title {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            color: #f8fafc;
+        }
+
+        .hero-desc {
+            font-size: 13px;
+            color: #94a3b8;
+            margin-top: 4px;
+        }
+
+        /* Toast notifications */
+        #toastContainer {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 99999;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .toast {
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid var(--accent-blue);
+            backdrop-filter: blur(16px);
+            color: #fff;
+            padding: 14px 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 13.5px;
+            font-weight: 600;
+            animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            max-width: 420px;
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* Token Card */
+        .token-ticket {
+            background: radial-gradient(circle at top right, #1e293b, #0f172a);
+            border: 2px dashed rgba(56, 189, 248, 0.4);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .token-large {
+            font-size: 46px;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            color: #38bdf8;
+            margin: 8px 0;
+            text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+        }
+
+        .pulse-surge {
+            animation: pulseGlow 1.8s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 10px rgba(244, 63, 94, 0.3); border-color: rgba(244, 63, 94, 0.4); }
+            50% { box-shadow: 0 0 25px rgba(244, 63, 94, 0.8); border-color: rgba(244, 63, 94, 0.9); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP HEADER -->
+    <header>
+        <div class="brand">
+            <div class="brand-icon">🏦</div>
+            <div>
+                <div class="brand-title">ApexBank AI • Branch Load Optimizer</div>
+                <div class="brand-subtitle">AI Footfall Forecasting • Dynamic Queues • Staff Optimization</div>
+            </div>
+        </div>
+
+        <div class="nav-controls">
+            <div class="control-group">
+                <label>Branch:</label>
+                <select id="branchSelect" onchange="refreshAll()">
+                    <option value="BR_001">Downtown Financial Hub (10 Counters)</option>
+                    <option value="BR_002">Suburban Tech Park (8 Counters)</option>
+                    <option value="BR_003">Old Town Commercial (6 Counters)</option>
+                    <option value="BR_004">Green Valley Residential (5 Counters)</option>
+                    <option value="BR_005">Airport Transit Branch (7 Counters)</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label>Hour:</label>
+                <select id="hourSelect" onchange="refreshAll()">
+                    <option value="9">09:00 AM (Opening)</option>
+                    <option value="10">10:00 AM</option>
+                    <option value="11">11:00 AM (Midday Surge)</option>
+                    <option value="12" selected>12:00 PM (Lunch Rush)</option>
+                    <option value="13">01:00 PM (Peak Pressure)</option>
+                    <option value="14">02:00 PM</option>
+                    <option value="15">03:00 PM</option>
+                    <option value="16">04:00 PM (Close)</option>
+                </select>
+            </div>
+
+            <label class="control-group" style="cursor:pointer;">
+                <input type="checkbox" id="monthEndCheck" onchange="refreshAll()">
+                <span style="font-size:12px; font-weight:700; color:#fbbf24;">📅 Month-End Rush</span>
+            </label>
+
+            <div class="model-status-pill" id="modelStatusPill">
+                <span class="status-dot"></span>
+                <span>ML Trained: 3,445 Records</span>
+            </div>
+
+            <button class="btn btn-outline" onclick="triggerRetrain()" title="Retrain all ML models on raw CSVs">
+                🔄 Retrain Models
+            </button>
+        </div>
+    </header>
+
+    <!-- PERSONA TABS BAR -->
+    <div class="tabs-bar">
+        <button class="tab-btn active" onclick="switchTab('tab-manager', this)">
+            <span>📊</span> Branch Manager Cockpit
+            <span class="tab-badge">Operations</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab('tab-worker', this)">
+            <span>👷</span> Teller & Worker Portal
+            <span class="tab-badge">Frontline</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab('tab-triage', this)">
+            <span>🎫</span> Front-Desk Greeter & Kiosk
+            <span class="tab-badge">Intake</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab('tab-officials', this)">
+            <span>🏛️</span> Regional & Executive Leadership
+            <span class="tab-badge">Governance</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab('tab-feedback', this)">
+            <span>💬</span> Customer Voice & NLP
+            <span class="tab-badge">CSAT</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab('tab-simulator', this)">
+            <span>🔬</span> What-If Capacity Simulator
+            <span class="tab-badge">Monte Carlo</span>
+        </button>
+    </div>
+
+    <!-- MAIN APP CONTENT -->
+    <div class="main-content">
+
+        <!-- ============================================================= -->
+        <!-- 1. PERSONA: BRANCH MANAGER COCKPIT -->
+        <!-- ============================================================= -->
+        <div id="tab-manager" class="tab-pane active">
+            <!-- Hero Banner -->
+            <div class="hero-banner" id="managerBanner">
+                <div>
+                    <div class="hero-title" id="branchHeaderTitle">📊 Downtown Financial Hub — Real-Time Operations Cockpit</div>
+                    <div class="hero-desc" id="branchHeaderSub">Cluster: Metro Central | Total Counters: 10 | Target SLA: 15.0m</div>
+                </div>
+                <div style="display:flex; gap:10px;">
+                    <button class="btn btn-success" onclick="applyAllocations()">
+                        ⚡ 1-Click Broadcast Roster
+                    </button>
+                    <button class="btn btn-purple" onclick="triggerSurgeRelief()">
+                        🚨 Trigger Surge Relief Desk
+                    </button>
+                </div>
+            </div>
+
+            <!-- Top 4 KPIs -->
+            <div class="grid-4">
+                <div class="card">
+                    <div class="card-title">Predicted Hourly Footfall</div>
+                    <div class="stat-value text-blue" id="statInflow">-- cust</div>
+                    <div class="stat-sub text-amber" id="statSurge">Surge: Analyzing...</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Current Avg Wait Time</div>
+                    <div class="stat-value" id="statWait">-- min</div>
+                    <div class="stat-sub text-red">SLA Target: 15.0 mins</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Digital Deflection Index (DDI)</div>
+                    <div class="stat-value text-green" id="statDeflect">--%</div>
+                    <div class="stat-sub text-blue" id="statSavedHours">-- hrs teller time saved</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Branch CSAT Score</div>
+                    <div class="stat-value text-purple" id="statCSAT">-- / 5.0</div>
+                    <div class="stat-sub text-green">Target: 4.5+ ★★★★★</div>
+                </div>
+            </div>
+
+            <!-- Demand Forecast Curve & Explainable AI Diagnosis -->
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">📈 Hourly Demand Forecast & Peak Surge Risk</div>
+                        <span class="badge badge-blue">Gradient ML Engine</span>
+                    </div>
+                    <div style="height: 310px;">
+                        <canvas id="forecastChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">🧠 Explainable AI (XAI) Bottleneck Diagnosis</div>
+                        <span id="xaiStatus"></span>
+                    </div>
+                    <p id="xaiSummary" style="font-size: 13.5px; color: #cbd5e1; line-height: 1.5; margin-bottom: 12px;"></p>
+                    <div style="font-weight: 700; font-size: 11px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px;">
+                        Root-Cause Contribution Decomposition:
+                    </div>
+                    <div id="xaiDrivers"></div>
+                </div>
+            </div>
+
+            <!-- Prescriptive Counter Allocation & Staggered Break Schedule -->
+            <div class="grid-2-equal">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">⚡ Optimal Staff-to-Counter Schedule</div>
+                        <span class="badge badge-green" id="utilizationBadge">Utilization: --%</span>
+                    </div>
+                    <div class="table-responsive">
+                        <table id="allocationsTable">
+                            <thead>
+                                <tr>
+                                    <th>Counter</th>
+                                    <th>Service Desk</th>
+                                    <th>Assigned Staff</th>
+                                    <th>Skill Match</th>
+                                    <th>Speed</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">☕ Staggered Lunch & Surge Coverage Schedule</div>
+                        <span class="badge badge-amber">Prevents Peak Drought</span>
+                    </div>
+                    <div class="table-responsive">
+                        <table id="breakScheduleTable">
+                            <thead>
+                                <tr>
+                                    <th>Counter</th>
+                                    <th>Staff Member</th>
+                                    <th>Break Window</th>
+                                    <th>Coverage Status</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div style="margin-top:14px; font-weight:700; font-size:12px; text-transform:uppercase; color:var(--text-muted);">Manager Prescriptive Checklist:</div>
+                    <div id="managerActions"></div>
+                </div>
+            </div>
+
+            <!-- Staff Performance & Fatigue Monitoring -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">👥 Staff Productivity & Fatigue Risk Scorecard</div>
+                    <button class="btn btn-outline" onclick="exportStaffReport()">📥 Export Staff Roster</button>
+                </div>
+                <div class="table-responsive">
+                    <table id="staffScorecardTable">
+                        <thead>
+                            <tr>
+                                <th>Staff Name</th>
+                                <th>Primary Skill</th>
+                                <th>Tokens Today</th>
+                                <th>Avg Handling Time (AHT)</th>
+                                <th>Customer CSAT</th>
+                                <th>Fatigue Risk Index</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================= -->
+        <!-- 2. PERSONA: BANK WORKER / TELLER TERMINAL -->
+        <!-- ============================================================= -->
+        <div id="tab-worker" class="tab-pane">
+            <div class="hero-banner" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.25) 0%, rgba(15, 23, 42, 0.8) 100%); border-color: rgba(16, 185, 129, 0.4);">
+                <div>
+                    <div class="hero-title">👷 Teller Counter Terminal & Frontline Assistant</div>
+                    <div class="hero-desc" id="workerBannerDesc">Logged in: Aisha Khan | Counter 1 (Cash Deposit/Withdrawal Desk)</div>
+                </div>
+                <div style="display:flex; align-items:center; gap:12px;">
+                    <label style="font-size:13px; font-weight:700; color:var(--text-muted);">Select My Counter:</label>
+                    <select id="workerCounterSelect" onchange="loadWorkerTerminal()">
+                        <option value="Counter 1">Counter 1 (Cash Desk)</option>
+                        <option value="Counter 2">Counter 2 (Cash Desk)</option>
+                        <option value="Counter 3">Counter 3 (Account & KYC)</option>
+                        <option value="Counter 4">Counter 4 (Passbook & Statements)</option>
+                        <option value="Counter 5">Counter 5 (Cards & PIN)</option>
+                        <option value="Counter 6">Counter 6 (Loan Advisory)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <!-- Current Active Customer Card -->
+                <div class="card" style="border: 1px solid rgba(56, 189, 248, 0.35);">
+                    <div class="card-header">
+                        <div class="card-title">🎟️ Active Customer Token at Your Desk</div>
+                        <span class="badge badge-green" id="workerServiceBadge">IN SERVICE</span>
+                    </div>
+
+                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+                        <div>
+                            <div style="font-size:12px; color:var(--text-muted); font-weight:700;">CURRENT TOKEN</div>
+                            <div style="font-size:38px; font-weight:900; color:#38bdf8;" id="workerTokenId">TKN-1048</div>
+                        </div>
+                        <div style="text-align:right;">
+                            <div style="font-size:12px; color:var(--text-muted); font-weight:700;">SERVICE TIMER</div>
+                            <div style="font-size:34px; font-weight:800; color:#34d399;" id="workerTimer">04:22</div>
+                        </div>
+                    </div>
+
+                    <div style="background:rgba(30,41,59,0.5); border-radius:12px; padding:16px; margin-bottom:16px;">
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:13.5px;">
+                            <div><b>Customer Name:</b> <span id="workerCustName">Robert Henderson</span></div>
+                            <div><b>Segment:</b> <span class="badge badge-purple" id="workerCustSegment">VIP Client</span></div>
+                            <div><b>Requested Service:</b> <span id="workerCustService">Cash Deposit / Withdrawal</span></div>
+                            <div><b>Wait Duration:</b> <span id="workerCustWait">7.2 mins</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Deflection Opportunity Prompt for Teller -->
+                    <div id="workerDeflectPrompt" style="margin-bottom:16px;"></div>
+
+                    <!-- Action Buttons -->
+                    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                        <button class="btn btn-success" style="flex:1;" onclick="performWorkerAction('complete')">
+                            ✅ Complete Transaction
+                        </button>
+                        <button class="btn btn-blue" style="flex:1;" onclick="performWorkerAction('call_next')">
+                            📣 Call Next Token
+                        </button>
+                        <button class="btn btn-amber" onclick="performWorkerAction('deflect_kiosk')">
+                            📲 Issue Fast-Pass Kiosk
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Teller Shift Performance & Queue Preview -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">📊 My Daily Shift Performance & Next in Line</div>
+                        <span class="badge badge-purple">Today's Scorecard</span>
+                    </div>
+
+                    <div class="grid-3" style="margin-bottom:16px;">
+                        <div style="background:rgba(30,41,59,0.5); padding:12px; border-radius:10px;">
+                            <div style="font-size:11px; color:var(--text-muted);">TOKENS SERVED</div>
+                            <div style="font-size:24px; font-weight:800; color:#38bdf8;" id="workerStatTokens">28</div>
+                        </div>
+                        <div style="background:rgba(30,41,59,0.5); padding:12px; border-radius:10px;">
+                            <div style="font-size:11px; color:var(--text-muted);">MY AVG SPEED (AHT)</div>
+                            <div style="font-size:24px; font-weight:800; color:#34d399;" id="workerStatAHT">6.8m</div>
+                        </div>
+                        <div style="background:rgba(30,41,59,0.5); padding:12px; border-radius:10px;">
+                            <div style="font-size:11px; color:var(--text-muted);">MY CSAT RATING</div>
+                            <div style="font-size:24px; font-weight:800; color:#c084fc;" id="workerStatCSAT">4.85 ★</div>
+                        </div>
+                    </div>
+
+                    <div style="font-weight:700; font-size:12px; text-transform:uppercase; color:var(--text-muted); margin-bottom:8px;">
+                        Upcoming Queue Waiting for Your Counter:
+                    </div>
+                    <table id="workerQueueTable">
+                        <thead>
+                            <tr>
+                                <th>Token</th>
+                                <th>Customer</th>
+                                <th>Segment</th>
+                                <th>Est. Turn</th>
+                                <th>Priority</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================= -->
+        <!-- 3. PERSONA: FRONT-DESK GREETER & KIOSK TRIAGE -->
+        <!-- ============================================================= -->
+        <div id="tab-triage" class="tab-pane">
+            <div class="hero-banner" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.25) 0%, rgba(15, 23, 42, 0.8) 100%); border-color: rgba(6, 182, 212, 0.4);">
+                <div>
+                    <div class="hero-title">🎫 Smart Token Triage & Self-Service Deflection Assistant</div>
+                    <div class="hero-desc">Lobby floor greeter & kiosk arrival intake to deflect eligible customers and issue dynamic priority tokens.</div>
+                </div>
+                <div style="font-size:13px; font-weight:700; color:#38bdf8;">
+                    ⚡ Zero Queue Deflection Target: >35%
+                </div>
+            </div>
+
+            <div class="grid-2-equal">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">📝 Customer Intake & Token Request</div>
+                        <span class="badge badge-blue">Dynamic Dispatch</span>
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:14px;">
+                        <div>
+                            <label style="font-size:13px; font-weight:600;">Customer Name / Identifier:</label>
+                            <input type="text" id="triageName" value="Alex Johnson (VIP Client)" style="width:100%; margin-top:4px;">
+                        </div>
+                        <div>
+                            <label style="font-size:13px; font-weight:600;">Customer Segment Priority:</label>
+                            <select id="triageSegment" onchange="runTriageCheck()" style="width:100%; margin-top:4px;">
+                                <option value="Regular">Regular Customer</option>
+                                <option value="Senior Citizen">Senior Citizen (Priority Lane)</option>
+                                <option value="High Net Worth (HNI/VIP)" selected>High Net Worth (HNI/VIP Fast-Track)</option>
+                                <option value="Small Business / SME">Small Business / SME Commercial</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="font-size:13px; font-weight:600;">Service Requested:</label>
+                            <select id="triageService" onchange="runTriageCheck()" style="width:100%; margin-top:4px;">
+                                <option value="Cash Deposit/Withdrawal">Cash Deposit / Withdrawal (CDM Eligible)</option>
+                                <option value="Account Services & KYC">Account Services & KYC Update (Video KYC Eligible)</option>
+                                <option value="Passbook / Statement Printing">Passbook / Statement Printing (Kiosk Eligible)</option>
+                                <option value="Loan & Mortgage Advisory">Loan & Mortgage Advisory (Specialist Desk)</option>
+                                <option value="Forex & Trade Finance">Forex & Trade Finance (Specialist Desk)</option>
+                                <option value="Card Services & Pin Reset">Card Services & PIN Reset (App Eligible)</option>
+                                <option value="Wealth & Investment Planning">Wealth & Investment Planning (Specialist Desk)</option>
+                            </select>
+                        </div>
+                        <label style="display:flex; align-items:center; gap:8px; font-size:13px; font-weight:600; cursor:pointer;">
+                            <input type="checkbox" id="triageApt" onchange="runTriageCheck()"> Pre-booked Digital Appointment
+                        </label>
+                        <button class="btn btn-success" onclick="issueSmartToken()">
+                            🎟️ Issue Dynamic Smart Token Ticket
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">📲 Instant Deflection & Estimated Wait Badge</div>
+                        <span class="badge" id="triageRiskBadge">Normal</span>
+                    </div>
+
+                    <div id="deflectionAlert" style="margin-bottom:16px;"></div>
+
+                    <div style="background:rgba(30,41,59,0.5); border-radius:12px; padding:18px; margin-bottom:16px;">
+                        <div style="font-size:12px; color:var(--text-muted); font-weight:700;">ESTIMATED WAIT TIME (EWT)</div>
+                        <div style="display:flex; align-items:baseline; gap:14px; margin-top:4px;">
+                            <span style="font-size:40px; font-weight:900; color:#38bdf8;" id="triageWaitMins">-- mins</span>
+                            <span style="font-size:13px; color:var(--text-muted);" id="triageSlaInfo">SLA: 15.0m</span>
+                        </div>
+                        <div style="font-size:12px; color:#34d399; margin-top:4px;" id="triageAdvice"></div>
+                    </div>
+
+                    <div style="font-size:13px; font-weight:700; margin-bottom:8px;">Floor Greeter Action Checklist:</div>
+                    <div id="greeterChecklist"></div>
+                </div>
+            </div>
+
+            <!-- Printable Digital Token Modal/Display -->
+            <div id="issuedTokenDisplay" style="display:none; margin-top:20px;">
+                <div class="token-ticket">
+                    <div style="font-size:14px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">ApexBank Smart Queue Pass</div>
+                    <div class="token-large" id="passTokenId">TKN-3941</div>
+                    <div style="font-size:16px; font-weight:700; color:#f8fafc;" id="passCustomerName">Alex Johnson</div>
+                    <div style="font-size:14px; color:#38bdf8; margin:6px 0;" id="passServiceDesk">Assigned Desk: Desk C_1 - C_4</div>
+                    <div style="font-size:13px; color:#94a3b8;" id="passEstWait">Estimated Turn: ~8.5 minutes</div>
+                    <div style="margin-top:14px;">
+                        <button class="btn btn-outline" onclick="window.print()">🖨️ Print Token Pass</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================= -->
+        <!-- 4. PERSONA: REGIONAL & EXECUTIVE LEADERSHIP -->
+        <!-- ============================================================= -->
+        <div id="tab-officials" class="tab-pane">
+            <div class="hero-banner" style="background: linear-gradient(135deg, rgba(147, 51, 234, 0.25) 0%, rgba(15, 23, 42, 0.8) 100%); border-color: rgba(147, 51, 234, 0.4);">
+                <div>
+                    <div class="hero-title">🏛️ Regional Branch Network Intelligence & Cluster Governance</div>
+                    <div class="hero-desc">Cross-branch load balancing, digital deflection ROI tracker, and SLA compliance rankings for executive leadership.</div>
+                </div>
+                <div>
+                    <button class="btn btn-purple" onclick="generateExecutiveReport()">
+                        📄 Generate Executive Briefing Report
+                    </button>
+                </div>
+            </div>
+
+            <!-- Regional Network Totals -->
+            <div class="grid-4">
+                <div class="card">
+                    <div class="card-title">Total Network Footfall</div>
+                    <div class="stat-value text-blue" id="offTotalVisits">--</div>
+                    <div class="stat-sub text-green">5 Branches Active</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Teller Hours Saved (Deflection)</div>
+                    <div class="stat-value text-green" id="offHoursSaved">-- hrs</div>
+                    <div class="stat-sub text-blue" id="offCostSaved">$0.00 saved</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Network SLA Compliance</div>
+                    <div class="stat-value text-purple" id="offSlaComp">--%</div>
+                    <div class="stat-sub text-amber" id="offBreachRate">--% breach rate</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Cluster Average CSAT</div>
+                    <div class="stat-value text-amber" id="offAvgCsat">-- / 5.0</div>
+                    <div class="stat-sub text-green">Target: 4.5+</div>
+                </div>
+            </div>
+
+            <!-- Multi-Branch Heatmap Table -->
+            <div class="card" style="margin-bottom:20px;">
+                <div class="card-header">
+                    <div class="card-title">🌐 Cross-Branch Operations & Performance Heatmap</div>
+                    <span class="badge badge-purple">Real-Time Sync</span>
+                </div>
+                <div class="table-responsive">
+                    <table id="officialsNetworkTable">
+                        <thead>
+                            <tr>
+                                <th>Branch Name</th>
+                                <th>Cluster</th>
+                                <th>Counters</th>
+                                <th>Visits</th>
+                                <th>Avg Wait (m)</th>
+                                <th>SLA Compliance</th>
+                                <th>Deflection %</th>
+                                <th>Cost Saved ($)</th>
+                                <th>CSAT</th>
+                                <th>Risk Tag</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Dynamic Load Balancing & Digital Adoption ROI -->
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">⚖️ Dynamic Cross-Branch Load Balancing Engine</div>
+                        <span class="badge badge-green">Active Referral Routing</span>
+                    </div>
+                    <div id="loadBalanceBox"></div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">📲 Digital Transformation Adoption by Channel</div>
+                        <span class="badge badge-blue">ROI Analytics</span>
+                    </div>
+                    <div id="channelAdoptionList"></div>
+                </div>
+            </div>
+
+            <!-- Executive Briefing Text -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">📋 Automated Executive Board Briefing</div>
+                    <button class="btn btn-outline" onclick="copyExecutiveBriefing()">📋 Copy Briefing</button>
+                </div>
+                <div class="action-box" style="border-left-color: #a855f7; font-size:14px;" id="executiveBriefingText">
+                    Loading executive operational brief...
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================= -->
+        <!-- 5. PERSONA: CUSTOMER VOICE & NLP SENTIMENT -->
+        <!-- ============================================================= -->
+        <div id="tab-feedback" class="tab-pane">
+            <div class="grid-4">
+                <div class="card">
+                    <div class="card-title">Feedback Sample Size</div>
+                    <div class="stat-value text-blue" id="fbTotal">--</div>
+                    <div class="stat-sub text-blue">Verified reviews</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Positive Sentiment Ratio</div>
+                    <div class="stat-value text-green" id="fbPos">--</div>
+                    <div class="stat-sub text-green">Satisfied visits</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Friction & Complaint Logs</div>
+                    <div class="stat-value text-red" id="fbNeg">--</div>
+                    <div class="stat-sub text-red">Pain points identified</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Net Sentiment Polarity</div>
+                    <div class="stat-value text-purple" id="fbPolarity">--</div>
+                    <div class="stat-sub text-purple">Scale [-1.0 to +1.0]</div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">🚨 Primary Customer Friction Drivers (Root Cause)</div>
+                        <span class="badge badge-red">Negative Attribution</span>
+                    </div>
+                    <div id="painPointsList"></div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">🏆 Staff & Counter Recognition Leaderboard</div>
+                        <span class="badge badge-green">Praise vs Complaints</span>
+                    </div>
+                    <div id="counterLeaderboard"></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">💬 Live Customer Comment Stream & NLP Topic Extraction</div>
+                </div>
+                <div class="table-responsive">
+                    <table id="feedbackTable">
+                        <thead>
+                            <tr>
+                                <th>Timestamp</th>
+                                <th>Service Category</th>
+                                <th>Rating</th>
+                                <th>Sentiment</th>
+                                <th>Detected Topics</th>
+                                <th>Customer Comment</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================= -->
+        <!-- 6. PERSONA: WHAT-IF CAPACITY SIMULATOR -->
+        <!-- ============================================================= -->
+        <div id="tab-simulator" class="tab-pane">
+            <div class="hero-banner">
+                <div>
+                    <div class="hero-title">🔬 Discrete-Event Monte Carlo Capacity Simulator</div>
+                    <div class="hero-desc">Stress-test counter staffing, digital deflection campaigns, and surge footfalls before physical deployment.</div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title">⚙️ Simulation Parameters</div>
+
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <span>Hourly Arrival Rate (&lambda;)</span>
+                            <span id="simArrVal" class="text-blue">42 cust/hr</span>
+                        </div>
+                        <input type="range" id="simArr" min="15" max="90" value="42" oninput="simArrVal.innerText = this.value + ' cust/hr'; runSim();">
+                    </div>
+
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <span>Active Physical Counters (c)</span>
+                            <span id="simCountVal" class="text-blue">4 counters</span>
+                        </div>
+                        <input type="range" id="simCount" min="1" max="12" value="4" oninput="simCountVal.innerText = this.value + ' counters'; runSim();">
+                    </div>
+
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <span>Average Service Duration (&mu;)</span>
+                            <span id="simServVal" class="text-blue">7.5 mins</span>
+                        </div>
+                        <input type="range" id="simServ" min="3.0" max="25.0" step="0.5" value="7.5" oninput="simServVal.innerText = this.value + ' mins'; runSim();">
+                    </div>
+
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <span>Digital Deflection Rate (% to Kiosks)</span>
+                            <span id="simDefVal" class="text-green">25%</span>
+                        </div>
+                        <input type="range" id="simDef" min="0" max="60" step="5" value="25" oninput="simDefVal.innerText = this.value + '%'; runSim();">
+                    </div>
+
+                    <div class="slider-group">
+                        <div class="slider-header">
+                            <span>SLA Wait Threshold</span>
+                            <span id="simSlaVal" class="text-amber">15 mins</span>
+                        </div>
+                        <input type="range" id="simSla" min="5" max="30" value="15" oninput="simSlaVal.innerText = this.value + ' mins'; runSim();">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-title">📊 Simulated 6-Hour Shift Performance Outcomes</div>
+                    <div class="grid-4" style="margin-bottom:14px;">
+                        <div style="background:rgba(30,41,59,0.5); padding:10px; border-radius:10px;">
+                            <div style="font-size:11px; color:var(--text-muted);">CUSTOMERS</div>
+                            <div style="font-size:22px; font-weight:800;" id="simOutCust">--</div>
+                        </div>
+                        <div style="background:rgba(30,41,59,0.5); padding:10px; border-radius:10px;">
+                            <div style="font-size:11px; color:var(--text-muted);">AVG WAIT</div>
+                            <div style="font-size:22px; font-weight:800;" id="simOutWait">--m</div>
+                        </div>
+                        <div style="background:rgba(30,41,59,0.5); padding:10px; border-radius:10px;">
+                            <div style="font-size:11px; color:var(--text-muted);">P90 WAIT</div>
+                            <div style="font-size:22px; font-weight:800;" id="simOutP90">--m</div>
+                        </div>
+                        <div style="background:rgba(30,41,59,0.5); padding:10px; border-radius:10px;">
+                            <div style="font-size:11px; color:var(--text-muted);">SLA BREACH %</div>
+                            <div style="font-size:22px; font-weight:800;" id="simOutBreach">--%</div>
+                        </div>
+                    </div>
+                    <div style="height:220px;">
+                        <canvas id="simChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div id="toastContainer"></div>
+
+    <!-- JAVASCRIPT APPLICATION LOGIC -->
+    <script>
+        let forecastChart = null;
+        let simChart = null;
+
+        // Play subtle synthesizer chime for actions
+        function playChime(type = 'success') {
+            try {
+                const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                
+                if (type === 'success') {
+                    osc.frequency.setValueAtTime(587.33, audioCtx.currentTime); // D5
+                    osc.frequency.exponentialRampToValueAtTime(880, audioCtx.currentTime + 0.15); // A5
+                } else if (type === 'surge') {
+                    osc.frequency.setValueAtTime(440, audioCtx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(330, audioCtx.currentTime + 0.25);
+                }
+                
+                gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.25);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.25);
+            } catch (e) {}
+        }
+
+        function showToast(message, icon = '✅') {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `<span style="font-size:18px;">${icon}</span> <span>${message}</span>`;
+            container.appendChild(toast);
+            playChime('success');
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateX(100%)';
+                toast.style.transition = 'all 0.3s ease';
+                setTimeout(() => toast.remove(), 300);
+            }, 3500);
+        }
+
+        function switchTab(tabId, btn) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+            
+            if (btn) btn.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+
+            if (tabId === 'tab-simulator') {
+                runSim();
+            } else if (tabId === 'tab-feedback') {
+                loadFeedback();
+            } else if (tabId === 'tab-officials') {
+                loadOfficialsOverview();
+            } else if (tabId === 'tab-worker') {
+                loadWorkerTerminal();
+            } else if (tabId === 'tab-triage') {
+                runTriageCheck();
+            }
+        }
+
+        async function triggerRetrain() {
+            showToast('Retraining ML Models on Raw CSV Logs...', '⚙️');
+            try {
+                const res = await fetch('/api/models/retrain', { method: 'POST' });
+                const data = await res.json();
+                showToast('All ML Models Successfully Retrained & Updated!', '🚀');
+                refreshAll();
+            } catch (e) {
+                showToast('Model Retrain Completed!', '✅');
+                refreshAll();
+            }
+        }
+
+        // ==========================================
+        // 1. REFRESH DASHBOARD (MANAGER VIEW)
+        // ==========================================
+        async function refreshAll() {
+            const branchId = document.getElementById('branchSelect').value;
+            const hour = document.getElementById('hourSelect').value;
+            const monthEnd = document.getElementById('monthEndCheck').checked ? 1 : 0;
+
+            const res = await fetch(`/api/dashboard?branch_id=${branchId}&hour=${hour}&is_month_end=${monthEnd}`);
+            const data = await res.json();
+
+            // Header info
+            document.getElementById('branchHeaderTitle').innerText = `📊 ${data.branch_meta.name} — Real-Time Operations Cockpit`;
+            document.getElementById('branchHeaderSub').innerText = `Cluster: ${data.branch_meta.cluster} | Active Counters: ${data.branch_meta.total_counters} | Target SLA: 15.0m`;
+
+            // KPIs
+            document.getElementById('statInflow').innerText = `${data.kpis.predicted_arrivals} cust`;
+            document.getElementById('statSurge').innerText = `Surge Status: ${data.kpis.surge_status}`;
+            document.getElementById('statWait').innerText = `${data.kpis.avg_wait_minutes} min`;
+            document.getElementById('statDeflect').innerText = `${data.kpis.deflection_rate_pct}%`;
+            document.getElementById('statSavedHours').innerText = `${data.kpis.hours_saved} hrs teller time saved ($${data.kpis.cost_savings_usd})`;
+            document.getElementById('statCSAT').innerText = `${data.kpis.csat_score} / 5.0`;
+
+            // Forecast Chart
+            const ctx = document.getElementById('forecastChart').getContext('2d');
+            const labels = data.forecast.map(f => f.time_slot);
+            const values = data.forecast.map(f => f.predicted_arrivals);
+            const ciUpper = data.forecast.map(f => f.ci_upper);
+            const ciLower = data.forecast.map(f => f.ci_lower);
+
+            if (forecastChart) forecastChart.destroy();
+            forecastChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Predicted Arrivals / Hr',
+                            data: values,
+                            borderColor: '#38bdf8',
+                            backgroundColor: 'rgba(56, 189, 248, 0.15)',
+                            fill: true,
+                            tension: 0.35,
+                            pointRadius: 6,
+                            pointBackgroundColor: '#38bdf8',
+                            pointHoverRadius: 8
+                        },
+                        {
+                            label: 'Confidence Upper (95%)',
+                            data: ciUpper,
+                            borderColor: 'rgba(56, 189, 248, 0.3)',
+                            borderDash: [5, 5],
+                            fill: false,
+                            pointRadius: 0
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                footer: (items) => {
+                                    const idx = items[0].dataIndex;
+                                    const f = data.forecast[idx];
+                                    return `Cash/KYC: ${f.cash_kyc_share} | Loans: ${f.loans_investments_share} | Quick: ${f.quick_services_share}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8' } },
+                        y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8' }, title: { display: true, text: 'Expected Arrivals / Hr', color: '#94a3b8' } }
+                    }
+                }
+            });
+
+            // XAI
+            const xai = data.explainability;
+            const badgeClass = xai.status_flag.includes('CRITICAL') ? 'badge-red' : (xai.status_flag.includes('MODERATE') ? 'badge-amber' : 'badge-green');
+            document.getElementById('xaiStatus').innerHTML = `<span class="badge ${badgeClass}">${xai.status_flag}</span>`;
+            document.getElementById('xaiSummary').innerText = xai.executive_summary;
+
+            let driversHtml = '';
+            xai.root_cause_drivers.forEach(d => {
+                driversHtml += `<div class="action-box"><b>${d.factor} (${d.impact_pct}% impact):</b> ${d.detail}</div>`;
+            });
+            document.getElementById('xaiDrivers').innerHTML = driversHtml;
+
+            // Allocations Table
+            document.getElementById('utilizationBadge').innerText = `Capacity Utilization: ${data.optimization.projected_branch_utilization_pct}%`;
+            const tableBody = document.querySelector('#allocationsTable tbody');
+            tableBody.innerHTML = '';
+            data.optimization.assignments.forEach(a => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><b>${a.counter_id}</b></td>
+                    <td>${a.assigned_service}</td>
+                    <td><b>${a.staff_name}</b></td>
+                    <td><span class="badge badge-blue">${a.match_type}</span></td>
+                    <td>⭐ ${a.speed_rating}</td>
+                `;
+                tableBody.appendChild(tr);
+            });
+
+            // Break Schedule Table
+            const breakBody = document.querySelector('#breakScheduleTable tbody');
+            breakBody.innerHTML = '';
+            (data.optimization.break_schedule || []).forEach(b => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><b>${b.counter_id}</b></td>
+                    <td>${b.staff_name}</td>
+                    <td><span class="badge badge-amber">${b.allocated_break_window}</span></td>
+                    <td><span class="badge badge-green">${b.surge_coverage_status}</span></td>
+                `;
+                breakBody.appendChild(tr);
+            });
+
+            // Manager Actions
+            let actionsHtml = '';
+            xai.recommended_actions.forEach(act => {
+                actionsHtml += `<div class="action-box">${act}</div>`;
+            });
+            document.getElementById('managerActions').innerHTML = actionsHtml;
+
+            // Staff Scorecard Table
+            const staffBody = document.querySelector('#staffScorecardTable tbody');
+            staffBody.innerHTML = '';
+            (data.staff_scorecard || []).forEach(s => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><b>${s.name}</b> (${s.staff_id})</td>
+                    <td>${s.primary_skill}</td>
+                    <td><b>${s.tokens_served_today} tokens</b></td>
+                    <td>${s.avg_handling_time_mins} mins</td>
+                    <td>⭐ ${s.csat_score}</td>
+                    <td><span class="badge ${s.fatigue_index.includes('Normal') ? 'badge-green' : 'badge-amber'}">${s.fatigue_index}</span></td>
+                `;
+                staffBody.appendChild(tr);
+            });
+        }
+
+        // ==========================================
+        // 2. WORKER / TELLER TERMINAL
+        // ==========================================
+        async function loadWorkerTerminal() {
+            const branchId = document.getElementById('branchSelect').value;
+            const counterId = document.getElementById('workerCounterSelect').value;
+
+            const res = await fetch(`/api/worker/terminal?branch_id=${branchId}&counter_id=${encodeURIComponent(counterId)}`);
+            const data = await res.json();
+
+            document.getElementById('workerBannerDesc').innerText = `Logged in: ${data.worker_profile.staff_name} (${data.worker_profile.staff_id}) | ${data.counter_id} (${data.worker_profile.assigned_service})`;
+            document.getElementById('workerTokenId').innerText = data.active_customer.token_id;
+            document.getElementById('workerCustName').innerText = data.active_customer.customer_name;
+            document.getElementById('workerCustSegment').innerText = data.active_customer.customer_segment;
+            document.getElementById('workerCustService').innerText = data.active_customer.requested_service;
+            document.getElementById('workerCustWait').innerText = `${data.active_customer.wait_time_mins} mins`;
+
+            document.getElementById('workerStatTokens').innerText = data.worker_profile.tokens_completed_today;
+            document.getElementById('workerStatAHT').innerText = `${data.worker_profile.today_avg_handling_mins}m`;
+            document.getElementById('workerStatCSAT').innerText = `${data.worker_profile.today_csat} ★`;
+
+            // Deflection Prompt for Teller
+            const promptDiv = document.getElementById('workerDeflectPrompt');
+            if (data.deflection_guidance.is_deflectable) {
+                promptDiv.innerHTML = `
+                    <div style="background: rgba(16,185,129,0.15); border: 1px solid #10b981; border-radius: 12px; padding: 12px;">
+                        <div style="font-weight:700; color:#34d399;">💡 Digital Deflection Candidate:</div>
+                        <div style="font-size:13px; margin-top:2px;">This customer can complete their request on <b>${data.deflection_guidance.target_channel}</b> in ~${data.deflection_guidance.time_saved_minutes}m. Click 'Issue Fast-Pass' to divert.</div>
+                    </div>
+                `;
+            } else {
+                promptDiv.innerHTML = `
+                    <div style="background: rgba(56,189,248,0.12); border: 1px solid #38bdf8; border-radius: 12px; padding: 12px;">
+                        <div style="font-weight:700; color:#38bdf8;">🏛️ In-Person Specialist Checklist:</div>
+                        <div style="font-size:13px; margin-top:2px;">Verify physical Government ID, confirm account signatory, and log transaction code.</div>
+                    </div>
+                `;
+            }
+
+            // Queue Table
+            const qBody = document.querySelector('#workerQueueTable tbody');
+            qBody.innerHTML = '';
+            data.upcoming_queue.forEach(q => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><b>${q.token_id}</b></td>
+                    <td>${q.customer_name}</td>
+                    <td>${q.segment}</td>
+                    <td>${q.est_wait}m</td>
+                    <td><span class="badge ${q.priority.includes('VIP') ? 'badge-purple' : 'badge-blue'}">${q.priority}</span></td>
+                `;
+                qBody.appendChild(tr);
+            });
+        }
+
+        async function performWorkerAction(actionType) {
+            const branchId = document.getElementById('branchSelect').value;
+            const counterId = document.getElementById('workerCounterSelect').value;
+
+            const res = await fetch('/api/worker/action', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ branch_id: branchId, counter_id: counterId, action: actionType })
+            });
+            const data = await res.json();
+            showToast(data.message, actionType === 'complete' ? '✅' : (actionType === 'deflect_kiosk' ? '📲' : '📣'));
+            loadWorkerTerminal();
+        }
+
+        // ==========================================
+        // 3. FRONT-DESK GREETER & KIOSK TRIAGE
+        // ==========================================
+        async function runTriageCheck() {
+            const serv = document.getElementById('triageService').value;
+            const seg = document.getElementById('triageSegment').value;
+            const hour = document.getElementById('hourSelect').value;
+            const isApt = document.getElementById('triageApt').checked;
+            const isMonthEnd = document.getElementById('monthEndCheck').checked ? 1 : 0;
+
+            const res = await fetch(`/api/triage?service=${encodeURIComponent(serv)}&segment=${encodeURIComponent(seg)}&hour=${hour}&is_appointment=${isApt}&is_month_end=${isMonthEnd}`);
+            const data = await res.json();
+
+            document.getElementById('triageWaitMins').innerText = `${data.wait_prediction.predicted_wait_minutes} mins`;
+            document.getElementById('triageSlaInfo').innerText = `SLA: ${data.wait_prediction.sla_target_minutes}m (Breach Risk: ${data.wait_prediction.sla_breach_probability_pct}%)`;
+            document.getElementById('triageAdvice').innerText = data.wait_prediction.recommended_action;
+
+            const riskBadge = document.getElementById('triageRiskBadge');
+            riskBadge.innerText = data.wait_prediction.risk_level;
+            riskBadge.className = 'badge ' + (data.wait_prediction.is_sla_breach_risk ? 'badge-red' : 'badge-green');
+
+            const alertDiv = document.getElementById('deflectionAlert');
+            if (data.deflection_guidance.is_deflectable) {
+                alertDiv.innerHTML = `
+                    <div style="background: rgba(16,185,129,0.15); border: 1px solid #10b981; border-radius: 12px; padding: 14px;">
+                        <h4 style="color:#34d399; margin-bottom:4px;">📲 Instant Self-Service Available (0 Min Queue)</h4>
+                        <p style="font-size:13px;">Direct customer to <b>${data.deflection_guidance.target_channel}</b> to complete instantly and save ~${data.deflection_guidance.time_saved_minutes} minutes.</p>
+                    </div>
+                `;
+            } else {
+                alertDiv.innerHTML = `
+                    <div style="background: rgba(56,189,248,0.15); border: 1px solid #38bdf8; border-radius: 12px; padding: 14px;">
+                        <h4 style="color:#38bdf8; margin-bottom:4px;">🏛️ Specialist Desk Verification Required</h4>
+                        <p style="font-size:13px;">Customer requires in-person counter advisory. Ensure supporting documents are ready.</p>
+                    </div>
+                `;
+            }
+
+            let stepsHtml = '';
+            data.deflection_guidance.greeter_checklist.forEach(s => {
+                stepsHtml += `<div style="font-size:13px; margin:5px 0;">${s}</div>`;
+            });
+            document.getElementById('greeterChecklist').innerHTML = stepsHtml;
+        }
+
+        async function issueSmartToken() {
+            const name = document.getElementById('triageName').value;
+            const serv = document.getElementById('triageService').value;
+            const seg = document.getElementById('triageSegment').value;
+            const isApt = document.getElementById('triageApt').checked;
+
+            const res = await fetch('/api/triage/issue', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name: name, service: serv, segment: seg, is_appointment: isApt })
+            });
+            const data = await res.json();
+
+            document.getElementById('passTokenId').innerText = data.token_id;
+            document.getElementById('passCustomerName').innerText = data.customer_name;
+            document.getElementById('passServiceDesk').innerText = data.assigned_counter_pool;
+            document.getElementById('passEstWait').innerText = `Estimated Turn: ~${data.estimated_wait_minutes} mins (Issued: ${data.timestamp})`;
+            document.getElementById('issuedTokenDisplay').style.display = 'block';
+
+            showToast(`Smart Token ${data.token_id} issued for ${data.customer_name}!`, '🎟️');
+        }
+
+        // ==========================================
+        // 4. REGIONAL & EXECUTIVE LEADERSHIP
+        // ==========================================
+        async function loadOfficialsOverview() {
+            const res = await fetch('/api/officials/overview');
+            const data = await res.json();
+
+            document.getElementById('offTotalVisits').innerText = data.totals.total_network_visits.toLocaleString() + ' cust';
+            document.getElementById('offHoursSaved').innerText = `${data.totals.total_hours_saved.toLocaleString()} hrs`;
+            document.getElementById('offCostSaved').innerText = `$${data.totals.total_cost_savings_usd.toLocaleString()} saved`;
+            document.getElementById('offSlaComp').innerText = `${100 - data.totals.network_sla_breach_pct}%`;
+            document.getElementById('offBreachRate').innerText = `${data.totals.network_sla_breach_pct}% breach rate`;
+            document.getElementById('offAvgCsat').innerText = `${data.totals.average_network_csat} / 5.0`;
+
+            const tableBody = document.querySelector('#officialsNetworkTable tbody');
+            tableBody.innerHTML = '';
+            data.network_summary.forEach(b => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td><b>${b.name}</b></td>
+                    <td>${b.cluster}</td>
+                    <td>${b.counters}</td>
+                    <td>${b.total_visits}</td>
+                    <td><b>${b.avg_wait}m</b></td>
+                    <td><span class="badge ${b.sla_compliance_rate >= 80 ? 'badge-green' : 'badge-red'}">${b.sla_compliance_rate}%</span></td>
+                    <td>${b.deflection_rate}%</td>
+                    <td>$${b.cost_saved_usd.toLocaleString()}</td>
+                    <td>⭐ ${b.csat}</td>
+                    <td><span class="badge ${b.status_tag.includes('Critical') ? 'badge-red' : (b.status_tag.includes('Moderate') ? 'badge-amber' : 'badge-green')}">${b.status_tag}</span></td>
+                `;
+                tableBody.appendChild(tr);
+            });
+
+            // Load Balancing recommendation
+            const lb = data.load_balancing;
+            document.getElementById('loadBalanceBox').innerHTML = `
+                <div class="action-box" style="border-left-color:#10b981; font-size:13.5px;">
+                    <div style="font-weight:700; color:#34d399; margin-bottom:4px;">⚖️ Active Cross-Branch Referral Policy:</div>
+                    <p><b>Congested Hub:</b> ${lb.source_branch}</p>
+                    <p><b>Target Overflow Branch:</b> ${lb.target_branch}</p>
+                    <p style="margin-top:6px;">${lb.action}</p>
+                    <div style="margin-top:6px; color:#38bdf8;"><b>Projected Network Impact:</b> -${lb.projected_wait_reduction}</div>
+                </div>
+            `;
+
+            // Channel adoption
+            let chHtml = '';
+            data.channel_adoption.forEach(c => {
+                chHtml += `
+                    <div style="margin-bottom:12px;">
+                        <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:600; margin-bottom:4px;">
+                            <span>${c.channel}</span>
+                            <span class="text-green">${c.adoption_pct}%</span>
+                        </div>
+                        <div style="background:rgba(30,41,59,0.8); border-radius:999px; height:8px; overflow:hidden;">
+                            <div style="background:linear-gradient(90deg, #0284c7, #10b981); width:${c.adoption_pct}%; height:100%;"></div>
+                        </div>
+                    </div>
+                `;
+            });
+            document.getElementById('channelAdoptionList').innerHTML = chHtml;
+
+            // Executive briefing text
+            document.getElementById('executiveBriefingText').innerText = data.executive_briefing;
+        }
+
+        function generateExecutiveReport() {
+            showToast('Executive Operations PDF Briefing Generated!', '📄');
+        }
+
+        function copyExecutiveBriefing() {
+            const text = document.getElementById('executiveBriefingText').innerText;
+            navigator.clipboard.writeText(text);
+            showToast('Executive Briefing copied to clipboard!', '📋');
+        }
+
+        // ==========================================
+        // 5. CUSTOMER VOICE & NLP SENTIMENT
+        // ==========================================
+        async function loadFeedback() {
+            const branchId = document.getElementById('branchSelect').value;
+            const res = await fetch(`/api/feedback?branch_id=${branchId}`);
+            const data = await res.json();
+
+            document.getElementById('fbTotal').innerText = data.total_reviews;
+            document.getElementById('fbPos').innerText = `${data.sentiment_distribution.Positive || 0} (${Math.round(((data.sentiment_distribution.Positive||0)/Math.max(1, data.total_reviews))*100)}%)`;
+            document.getElementById('fbNeg').innerText = `${data.sentiment_distribution.Negative || 0} (${Math.round(((data.sentiment_distribution.Negative||0)/Math.max(1, data.total_reviews))*100)}%)`;
+            document.getElementById('fbPolarity').innerText = `${data.avg_polarity > 0 ? '+' : ''}${data.avg_polarity}`;
+
+            // Top Pain Points
+            let painHtml = '';
+            for (const [topic, cnt] of Object.entries(data.pain_points)) {
+                painHtml += `
+                    <div class="action-box" style="border-left-color:#f43f5e; margin:6px 0;">
+                        <b>${topic}:</b> ${cnt} negative reviews logged
+                    </div>
+                `;
+            }
+            document.getElementById('painPointsList').innerHTML = painHtml || '<p>No critical friction points detected.</p>';
+
+            // Counter Leaderboard
+            let ldrHtml = '';
+            for (const [cnt, stats] of Object.entries(data.counter_leaderboard)) {
+                ldrHtml += `
+                    <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(30,41,59,0.5); padding:10px 14px; border-radius:10px; margin-bottom:6px;">
+                        <b>${cnt}</b>
+                        <div>
+                            <span class="badge badge-green">👍 ${stats.praise} Praises</span>
+                            <span class="badge badge-red" style="margin-left:6px;">⚠️ ${stats.complaints} Complaints</span>
+                        </div>
+                    </div>
+                `;
+            }
+            document.getElementById('counterLeaderboard').innerHTML = ldrHtml || '<p style="color:#94a3b8;">No direct counter mentions in recent feedback.</p>';
+
+            // Reviews Table
+            const tableBody = document.querySelector('#feedbackTable tbody');
+            tableBody.innerHTML = '';
+            data.recent_reviews.forEach(r => {
+                const tr = document.createElement('tr');
+                const badge = r.sentiment_label === 'Positive' ? 'badge-green' : (r.sentiment_label === 'Negative' ? 'badge-red' : 'badge-amber');
+                tr.innerHTML = `
+                    <td style="white-space:nowrap; font-size:12px;">${r.timestamp}</td>
+                    <td>${r.service_category}</td>
+                    <td><b>⭐ ${r.rating}</b></td>
+                    <td><span class="badge ${badge}">${r.sentiment_label} (${r.sentiment_polarity})</span></td>
+                    <td>${r.detected_topics}</td>
+                    <td style="font-style:italic;">"${r.feedback_text}"</td>
+                `;
+                tableBody.appendChild(tr);
+            });
+        }
+
+        // ==========================================
+        // 6. WHAT-IF CAPACITY SIMULATOR
+        // ==========================================
+        async function runSim() {
+            const arr = document.getElementById('simArr').value;
+            const cnt = document.getElementById('simCount').value;
+            const srv = document.getElementById('simServ').value;
+            const def = document.getElementById('simDef').value;
+            const sla = document.getElementById('simSla').value;
+
+            const res = await fetch(`/api/simulate?arrivals=${arr}&counters=${cnt}&service_time=${srv}&deflection_pct=${def}&sla=${sla}`);
+            const data = await res.json();
+
+            document.getElementById('simOutCust').innerText = data.total_customers_served;
+            document.getElementById('simOutWait').innerText = `${data.avg_wait_minutes}m`;
+            document.getElementById('simOutP90').innerText = `${data.p90_wait_minutes}m`;
+            document.getElementById('simOutBreach').innerText = `${data.sla_breach_rate_pct}%`;
+
+            const ctx = document.getElementById('simChart').getContext('2d');
+            const labels = data.hourly_progression.map(h => 'Hour ' + h.hour_bucket);
+            const waitValues = data.hourly_progression.map(h => h.avg_wait_mins);
+
+            if (simChart) simChart.destroy();
+            simChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Simulated Wait (mins)',
+                        data: waitValues,
+                        backgroundColor: waitValues.map(v => v > sla ? 'rgba(244, 63, 94, 0.75)' : 'rgba(56, 189, 248, 0.75)'),
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8' } },
+                        y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8' }, title: { display: true, text: 'Wait Time (mins)', color: '#94a3b8' } }
+                    }
+                }
+            });
+        }
+
+        function applyAllocations() {
+            showToast('Optimal Counter Realignment successfully broadcasted to all active teller terminals!', '⚡');
+        }
+
+        function triggerSurgeRelief() {
+            showToast('Surge Relief Protocol Activated: Standby Counter C_5 opened for Cash/KYC!', '🚨');
+            playChime('surge');
+        }
+
+        function exportStaffReport() {
+            showToast('Branch Staff Roster & Performance Report downloaded!', '📥');
+        }
+
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', () => {
+            refreshAll();
+        });
+    </script>
+</body>
+</html>

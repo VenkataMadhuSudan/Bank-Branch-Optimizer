@@ -1,0 +1,690 @@
+feedback_id,token_id,branch_id,timestamp,service_category,rating,feedback_text
+FB_20002,TKN_10003,BR_001,2026-09-16 15:59:45,Cash Deposit/Withdrawal,5,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20003,TKN_10007,BR_001,2026-09-16 13:36:08,Account Services & KYC,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20004,TKN_10015,BR_001,2026-09-16 11:03:27,Card Services & Pin Reset,4,"Smooth experience with Card Services & Pin Reset, barely waited 5 minutes."
+FB_20005,TKN_10020,BR_001,2026-09-16 12:30:45,Cash Deposit/Withdrawal,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20006,TKN_10026,BR_001,2026-09-16 13:53:48,Forex & Trade Finance,5,Very fast service today at counter C_4! Staff was very helpful.
+FB_20007,TKN_10039,BR_001,2026-09-16 10:31:56,Passbook / Statement Printing,4,"Smooth experience with Passbook / Statement Printing, barely waited 5 minutes."
+FB_20008,TKN_10052,BR_001,2026-09-16 13:01:38,Passbook / Statement Printing,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20009,TKN_10059,BR_001,2026-09-16 12:12:30,Cash Deposit/Withdrawal,4,Very fast service today at counter C_1! Staff was very helpful.
+FB_20010,TKN_10061,BR_001,2026-09-16 16:04:19,Account Services & KYC,2,"Branch visit was just to verify KYC documents, hope they enable video KYC soon."
+FB_20011,TKN_10063,BR_001,2026-09-16 15:29:31,Loan & Mortgage Advisory,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20012,TKN_10068,BR_001,2026-09-16 11:08:44,Forex & Trade Finance,5,Very fast service today at counter C_1! Staff was very helpful.
+FB_20013,TKN_10077,BR_001,2026-09-16 14:31:08,Wealth & Investment Planning,4,Very fast service today at counter C_8! Staff was very helpful.
+FB_20014,TKN_10078,BR_001,2026-09-16 12:03:04,Cash Deposit/Withdrawal,4,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20015,TKN_10080,BR_001,2026-09-16 13:32:30,Cash Deposit/Withdrawal,3,Waited in line just to deposit a small cheque. Self-service machine was empty!
+FB_20016,TKN_10094,BR_002,2026-09-16 14:22:20,Loan & Mortgage Advisory,4,Excellent support by Sarah Jenkins (BR_002-4). Solved my account issue quickly.
+FB_20017,TKN_10100,BR_002,2026-09-16 12:47:22,Cash Deposit/Withdrawal,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20018,TKN_10101,BR_002,2026-09-16 14:41:10,Cash Deposit/Withdrawal,3,Heavy crowd at Suburban Tech Park. Needs better queue management and extra counters.
+FB_20019,TKN_10109,BR_002,2026-09-16 14:32:01,Cash Deposit/Withdrawal,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20020,TKN_10112,BR_002,2026-09-16 10:36:26,Account Services & KYC,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20021,TKN_10113,BR_002,2026-09-16 10:55:35,Passbook / Statement Printing,5,Excellent support by Sarah Jenkins (BR_002-4). Solved my account issue quickly.
+FB_20022,TKN_10114,BR_002,2026-09-16 16:36:53,Loan & Mortgage Advisory,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20023,TKN_10115,BR_002,2026-09-16 12:26:39,Passbook / Statement Printing,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20024,TKN_10116,BR_002,2026-09-16 14:47:07,Passbook / Statement Printing,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20025,TKN_10119,BR_002,2026-09-16 12:45:46,Forex & Trade Finance,2,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20026,TKN_10127,BR_002,2026-09-16 12:49:06,Wealth & Investment Planning,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20027,TKN_10130,BR_002,2026-09-16 12:15:57,Cash Deposit/Withdrawal,5,Excellent support by Anita Desai (BR_002-8). Solved my account issue quickly.
+FB_20028,TKN_10143,BR_002,2026-09-16 13:07:48,Passbook / Statement Printing,2,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20029,TKN_10145,BR_002,2026-09-16 14:40:16,Loan & Mortgage Advisory,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20030,TKN_10154,BR_003,2026-09-16 13:00:49,Cash Deposit/Withdrawal,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20031,TKN_10157,BR_003,2026-09-16 11:35:28,Cash Deposit/Withdrawal,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20032,TKN_10159,BR_003,2026-09-16 11:06:05,Wealth & Investment Planning,5,Excellent support by Michael Chang (BR_003-7). Solved my account issue quickly.
+FB_20033,TKN_10160,BR_003,2026-09-16 14:32:13,Loan & Mortgage Advisory,3,Heavy crowd at Old Town Commercial. Needs better queue management and extra counters.
+FB_20034,TKN_10164,BR_003,2026-09-16 09:52:27,Loan & Mortgage Advisory,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20035,TKN_10173,BR_003,2026-09-16 14:43:00,Card Services & Pin Reset,3,"Branch visit was just to verify KYC documents, hope they enable video KYC soon."
+FB_20036,TKN_10175,BR_003,2026-09-16 12:05:10,Forex & Trade Finance,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20037,TKN_10177,BR_003,2026-09-16 16:59:40,Cash Deposit/Withdrawal,2,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20038,TKN_10178,BR_003,2026-09-16 12:11:28,Account Services & KYC,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20039,TKN_10188,BR_003,2026-09-16 10:25:26,Forex & Trade Finance,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20040,TKN_10199,BR_004,2026-09-16 12:49:19,Cash Deposit/Withdrawal,3,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20041,TKN_10202,BR_004,2026-09-16 16:00:08,Loan & Mortgage Advisory,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20042,TKN_10204,BR_004,2026-09-16 12:40:39,Cash Deposit/Withdrawal,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20043,TKN_10207,BR_004,2026-09-16 12:16:33,Passbook / Statement Printing,2,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20044,TKN_10219,BR_004,2026-09-16 10:41:24,Cash Deposit/Withdrawal,5,Very fast service today at counter C_1! Staff was very helpful.
+FB_20045,TKN_10221,BR_004,2026-09-16 10:51:32,Card Services & Pin Reset,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20046,TKN_10233,BR_004,2026-09-16 14:49:00,Account Services & KYC,3,"Branch visit was just to verify KYC documents, hope they enable video KYC soon."
+FB_20047,TKN_10235,BR_004,2026-09-16 10:01:26,Loan & Mortgage Advisory,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20048,TKN_10236,BR_004,2026-09-16 11:36:02,Cash Deposit/Withdrawal,3,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20049,TKN_10240,BR_004,2026-09-16 14:39:42,Cash Deposit/Withdrawal,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20050,TKN_10254,BR_004,2026-09-16 15:00:36,Cash Deposit/Withdrawal,3,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20051,TKN_10256,BR_004,2026-09-16 11:24:58,Cash Deposit/Withdrawal,3,"Branch visit was just to verify KYC documents, hope they enable video KYC soon."
+FB_20052,TKN_10269,BR_004,2026-09-16 12:40:21,Forex & Trade Finance,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20053,TKN_10270,BR_004,2026-09-16 10:12:26,Cash Deposit/Withdrawal,5,Excellent support by Aisha Khan (BR_004-4). Solved my account issue quickly.
+FB_20054,TKN_10271,BR_004,2026-09-16 12:11:54,Cash Deposit/Withdrawal,5,Excellent support by Robert Chen (BR_004-3). Solved my account issue quickly.
+FB_20055,TKN_10275,BR_004,2026-09-16 14:05:12,Wealth & Investment Planning,4,Excellent support by Michael Chang (BR_004-1). Solved my account issue quickly.
+FB_20056,TKN_10276,BR_004,2026-09-16 14:00:54,Cash Deposit/Withdrawal,3,"Branch visit was just to verify KYC documents, hope they enable video KYC soon."
+FB_20057,TKN_10279,BR_005,2026-09-16 11:42:00,Cash Deposit/Withdrawal,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20058,TKN_10284,BR_005,2026-09-16 12:48:56,Cash Deposit/Withdrawal,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20059,TKN_10299,BR_005,2026-09-16 13:31:23,Wealth & Investment Planning,4,Excellent support by Anita Desai (BR_005-5). Solved my account issue quickly.
+FB_20060,TKN_10306,BR_005,2026-09-16 14:19:08,Passbook / Statement Printing,2,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20061,TKN_10317,BR_005,2026-09-16 15:08:13,Account Services & KYC,4,Very fast service today at counter C_7! Staff was very helpful.
+FB_20062,TKN_10319,BR_005,2026-09-16 15:19:46,Passbook / Statement Printing,5,Very fast service today at counter C_2! Staff was very helpful.
+FB_20063,TKN_10320,BR_005,2026-09-16 15:41:18,Loan & Mortgage Advisory,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20064,TKN_10323,BR_005,2026-09-16 12:19:44,Wealth & Investment Planning,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20065,TKN_10324,BR_005,2026-09-16 12:07:43,Account Services & KYC,3,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20066,TKN_10326,BR_005,2026-09-16 14:38:44,Account Services & KYC,3,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20067,TKN_10331,BR_005,2026-09-16 13:18:41,Cash Deposit/Withdrawal,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20068,TKN_10342,BR_001,2026-09-17 15:56:10,Cash Deposit/Withdrawal,4,Excellent support by Marcus Vance (BR_001-8). Solved my account issue quickly.
+FB_20069,TKN_10362,BR_001,2026-09-17 12:39:53,Forex & Trade Finance,3,Heavy crowd at Downtown Financial Hub. Needs better queue management and extra counters.
+FB_20070,TKN_10366,BR_001,2026-09-17 14:06:35,Account Services & KYC,4,"Smooth experience with Account Services & KYC, barely waited 5 minutes."
+FB_20071,TKN_10367,BR_001,2026-09-17 14:22:40,Forex & Trade Finance,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20072,TKN_10373,BR_001,2026-09-17 15:15:36,Account Services & KYC,4,"Smooth experience with Account Services & KYC, barely waited 5 minutes."
+FB_20073,TKN_10374,BR_001,2026-09-17 11:28:31,Account Services & KYC,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20074,TKN_10385,BR_001,2026-09-17 11:51:58,Forex & Trade Finance,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20075,TKN_10386,BR_001,2026-09-17 09:52:14,Passbook / Statement Printing,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20076,TKN_10400,BR_001,2026-09-17 12:08:45,Cash Deposit/Withdrawal,3,Heavy crowd at Downtown Financial Hub. Needs better queue management and extra counters.
+FB_20077,TKN_10415,BR_002,2026-09-17 11:40:00,Passbook / Statement Printing,3,Heavy crowd at Suburban Tech Park. Needs better queue management and extra counters.
+FB_20078,TKN_10423,BR_002,2026-09-17 13:20:04,Account Services & KYC,3,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20079,TKN_10424,BR_002,2026-09-17 14:47:39,Wealth & Investment Planning,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20080,TKN_10431,BR_002,2026-09-17 12:24:57,Cash Deposit/Withdrawal,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20081,TKN_10432,BR_002,2026-09-17 09:50:19,Cash Deposit/Withdrawal,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20082,TKN_10434,BR_002,2026-09-17 14:26:16,Passbook / Statement Printing,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20083,TKN_10435,BR_002,2026-09-17 12:14:26,Cash Deposit/Withdrawal,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20084,TKN_10436,BR_002,2026-09-17 14:24:42,Account Services & KYC,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20085,TKN_10439,BR_002,2026-09-17 10:54:08,Passbook / Statement Printing,2,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20086,TKN_10443,BR_002,2026-09-17 11:48:38,Account Services & KYC,4,Very fast service today at counter C_1! Staff was very helpful.
+FB_20087,TKN_10455,BR_002,2026-09-17 14:31:46,Cash Deposit/Withdrawal,2,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20088,TKN_10457,BR_002,2026-09-17 12:28:37,Cash Deposit/Withdrawal,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20089,TKN_10463,BR_002,2026-09-17 17:12:21,Account Services & KYC,5,Very fast service today at counter C_5! Staff was very helpful.
+FB_20090,TKN_10475,BR_003,2026-09-17 12:21:26,Forex & Trade Finance,3,Heavy crowd at Old Town Commercial. Needs better queue management and extra counters.
+FB_20091,TKN_10476,BR_003,2026-09-17 15:22:20,Account Services & KYC,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20092,TKN_10477,BR_003,2026-09-17 15:21:04,Forex & Trade Finance,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20093,TKN_10479,BR_003,2026-09-17 13:14:22,Cash Deposit/Withdrawal,4,Very fast service today at counter C_2! Staff was very helpful.
+FB_20094,TKN_10480,BR_003,2026-09-17 10:42:29,Cash Deposit/Withdrawal,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20095,TKN_10489,BR_003,2026-09-17 14:21:51,Cash Deposit/Withdrawal,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20096,TKN_10494,BR_003,2026-09-17 13:32:36,Passbook / Statement Printing,4,Very fast service today at counter C_2! Staff was very helpful.
+FB_20097,TKN_10504,BR_003,2026-09-17 12:07:02,Card Services & Pin Reset,5,Excellent support by Priya Sharma (BR_003-3). Solved my account issue quickly.
+FB_20098,TKN_10505,BR_003,2026-09-17 12:48:30,Cash Deposit/Withdrawal,4,Excellent support by Michael Chang (BR_003-7). Solved my account issue quickly.
+FB_20099,TKN_10510,BR_003,2026-09-17 10:58:13,Forex & Trade Finance,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20100,TKN_10512,BR_003,2026-09-17 12:24:19,Account Services & KYC,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20101,TKN_10514,BR_003,2026-09-17 12:18:05,Cash Deposit/Withdrawal,5,Very fast service today at counter C_6! Staff was very helpful.
+FB_20102,TKN_10529,BR_004,2026-09-17 13:35:12,Loan & Mortgage Advisory,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20103,TKN_10530,BR_004,2026-09-17 10:02:37,Card Services & Pin Reset,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20104,TKN_10537,BR_004,2026-09-17 14:35:08,Account Services & KYC,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20105,TKN_10540,BR_004,2026-09-17 10:50:36,Loan & Mortgage Advisory,4,"Smooth experience with Loan & Mortgage Advisory, barely waited 5 minutes."
+FB_20106,TKN_10551,BR_004,2026-09-17 12:37:37,Passbook / Statement Printing,2,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20107,TKN_10559,BR_004,2026-09-17 12:28:37,Card Services & Pin Reset,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20108,TKN_10564,BR_004,2026-09-17 10:57:55,Cash Deposit/Withdrawal,5,Very fast service today at counter C_5! Staff was very helpful.
+FB_20109,TKN_10571,BR_004,2026-09-17 15:10:09,Account Services & KYC,3,"Branch visit was just to verify KYC documents, hope they enable video KYC soon."
+FB_20110,TKN_10574,BR_004,2026-09-17 10:34:23,Forex & Trade Finance,5,"Smooth experience with Forex & Trade Finance, barely waited 5 minutes."
+FB_20111,TKN_10577,BR_004,2026-09-17 14:01:45,Wealth & Investment Planning,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20112,TKN_10580,BR_004,2026-09-17 12:31:14,Account Services & KYC,5,Very fast service today at counter C_2! Staff was very helpful.
+FB_20113,TKN_10588,BR_005,2026-09-17 11:17:36,Card Services & Pin Reset,5,Very fast service today at counter C_5! Staff was very helpful.
+FB_20114,TKN_10597,BR_005,2026-09-17 13:29:20,Passbook / Statement Printing,3,"Branch visit was just to verify KYC documents, hope they enable video KYC soon."
+FB_20115,TKN_10598,BR_005,2026-09-17 10:31:09,Account Services & KYC,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20116,TKN_10613,BR_005,2026-09-17 09:25:34,Passbook / Statement Printing,4,Very fast service today at counter C_1! Staff was very helpful.
+FB_20117,TKN_10616,BR_005,2026-09-17 12:48:21,Forex & Trade Finance,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20118,TKN_10622,BR_005,2026-09-17 11:49:08,Forex & Trade Finance,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20119,TKN_10624,BR_005,2026-09-17 12:21:29,Account Services & KYC,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20120,TKN_10626,BR_005,2026-09-17 13:06:57,Cash Deposit/Withdrawal,5,Excellent support by Michael Chang (BR_005-7). Solved my account issue quickly.
+FB_20121,TKN_10633,BR_005,2026-09-17 13:39:03,Account Services & KYC,2,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20122,TKN_10635,BR_005,2026-09-17 12:43:52,Loan & Mortgage Advisory,4,Excellent support by David Miller (BR_005-4). Solved my account issue quickly.
+FB_20123,TKN_10636,BR_005,2026-09-17 13:17:56,Card Services & Pin Reset,5,Excellent support by David Miller (BR_005-2). Solved my account issue quickly.
+FB_20124,TKN_10640,BR_005,2026-09-17 13:51:05,Cash Deposit/Withdrawal,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20125,TKN_10642,BR_005,2026-09-17 09:37:08,Passbook / Statement Printing,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20126,TKN_10646,BR_005,2026-09-17 11:54:17,Loan & Mortgage Advisory,4,Excellent support by James O'Connor (BR_005-3). Solved my account issue quickly.
+FB_20127,TKN_10648,BR_005,2026-09-17 16:49:05,Cash Deposit/Withdrawal,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20128,TKN_10661,BR_001,2026-09-18 14:15:44,Forex & Trade Finance,4,Very fast service today at counter C_1! Staff was very helpful.
+FB_20129,TKN_10665,BR_001,2026-09-18 12:41:24,Cash Deposit/Withdrawal,4,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20130,TKN_10669,BR_001,2026-09-18 14:26:34,Cash Deposit/Withdrawal,4,Very fast service today at counter C_2! Staff was very helpful.
+FB_20131,TKN_10671,BR_001,2026-09-18 09:39:31,Cash Deposit/Withdrawal,3,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20132,TKN_10676,BR_001,2026-09-18 13:09:20,Account Services & KYC,3,Waited in line just to deposit a small cheque. Self-service machine was empty!
+FB_20133,TKN_10685,BR_001,2026-09-18 12:35:25,Account Services & KYC,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20134,TKN_10693,BR_001,2026-09-18 13:07:30,Cash Deposit/Withdrawal,4,Excellent support by Anita Desai (BR_001-9). Solved my account issue quickly.
+FB_20135,TKN_10695,BR_001,2026-09-18 13:01:55,Passbook / Statement Printing,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20136,TKN_10704,BR_001,2026-09-18 15:16:05,Card Services & Pin Reset,5,Very fast service today at counter C_7! Staff was very helpful.
+FB_20137,TKN_10707,BR_001,2026-09-18 10:32:44,Account Services & KYC,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20138,TKN_10715,BR_002,2026-09-18 11:41:14,Passbook / Statement Printing,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20139,TKN_10718,BR_002,2026-09-18 16:12:35,Passbook / Statement Printing,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20140,TKN_10721,BR_002,2026-09-18 14:00:27,Account Services & KYC,2,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20141,TKN_10723,BR_002,2026-09-18 16:46:41,Cash Deposit/Withdrawal,3,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20142,TKN_10730,BR_002,2026-09-18 15:24:06,Account Services & KYC,5,Excellent support by Anita Desai (BR_002-8). Solved my account issue quickly.
+FB_20143,TKN_10733,BR_002,2026-09-18 14:48:29,Loan & Mortgage Advisory,5,Excellent support by Priya Sharma (BR_002-10). Solved my account issue quickly.
+FB_20144,TKN_10734,BR_002,2026-09-18 10:33:41,Forex & Trade Finance,5,Very fast service today at counter C_5! Staff was very helpful.
+FB_20145,TKN_10736,BR_002,2026-09-18 12:39:29,Loan & Mortgage Advisory,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20146,TKN_10740,BR_002,2026-09-18 09:29:04,Passbook / Statement Printing,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20147,TKN_10743,BR_002,2026-09-18 12:31:41,Loan & Mortgage Advisory,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20148,TKN_10747,BR_002,2026-09-18 13:36:14,Wealth & Investment Planning,4,"Smooth experience with Wealth & Investment Planning, barely waited 5 minutes."
+FB_20149,TKN_10749,BR_002,2026-09-18 15:32:47,Account Services & KYC,2,"Branch visit was just to verify KYC documents, hope they enable video KYC soon."
+FB_20150,TKN_10761,BR_002,2026-09-18 14:45:26,Forex & Trade Finance,4,Very fast service today at counter C_2! Staff was very helpful.
+FB_20151,TKN_10763,BR_002,2026-09-18 10:52:17,Forex & Trade Finance,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20152,TKN_10771,BR_002,2026-09-18 10:57:42,Account Services & KYC,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20153,TKN_10773,BR_002,2026-09-18 14:16:20,Loan & Mortgage Advisory,5,Very fast service today at counter C_1! Staff was very helpful.
+FB_20154,TKN_10776,BR_003,2026-09-18 12:22:19,Forex & Trade Finance,4,Very fast service today at counter C_1! Staff was very helpful.
+FB_20155,TKN_10778,BR_003,2026-09-18 12:02:43,Account Services & KYC,3,Heavy crowd at Old Town Commercial. Needs better queue management and extra counters.
+FB_20156,TKN_10779,BR_003,2026-09-18 10:56:40,Cash Deposit/Withdrawal,5,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20157,TKN_10782,BR_003,2026-09-18 11:12:45,Card Services & Pin Reset,5,Very fast service today at counter C_2! Staff was very helpful.
+FB_20158,TKN_10783,BR_003,2026-09-18 12:47:09,Passbook / Statement Printing,5,"Smooth experience with Passbook / Statement Printing, barely waited 5 minutes."
+FB_20159,TKN_10786,BR_003,2026-09-18 14:12:01,Forex & Trade Finance,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20160,TKN_10793,BR_003,2026-09-18 10:25:40,Account Services & KYC,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20161,TKN_10795,BR_003,2026-09-18 13:12:58,Account Services & KYC,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20162,TKN_10800,BR_003,2026-09-18 15:45:36,Card Services & Pin Reset,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20163,TKN_10805,BR_003,2026-09-18 11:38:49,Card Services & Pin Reset,4,Excellent support by Elena Rostova (BR_003-4). Solved my account issue quickly.
+FB_20164,TKN_10806,BR_003,2026-09-18 12:39:39,Passbook / Statement Printing,4,Excellent support by Priya Sharma (BR_003-3). Solved my account issue quickly.
+FB_20165,TKN_10811,BR_003,2026-09-18 16:13:42,Cash Deposit/Withdrawal,5,Excellent support by Michael Chang (BR_003-2). Solved my account issue quickly.
+FB_20166,TKN_10812,BR_003,2026-09-18 14:39:14,Account Services & KYC,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20167,TKN_10816,BR_003,2026-09-18 13:16:24,Passbook / Statement Printing,4,Very fast service today at counter C_6! Staff was very helpful.
+FB_20168,TKN_10823,BR_003,2026-09-18 15:32:48,Forex & Trade Finance,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20169,TKN_10824,BR_003,2026-09-18 12:41:11,Account Services & KYC,2,Waited in line just to deposit a small cheque. Self-service machine was empty!
+FB_20170,TKN_10826,BR_003,2026-09-18 13:00:39,Cash Deposit/Withdrawal,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20171,TKN_10833,BR_003,2026-09-18 15:31:02,Passbook / Statement Printing,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20172,TKN_10835,BR_003,2026-09-18 11:30:37,Card Services & Pin Reset,4,Very fast service today at counter C_2! Staff was very helpful.
+FB_20173,TKN_10836,BR_003,2026-09-18 12:00:34,Account Services & KYC,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20174,TKN_10845,BR_004,2026-09-18 09:28:54,Card Services & Pin Reset,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20175,TKN_10846,BR_004,2026-09-18 09:37:01,Card Services & Pin Reset,5,"Smooth experience with Card Services & Pin Reset, barely waited 5 minutes."
+FB_20176,TKN_10854,BR_004,2026-09-18 12:43:18,Cash Deposit/Withdrawal,5,Very fast service today at counter C_4! Staff was very helpful.
+FB_20177,TKN_10864,BR_004,2026-09-18 13:14:48,Account Services & KYC,4,Very fast service today at counter C_2! Staff was very helpful.
+FB_20178,TKN_10872,BR_004,2026-09-18 11:14:22,Wealth & Investment Planning,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20179,TKN_10886,BR_004,2026-09-18 11:55:19,Loan & Mortgage Advisory,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20180,TKN_10887,BR_004,2026-09-18 09:46:54,Loan & Mortgage Advisory,5,"Smooth experience with Loan & Mortgage Advisory, barely waited 5 minutes."
+FB_20181,TKN_10890,BR_004,2026-09-18 10:18:44,Cash Deposit/Withdrawal,4,Very fast service today at counter C_2! Staff was very helpful.
+FB_20182,TKN_10900,BR_005,2026-09-18 12:34:23,Cash Deposit/Withdrawal,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20183,TKN_10903,BR_005,2026-09-18 13:40:51,Passbook / Statement Printing,2,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20184,TKN_10904,BR_005,2026-09-18 13:29:33,Account Services & KYC,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20185,TKN_10905,BR_005,2026-09-18 16:45:01,Account Services & KYC,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20186,TKN_10907,BR_005,2026-09-18 14:38:19,Forex & Trade Finance,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20187,TKN_10913,BR_005,2026-09-18 13:08:52,Cash Deposit/Withdrawal,5,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20188,TKN_10914,BR_005,2026-09-18 12:57:24,Forex & Trade Finance,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20189,TKN_10919,BR_005,2026-09-18 11:31:09,Account Services & KYC,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20190,TKN_10920,BR_005,2026-09-18 15:31:19,Account Services & KYC,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20191,TKN_10921,BR_005,2026-09-18 16:11:24,Cash Deposit/Withdrawal,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20192,TKN_10930,BR_005,2026-09-18 14:32:03,Cash Deposit/Withdrawal,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20193,TKN_10934,BR_005,2026-09-18 11:30:37,Wealth & Investment Planning,5,Excellent support by Michael Chang (BR_005-7). Solved my account issue quickly.
+FB_20194,TKN_10944,BR_005,2026-09-18 11:30:38,Account Services & KYC,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20195,TKN_10951,BR_005,2026-09-18 13:47:22,Cash Deposit/Withdrawal,4,Excellent support by David Miller (BR_005-4). Solved my account issue quickly.
+FB_20196,TKN_10953,BR_005,2026-09-18 11:01:04,Passbook / Statement Printing,2,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20197,TKN_10957,BR_005,2026-09-18 12:52:25,Account Services & KYC,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20198,TKN_10960,BR_005,2026-09-18 10:54:04,Account Services & KYC,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20199,TKN_10968,BR_001,2026-09-21 10:53:02,Passbook / Statement Printing,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20200,TKN_10972,BR_001,2026-09-21 13:25:07,Loan & Mortgage Advisory,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20201,TKN_10973,BR_001,2026-09-21 14:22:50,Passbook / Statement Printing,3,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20202,TKN_10977,BR_001,2026-09-21 10:46:51,Loan & Mortgage Advisory,4,Very fast service today at counter C_5! Staff was very helpful.
+FB_20203,TKN_10988,BR_001,2026-09-21 13:27:52,Cash Deposit/Withdrawal,4,Excellent support by Anita Desai (BR_001-9). Solved my account issue quickly.
+FB_20204,TKN_10993,BR_001,2026-09-21 16:17:13,Loan & Mortgage Advisory,4,Very fast service today at counter C_1! Staff was very helpful.
+FB_20205,TKN_10998,BR_001,2026-09-21 11:08:07,Loan & Mortgage Advisory,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20206,TKN_11002,BR_001,2026-09-21 11:22:01,Cash Deposit/Withdrawal,1,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20207,TKN_11004,BR_001,2026-09-21 12:26:37,Wealth & Investment Planning,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20208,TKN_11005,BR_001,2026-09-21 12:09:45,Cash Deposit/Withdrawal,4,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20209,TKN_11007,BR_001,2026-09-21 15:10:35,Account Services & KYC,2,"Branch visit was just to verify KYC documents, hope they enable video KYC soon."
+FB_20210,TKN_11010,BR_001,2026-09-21 13:11:29,Account Services & KYC,4,"Smooth experience with Account Services & KYC, barely waited 5 minutes."
+FB_20211,TKN_11012,BR_001,2026-09-21 12:36:10,Account Services & KYC,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20212,TKN_11013,BR_001,2026-09-21 14:40:08,Account Services & KYC,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20213,TKN_11015,BR_001,2026-09-21 14:40:43,Cash Deposit/Withdrawal,4,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20214,TKN_11016,BR_001,2026-09-21 10:38:07,Cash Deposit/Withdrawal,5,Very fast service today at counter C_9! Staff was very helpful.
+FB_20215,TKN_11018,BR_001,2026-09-21 15:11:10,Account Services & KYC,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20216,TKN_11019,BR_001,2026-09-21 14:14:15,Wealth & Investment Planning,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20217,TKN_11024,BR_001,2026-09-21 15:23:39,Wealth & Investment Planning,3,Heavy crowd at Downtown Financial Hub. Needs better queue management and extra counters.
+FB_20218,TKN_11031,BR_001,2026-09-21 13:12:31,Cash Deposit/Withdrawal,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20219,TKN_11032,BR_001,2026-09-21 14:59:29,Cash Deposit/Withdrawal,2,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20220,TKN_11033,BR_001,2026-09-21 13:05:58,Forex & Trade Finance,5,Excellent support by James O'Connor (BR_001-5). Solved my account issue quickly.
+FB_20221,TKN_11037,BR_001,2026-09-21 12:10:14,Passbook / Statement Printing,4,"Smooth experience with Passbook / Statement Printing, barely waited 5 minutes."
+FB_20222,TKN_11038,BR_001,2026-09-21 12:20:28,Cash Deposit/Withdrawal,2,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20223,TKN_11039,BR_001,2026-09-21 11:45:39,Card Services & Pin Reset,3,Heavy crowd at Downtown Financial Hub. Needs better queue management and extra counters.
+FB_20224,TKN_11048,BR_002,2026-09-21 14:34:09,Cash Deposit/Withdrawal,4,Excellent support by Aisha Khan (BR_002-6). Solved my account issue quickly.
+FB_20225,TKN_11049,BR_002,2026-09-21 12:05:05,Account Services & KYC,3,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20226,TKN_11061,BR_002,2026-09-21 14:26:13,Passbook / Statement Printing,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20227,TKN_11064,BR_002,2026-09-21 13:43:33,Account Services & KYC,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20228,TKN_11068,BR_002,2026-09-21 13:51:36,Cash Deposit/Withdrawal,2,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20229,TKN_11070,BR_002,2026-09-21 11:53:52,Forex & Trade Finance,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20230,TKN_11071,BR_002,2026-09-21 13:28:48,Account Services & KYC,2,"Branch visit was just to verify KYC documents, hope they enable video KYC soon."
+FB_20231,TKN_11076,BR_002,2026-09-21 14:39:13,Forex & Trade Finance,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20232,TKN_11077,BR_002,2026-09-21 15:23:16,Account Services & KYC,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20233,TKN_11081,BR_002,2026-09-21 13:07:29,Wealth & Investment Planning,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20234,TKN_11093,BR_003,2026-09-21 13:18:17,Passbook / Statement Printing,4,"Smooth experience with Passbook / Statement Printing, barely waited 5 minutes."
+FB_20235,TKN_11097,BR_003,2026-09-21 14:08:04,Account Services & KYC,4,Excellent support by Michael Chang (BR_003-2). Solved my account issue quickly.
+FB_20236,TKN_11109,BR_003,2026-09-21 12:35:15,Card Services & Pin Reset,5,Very fast service today at counter C_2! Staff was very helpful.
+FB_20237,TKN_11135,BR_003,2026-09-21 14:21:49,Passbook / Statement Printing,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20238,TKN_11139,BR_003,2026-09-21 14:52:39,Card Services & Pin Reset,2,Heavy crowd at Old Town Commercial. Needs better queue management and extra counters.
+FB_20239,TKN_11144,BR_004,2026-09-21 13:27:14,Cash Deposit/Withdrawal,2,"Branch visit was just to verify KYC documents, hope they enable video KYC soon."
+FB_20240,TKN_11155,BR_004,2026-09-21 14:27:08,Account Services & KYC,2,"Branch visit was just to verify KYC documents, hope they enable video KYC soon."
+FB_20241,TKN_11156,BR_004,2026-09-21 11:30:47,Card Services & Pin Reset,4,"Smooth experience with Card Services & Pin Reset, barely waited 5 minutes."
+FB_20242,TKN_11159,BR_004,2026-09-21 11:19:54,Forex & Trade Finance,4,Excellent support by Robert Chen (BR_004-3). Solved my account issue quickly.
+FB_20243,TKN_11161,BR_004,2026-09-21 12:03:46,Account Services & KYC,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20244,TKN_11163,BR_004,2026-09-21 14:28:07,Cash Deposit/Withdrawal,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20245,TKN_11165,BR_004,2026-09-21 09:59:48,Passbook / Statement Printing,2,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20246,TKN_11166,BR_004,2026-09-21 15:10:40,Account Services & KYC,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20247,TKN_11173,BR_004,2026-09-21 12:40:19,Cash Deposit/Withdrawal,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20248,TKN_11187,BR_004,2026-09-21 09:34:54,Cash Deposit/Withdrawal,5,Very fast service today at counter C_1! Staff was very helpful.
+FB_20249,TKN_11188,BR_004,2026-09-21 12:35:48,Card Services & Pin Reset,5,Excellent support by David Miller (BR_004-5). Solved my account issue quickly.
+FB_20250,TKN_11191,BR_004,2026-09-21 16:42:59,Loan & Mortgage Advisory,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20251,TKN_11196,BR_004,2026-09-21 09:21:42,Cash Deposit/Withdrawal,4,Very fast service today at counter C_2! Staff was very helpful.
+FB_20252,TKN_11199,BR_004,2026-09-21 15:23:43,Forex & Trade Finance,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20253,TKN_11201,BR_004,2026-09-21 16:34:20,Account Services & KYC,5,Excellent support by Priya Sharma (BR_004-2). Solved my account issue quickly.
+FB_20254,TKN_11204,BR_004,2026-09-21 13:43:54,Cash Deposit/Withdrawal,4,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20255,TKN_11209,BR_005,2026-09-21 11:45:09,Cash Deposit/Withdrawal,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20256,TKN_11212,BR_005,2026-09-21 14:56:51,Card Services & Pin Reset,5,"Smooth experience with Card Services & Pin Reset, barely waited 5 minutes."
+FB_20257,TKN_11221,BR_005,2026-09-21 15:51:52,Account Services & KYC,4,Excellent support by Michael Chang (BR_005-7). Solved my account issue quickly.
+FB_20258,TKN_11222,BR_005,2026-09-21 14:56:28,Cash Deposit/Withdrawal,5,Very fast service today at counter C_3! Staff was very helpful.
+FB_20259,TKN_11228,BR_005,2026-09-21 13:03:43,Forex & Trade Finance,4,"Smooth experience with Forex & Trade Finance, barely waited 5 minutes."
+FB_20260,TKN_11237,BR_005,2026-09-21 11:13:18,Cash Deposit/Withdrawal,4,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20261,TKN_11239,BR_005,2026-09-21 15:00:39,Cash Deposit/Withdrawal,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20262,TKN_11251,BR_001,2026-09-22 16:54:34,Account Services & KYC,5,Excellent support by James O'Connor (BR_001-5). Solved my account issue quickly.
+FB_20263,TKN_11259,BR_001,2026-09-22 12:10:22,Cash Deposit/Withdrawal,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20264,TKN_11262,BR_001,2026-09-22 13:45:28,Cash Deposit/Withdrawal,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20265,TKN_11275,BR_001,2026-09-22 11:20:42,Account Services & KYC,5,Very fast service today at counter C_10! Staff was very helpful.
+FB_20266,TKN_11279,BR_001,2026-09-22 15:38:30,Card Services & Pin Reset,4,"Smooth experience with Card Services & Pin Reset, barely waited 5 minutes."
+FB_20267,TKN_11290,BR_001,2026-09-22 10:59:55,Cash Deposit/Withdrawal,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20268,TKN_11298,BR_001,2026-09-22 14:21:37,Account Services & KYC,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20269,TKN_11304,BR_001,2026-09-22 11:07:01,Cash Deposit/Withdrawal,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20270,TKN_11306,BR_001,2026-09-22 11:29:18,Card Services & Pin Reset,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20271,TKN_11311,BR_001,2026-09-22 10:24:34,Card Services & Pin Reset,5,"Smooth experience with Card Services & Pin Reset, barely waited 5 minutes."
+FB_20272,TKN_11313,BR_001,2026-09-22 14:16:47,Card Services & Pin Reset,5,Very fast service today at counter C_7! Staff was very helpful.
+FB_20273,TKN_11323,BR_001,2026-09-22 12:57:51,Passbook / Statement Printing,2,Heavy crowd at Downtown Financial Hub. Needs better queue management and extra counters.
+FB_20274,TKN_11327,BR_002,2026-09-22 13:20:08,Loan & Mortgage Advisory,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20275,TKN_11334,BR_002,2026-09-22 14:56:40,Cash Deposit/Withdrawal,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20276,TKN_11338,BR_002,2026-09-22 13:45:01,Cash Deposit/Withdrawal,1,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20277,TKN_11362,BR_002,2026-09-22 13:45:33,Cash Deposit/Withdrawal,3,"Branch visit was just to verify KYC documents, hope they enable video KYC soon."
+FB_20278,TKN_11372,BR_003,2026-09-22 12:43:28,Passbook / Statement Printing,3,Waited in line just to deposit a small cheque. Self-service machine was empty!
+FB_20279,TKN_11373,BR_003,2026-09-22 11:23:14,Forex & Trade Finance,5,Excellent support by Michael Chang (BR_003-2). Solved my account issue quickly.
+FB_20280,TKN_11374,BR_003,2026-09-22 16:25:44,Loan & Mortgage Advisory,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20281,TKN_11377,BR_003,2026-09-22 13:54:30,Cash Deposit/Withdrawal,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20282,TKN_11379,BR_003,2026-09-22 12:29:03,Cash Deposit/Withdrawal,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20283,TKN_11384,BR_003,2026-09-22 13:04:00,Cash Deposit/Withdrawal,2,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20284,TKN_11386,BR_003,2026-09-22 15:58:31,Account Services & KYC,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20285,TKN_11388,BR_003,2026-09-22 15:06:14,Account Services & KYC,4,Excellent support by Priya Sharma (BR_003-6). Solved my account issue quickly.
+FB_20286,TKN_11392,BR_003,2026-09-22 12:37:56,Cash Deposit/Withdrawal,1,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20287,TKN_11403,BR_003,2026-09-22 14:18:49,Account Services & KYC,4,Very fast service today at counter C_1! Staff was very helpful.
+FB_20288,TKN_11407,BR_003,2026-09-22 16:53:57,Card Services & Pin Reset,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20289,TKN_11415,BR_003,2026-09-22 13:53:00,Forex & Trade Finance,5,Excellent support by Michael Chang (BR_003-7). Solved my account issue quickly.
+FB_20290,TKN_11429,BR_003,2026-09-22 13:32:48,Forex & Trade Finance,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20291,TKN_11431,BR_003,2026-09-22 13:31:22,Passbook / Statement Printing,2,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20292,TKN_11432,BR_003,2026-09-22 12:12:22,Cash Deposit/Withdrawal,4,Very fast service today at counter C_2! Staff was very helpful.
+FB_20293,TKN_11434,BR_003,2026-09-22 14:51:30,Cash Deposit/Withdrawal,2,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20294,TKN_11441,BR_004,2026-09-22 11:39:52,Card Services & Pin Reset,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20295,TKN_11444,BR_004,2026-09-22 10:54:35,Passbook / Statement Printing,3,Heavy crowd at Green Valley Residential. Needs better queue management and extra counters.
+FB_20296,TKN_11445,BR_004,2026-09-22 12:21:52,Cash Deposit/Withdrawal,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20297,TKN_11447,BR_004,2026-09-22 13:28:52,Account Services & KYC,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20298,TKN_11449,BR_004,2026-09-22 12:47:06,Passbook / Statement Printing,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20299,TKN_11450,BR_004,2026-09-22 12:04:08,Loan & Mortgage Advisory,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20300,TKN_11463,BR_004,2026-09-22 12:09:47,Card Services & Pin Reset,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20301,TKN_11465,BR_004,2026-09-22 14:25:28,Loan & Mortgage Advisory,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20302,TKN_11471,BR_004,2026-09-22 15:21:21,Account Services & KYC,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20303,TKN_11472,BR_004,2026-09-22 13:13:51,Loan & Mortgage Advisory,5,Excellent support by Sarah Jenkins (BR_004-7). Solved my account issue quickly.
+FB_20304,TKN_11483,BR_004,2026-09-22 15:52:31,Account Services & KYC,5,Very fast service today at counter C_1! Staff was very helpful.
+FB_20305,TKN_11487,BR_004,2026-09-22 10:47:42,Cash Deposit/Withdrawal,4,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20306,TKN_11496,BR_005,2026-09-22 11:11:17,Card Services & Pin Reset,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20307,TKN_11504,BR_005,2026-09-22 14:05:26,Account Services & KYC,4,Excellent support by Aisha Khan (BR_005-6). Solved my account issue quickly.
+FB_20308,TKN_11511,BR_005,2026-09-22 16:19:11,Wealth & Investment Planning,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20309,TKN_11518,BR_005,2026-09-22 09:57:23,Account Services & KYC,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20310,TKN_11528,BR_005,2026-09-22 15:09:56,Cash Deposit/Withdrawal,4,Very fast service today at counter C_3! Staff was very helpful.
+FB_20311,TKN_11530,BR_005,2026-09-22 11:52:24,Cash Deposit/Withdrawal,3,Heavy crowd at Airport Transit Branch. Needs better queue management and extra counters.
+FB_20312,TKN_11532,BR_005,2026-09-22 11:38:26,Cash Deposit/Withdrawal,2,"Branch visit was just to verify KYC documents, hope they enable video KYC soon."
+FB_20313,TKN_11534,BR_005,2026-09-22 14:18:23,Account Services & KYC,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20314,TKN_11536,BR_001,2026-09-23 11:24:43,Forex & Trade Finance,5,"Smooth experience with Forex & Trade Finance, barely waited 5 minutes."
+FB_20315,TKN_11537,BR_001,2026-09-23 15:35:00,Account Services & KYC,5,"Smooth experience with Account Services & KYC, barely waited 5 minutes."
+FB_20316,TKN_11538,BR_001,2026-09-23 15:30:45,Cash Deposit/Withdrawal,2,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20317,TKN_11541,BR_001,2026-09-23 12:33:59,Passbook / Statement Printing,3,"Branch visit was just to verify KYC documents, hope they enable video KYC soon."
+FB_20318,TKN_11549,BR_001,2026-09-23 11:28:13,Account Services & KYC,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20319,TKN_11551,BR_001,2026-09-23 16:09:00,Account Services & KYC,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20320,TKN_11552,BR_001,2026-09-23 16:23:30,Loan & Mortgage Advisory,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20321,TKN_11554,BR_001,2026-09-23 12:27:33,Cash Deposit/Withdrawal,5,Very fast service today at counter C_10! Staff was very helpful.
+FB_20322,TKN_11555,BR_001,2026-09-23 10:59:03,Cash Deposit/Withdrawal,5,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20323,TKN_11556,BR_001,2026-09-23 09:33:37,Account Services & KYC,4,Excellent support by Marcus Vance (BR_001-6). Solved my account issue quickly.
+FB_20324,TKN_11564,BR_001,2026-09-23 14:00:38,Loan & Mortgage Advisory,4,Very fast service today at counter C_6! Staff was very helpful.
+FB_20325,TKN_11567,BR_001,2026-09-23 14:31:57,Card Services & Pin Reset,4,"Smooth experience with Card Services & Pin Reset, barely waited 5 minutes."
+FB_20326,TKN_11568,BR_001,2026-09-23 12:27:42,Wealth & Investment Planning,4,Excellent support by Marcus Vance (BR_001-7). Solved my account issue quickly.
+FB_20327,TKN_11595,BR_001,2026-09-23 16:01:00,Passbook / Statement Printing,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20328,TKN_11604,BR_002,2026-09-23 13:32:24,Cash Deposit/Withdrawal,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20329,TKN_11607,BR_002,2026-09-23 12:01:56,Account Services & KYC,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20330,TKN_11618,BR_002,2026-09-23 11:12:47,Account Services & KYC,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20331,TKN_11623,BR_002,2026-09-23 16:45:46,Passbook / Statement Printing,5,"Smooth experience with Passbook / Statement Printing, barely waited 5 minutes."
+FB_20332,TKN_11626,BR_002,2026-09-23 11:10:45,Cash Deposit/Withdrawal,4,Very fast service today at counter C_2! Staff was very helpful.
+FB_20333,TKN_11628,BR_002,2026-09-23 15:42:55,Account Services & KYC,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20334,TKN_11633,BR_002,2026-09-23 12:41:44,Account Services & KYC,4,"Smooth experience with Account Services & KYC, barely waited 5 minutes."
+FB_20335,TKN_11635,BR_002,2026-09-23 14:09:06,Cash Deposit/Withdrawal,4,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20336,TKN_11647,BR_002,2026-09-23 12:20:04,Cash Deposit/Withdrawal,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20337,TKN_11649,BR_002,2026-09-23 10:59:00,Cash Deposit/Withdrawal,5,Excellent support by James O'Connor (BR_002-5). Solved my account issue quickly.
+FB_20338,TKN_11656,BR_002,2026-09-23 11:05:33,Account Services & KYC,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20339,TKN_11657,BR_002,2026-09-23 11:13:53,Account Services & KYC,3,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20340,TKN_11659,BR_002,2026-09-23 15:30:13,Account Services & KYC,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20341,TKN_11663,BR_002,2026-09-23 14:47:30,Account Services & KYC,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20342,TKN_11668,BR_002,2026-09-23 11:17:43,Account Services & KYC,5,"Smooth experience with Account Services & KYC, barely waited 5 minutes."
+FB_20343,TKN_11674,BR_002,2026-09-23 12:20:44,Cash Deposit/Withdrawal,3,Heavy crowd at Suburban Tech Park. Needs better queue management and extra counters.
+FB_20344,TKN_11677,BR_003,2026-09-23 10:47:06,Cash Deposit/Withdrawal,5,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20345,TKN_11685,BR_003,2026-09-23 12:25:13,Loan & Mortgage Advisory,3,Heavy crowd at Old Town Commercial. Needs better queue management and extra counters.
+FB_20346,TKN_11688,BR_003,2026-09-23 13:51:38,Cash Deposit/Withdrawal,4,Very fast service today at counter C_6! Staff was very helpful.
+FB_20347,TKN_11693,BR_003,2026-09-23 13:08:35,Account Services & KYC,4,Excellent support by Priya Sharma (BR_003-3). Solved my account issue quickly.
+FB_20348,TKN_11696,BR_003,2026-09-23 10:27:51,Forex & Trade Finance,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20349,TKN_11699,BR_003,2026-09-23 14:40:20,Cash Deposit/Withdrawal,3,Waited in line just to deposit a small cheque. Self-service machine was empty!
+FB_20350,TKN_11700,BR_003,2026-09-23 14:46:45,Account Services & KYC,4,Very fast service today at counter C_2! Staff was very helpful.
+FB_20351,TKN_11704,BR_003,2026-09-23 13:11:36,Account Services & KYC,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20352,TKN_11707,BR_003,2026-09-23 14:06:14,Cash Deposit/Withdrawal,2,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20353,TKN_11714,BR_003,2026-09-23 15:31:15,Loan & Mortgage Advisory,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20354,TKN_11718,BR_003,2026-09-23 12:19:59,Cash Deposit/Withdrawal,3,Heavy crowd at Old Town Commercial. Needs better queue management and extra counters.
+FB_20355,TKN_11720,BR_003,2026-09-23 14:24:40,Forex & Trade Finance,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20356,TKN_11727,BR_003,2026-09-23 11:42:11,Forex & Trade Finance,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20357,TKN_11729,BR_003,2026-09-23 12:13:24,Forex & Trade Finance,4,Very fast service today at counter C_5! Staff was very helpful.
+FB_20358,TKN_11730,BR_003,2026-09-23 12:05:51,Cash Deposit/Withdrawal,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20359,TKN_11736,BR_003,2026-09-23 15:38:40,Loan & Mortgage Advisory,5,Excellent support by James O'Connor (BR_003-1). Solved my account issue quickly.
+FB_20360,TKN_11742,BR_003,2026-09-23 10:46:51,Forex & Trade Finance,5,Very fast service today at counter C_2! Staff was very helpful.
+FB_20361,TKN_11747,BR_003,2026-09-23 15:06:08,Account Services & KYC,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20362,TKN_11753,BR_004,2026-09-23 11:19:23,Account Services & KYC,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20363,TKN_11755,BR_004,2026-09-23 15:52:53,Account Services & KYC,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20364,TKN_11762,BR_004,2026-09-23 09:18:59,Passbook / Statement Printing,5,"Smooth experience with Passbook / Statement Printing, barely waited 5 minutes."
+FB_20365,TKN_11764,BR_004,2026-09-23 16:49:14,Loan & Mortgage Advisory,4,"Smooth experience with Loan & Mortgage Advisory, barely waited 5 minutes."
+FB_20366,TKN_11765,BR_004,2026-09-23 13:16:19,Cash Deposit/Withdrawal,5,Very fast service today at counter C_4! Staff was very helpful.
+FB_20367,TKN_11774,BR_004,2026-09-23 11:52:18,Account Services & KYC,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20368,TKN_11775,BR_004,2026-09-23 09:50:02,Cash Deposit/Withdrawal,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20369,TKN_11782,BR_004,2026-09-23 14:57:48,Cash Deposit/Withdrawal,2,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20370,TKN_11783,BR_004,2026-09-23 15:11:15,Account Services & KYC,3,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20371,TKN_11785,BR_004,2026-09-23 15:43:40,Cash Deposit/Withdrawal,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20372,TKN_11786,BR_004,2026-09-23 15:12:39,Account Services & KYC,3,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20373,TKN_11788,BR_004,2026-09-23 14:23:55,Passbook / Statement Printing,2,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20374,TKN_11793,BR_004,2026-09-23 15:16:33,Card Services & Pin Reset,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20375,TKN_11794,BR_004,2026-09-23 12:37:47,Account Services & KYC,3,Waited in line just to deposit a small cheque. Self-service machine was empty!
+FB_20376,TKN_11803,BR_004,2026-09-23 12:59:00,Cash Deposit/Withdrawal,4,Very fast service today at counter C_3! Staff was very helpful.
+FB_20377,TKN_11811,BR_004,2026-09-23 13:40:07,Cash Deposit/Withdrawal,3,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20378,TKN_11820,BR_005,2026-09-23 15:12:45,Loan & Mortgage Advisory,5,Excellent support by David Miller (BR_005-2). Solved my account issue quickly.
+FB_20379,TKN_11828,BR_005,2026-09-23 13:39:33,Account Services & KYC,3,Heavy crowd at Airport Transit Branch. Needs better queue management and extra counters.
+FB_20380,TKN_11833,BR_005,2026-09-23 11:53:35,Account Services & KYC,3,Heavy crowd at Airport Transit Branch. Needs better queue management and extra counters.
+FB_20381,TKN_11834,BR_005,2026-09-23 13:26:47,Cash Deposit/Withdrawal,4,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20382,TKN_11849,BR_005,2026-09-23 13:38:56,Account Services & KYC,3,Heavy crowd at Airport Transit Branch. Needs better queue management and extra counters.
+FB_20383,TKN_11853,BR_005,2026-09-23 13:09:48,Cash Deposit/Withdrawal,3,Waited in line just to deposit a small cheque. Self-service machine was empty!
+FB_20384,TKN_11854,BR_005,2026-09-23 15:30:46,Forex & Trade Finance,3,Heavy crowd at Airport Transit Branch. Needs better queue management and extra counters.
+FB_20385,TKN_11856,BR_005,2026-09-23 12:06:13,Card Services & Pin Reset,4,"Smooth experience with Card Services & Pin Reset, barely waited 5 minutes."
+FB_20386,TKN_11866,BR_005,2026-09-23 12:17:05,Cash Deposit/Withdrawal,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20387,TKN_11872,BR_005,2026-09-23 12:37:18,Account Services & KYC,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20388,TKN_11883,BR_001,2026-09-24 15:00:22,Loan & Mortgage Advisory,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20389,TKN_11891,BR_001,2026-09-24 15:55:12,Forex & Trade Finance,5,Excellent support by Carlos Gomez (BR_001-12). Solved my account issue quickly.
+FB_20390,TKN_11896,BR_001,2026-09-24 15:59:58,Passbook / Statement Printing,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20391,TKN_11901,BR_001,2026-09-24 12:05:54,Loan & Mortgage Advisory,2,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20392,TKN_11902,BR_001,2026-09-24 17:11:59,Passbook / Statement Printing,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20393,TKN_11912,BR_001,2026-09-24 13:03:43,Loan & Mortgage Advisory,4,"Smooth experience with Loan & Mortgage Advisory, barely waited 5 minutes."
+FB_20394,TKN_11915,BR_001,2026-09-24 10:38:41,Cash Deposit/Withdrawal,2,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20395,TKN_11916,BR_001,2026-09-24 14:28:59,Loan & Mortgage Advisory,4,Very fast service today at counter C_6! Staff was very helpful.
+FB_20396,TKN_11922,BR_001,2026-09-24 10:44:07,Account Services & KYC,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20397,TKN_11929,BR_001,2026-09-24 15:14:12,Wealth & Investment Planning,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20398,TKN_11930,BR_001,2026-09-24 11:24:23,Passbook / Statement Printing,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20399,TKN_11932,BR_001,2026-09-24 10:36:11,Passbook / Statement Printing,5,Very fast service today at counter C_1! Staff was very helpful.
+FB_20400,TKN_11939,BR_001,2026-09-24 14:35:03,Account Services & KYC,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20401,TKN_11948,BR_001,2026-09-24 13:06:52,Card Services & Pin Reset,5,Excellent support by James O'Connor (BR_001-5). Solved my account issue quickly.
+FB_20402,TKN_11949,BR_001,2026-09-24 13:44:15,Cash Deposit/Withdrawal,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20403,TKN_11956,BR_001,2026-09-24 12:49:04,Account Services & KYC,4,Excellent support by Aisha Khan (BR_001-1). Solved my account issue quickly.
+FB_20404,TKN_11960,BR_001,2026-09-24 10:21:27,Loan & Mortgage Advisory,5,Very fast service today at counter C_6! Staff was very helpful.
+FB_20405,TKN_11964,BR_002,2026-09-24 15:04:49,Account Services & KYC,1,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20406,TKN_11976,BR_002,2026-09-24 13:00:37,Wealth & Investment Planning,4,Very fast service today at counter C_1! Staff was very helpful.
+FB_20407,TKN_11978,BR_002,2026-09-24 12:47:04,Account Services & KYC,4,"Smooth experience with Account Services & KYC, barely waited 5 minutes."
+FB_20408,TKN_11980,BR_002,2026-09-24 12:55:56,Passbook / Statement Printing,5,"Smooth experience with Passbook / Statement Printing, barely waited 5 minutes."
+FB_20409,TKN_11986,BR_002,2026-09-24 13:07:57,Card Services & Pin Reset,4,Excellent support by Robert Chen (BR_002-7). Solved my account issue quickly.
+FB_20410,TKN_11991,BR_002,2026-09-24 12:37:07,Cash Deposit/Withdrawal,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20411,TKN_11994,BR_002,2026-09-24 12:36:49,Cash Deposit/Withdrawal,3,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20412,TKN_11997,BR_002,2026-09-24 13:17:20,Account Services & KYC,4,"Smooth experience with Account Services & KYC, barely waited 5 minutes."
+FB_20413,TKN_12032,BR_002,2026-09-24 13:00:46,Card Services & Pin Reset,3,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20414,TKN_12034,BR_002,2026-09-24 13:42:46,Account Services & KYC,2,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20415,TKN_12042,BR_003,2026-09-24 11:40:17,Cash Deposit/Withdrawal,2,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20416,TKN_12043,BR_003,2026-09-24 12:12:48,Account Services & KYC,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20417,TKN_12050,BR_003,2026-09-24 14:53:06,Forex & Trade Finance,4,"Smooth experience with Forex & Trade Finance, barely waited 5 minutes."
+FB_20418,TKN_12081,BR_003,2026-09-24 14:03:49,Account Services & KYC,4,"Smooth experience with Account Services & KYC, barely waited 5 minutes."
+FB_20419,TKN_12085,BR_003,2026-09-24 16:49:52,Account Services & KYC,5,"Smooth experience with Account Services & KYC, barely waited 5 minutes."
+FB_20420,TKN_12088,BR_003,2026-09-24 11:40:03,Cash Deposit/Withdrawal,5,Very fast service today at counter C_1! Staff was very helpful.
+FB_20421,TKN_12096,BR_003,2026-09-24 15:55:52,Loan & Mortgage Advisory,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20422,TKN_12098,BR_003,2026-09-24 11:42:02,Account Services & KYC,5,Excellent support by Priya Sharma (BR_003-3). Solved my account issue quickly.
+FB_20423,TKN_12099,BR_003,2026-09-24 11:11:03,Cash Deposit/Withdrawal,3,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20424,TKN_12103,BR_003,2026-09-24 09:33:33,Account Services & KYC,5,"Smooth experience with Account Services & KYC, barely waited 5 minutes."
+FB_20425,TKN_12118,BR_004,2026-09-24 14:34:44,Account Services & KYC,4,"Smooth experience with Account Services & KYC, barely waited 5 minutes."
+FB_20426,TKN_12124,BR_004,2026-09-24 11:11:40,Loan & Mortgage Advisory,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20427,TKN_12132,BR_004,2026-09-24 13:25:57,Cash Deposit/Withdrawal,2,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20428,TKN_12136,BR_004,2026-09-24 10:33:19,Cash Deposit/Withdrawal,2,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20429,TKN_12146,BR_004,2026-09-24 15:22:46,Cash Deposit/Withdrawal,5,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20430,TKN_12153,BR_004,2026-09-24 13:16:06,Cash Deposit/Withdrawal,3,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20431,TKN_12165,BR_005,2026-09-24 11:10:12,Loan & Mortgage Advisory,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20432,TKN_12168,BR_005,2026-09-24 12:45:14,Account Services & KYC,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20433,TKN_12172,BR_005,2026-09-24 12:29:44,Cash Deposit/Withdrawal,2,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20434,TKN_12180,BR_005,2026-09-24 12:34:34,Cash Deposit/Withdrawal,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20435,TKN_12186,BR_005,2026-09-24 14:54:44,Wealth & Investment Planning,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20436,TKN_12190,BR_005,2026-09-24 14:24:41,Cash Deposit/Withdrawal,3,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20437,TKN_12192,BR_005,2026-09-24 16:54:36,Cash Deposit/Withdrawal,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20438,TKN_12198,BR_005,2026-09-24 13:06:36,Card Services & Pin Reset,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20439,TKN_12200,BR_005,2026-09-24 12:29:12,Cash Deposit/Withdrawal,3,Heavy crowd at Airport Transit Branch. Needs better queue management and extra counters.
+FB_20440,TKN_12206,BR_005,2026-09-24 13:43:14,Cash Deposit/Withdrawal,5,Very fast service today at counter C_7! Staff was very helpful.
+FB_20441,TKN_12214,BR_005,2026-09-24 12:20:45,Forex & Trade Finance,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20442,TKN_12216,BR_005,2026-09-24 12:20:04,Cash Deposit/Withdrawal,3,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20443,TKN_12217,BR_005,2026-09-24 14:43:31,Cash Deposit/Withdrawal,5,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20444,TKN_12219,BR_005,2026-09-24 13:39:52,Loan & Mortgage Advisory,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20445,TKN_12223,BR_005,2026-09-24 15:21:20,Account Services & KYC,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20446,TKN_12226,BR_001,2026-09-25 14:47:35,Cash Deposit/Withdrawal,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20447,TKN_12229,BR_001,2026-09-25 11:52:43,Card Services & Pin Reset,4,Very fast service today at counter C_9! Staff was very helpful.
+FB_20448,TKN_12233,BR_001,2026-09-25 11:06:37,Cash Deposit/Withdrawal,5,Excellent support by Sarah Jenkins (BR_001-3). Solved my account issue quickly.
+FB_20449,TKN_12234,BR_001,2026-09-25 13:48:48,Wealth & Investment Planning,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20450,TKN_12247,BR_001,2026-09-25 14:43:50,Card Services & Pin Reset,4,"Smooth experience with Card Services & Pin Reset, barely waited 5 minutes."
+FB_20451,TKN_12256,BR_001,2026-09-25 13:26:23,Wealth & Investment Planning,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20452,TKN_12262,BR_001,2026-09-25 12:48:51,Account Services & KYC,5,"Smooth experience with Account Services & KYC, barely waited 5 minutes."
+FB_20453,TKN_12275,BR_001,2026-09-25 13:15:28,Cash Deposit/Withdrawal,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20454,TKN_12277,BR_001,2026-09-25 11:02:29,Card Services & Pin Reset,4,Very fast service today at counter C_5! Staff was very helpful.
+FB_20455,TKN_12284,BR_001,2026-09-25 13:40:08,Loan & Mortgage Advisory,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20456,TKN_12286,BR_001,2026-09-25 13:27:12,Account Services & KYC,2,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20457,TKN_12287,BR_001,2026-09-25 12:26:57,Account Services & KYC,4,"Smooth experience with Account Services & KYC, barely waited 5 minutes."
+FB_20458,TKN_12299,BR_001,2026-09-25 16:40:39,Loan & Mortgage Advisory,5,Very fast service today at counter C_5! Staff was very helpful.
+FB_20459,TKN_12301,BR_001,2026-09-25 17:11:59,Account Services & KYC,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20460,TKN_12314,BR_002,2026-09-25 12:35:23,Cash Deposit/Withdrawal,3,"Branch visit was just to verify KYC documents, hope they enable video KYC soon."
+FB_20461,TKN_12318,BR_002,2026-09-25 12:00:13,Cash Deposit/Withdrawal,4,Excellent support by Michael Chang (BR_002-9). Solved my account issue quickly.
+FB_20462,TKN_12323,BR_002,2026-09-25 15:43:10,Passbook / Statement Printing,4,Very fast service today at counter C_4! Staff was very helpful.
+FB_20463,TKN_12337,BR_002,2026-09-25 12:23:30,Passbook / Statement Printing,2,Heavy crowd at Suburban Tech Park. Needs better queue management and extra counters.
+FB_20464,TKN_12340,BR_002,2026-09-25 14:45:47,Cash Deposit/Withdrawal,4,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20465,TKN_12344,BR_002,2026-09-25 12:48:27,Cash Deposit/Withdrawal,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20466,TKN_12348,BR_002,2026-09-25 12:42:03,Wealth & Investment Planning,4,Excellent support by Aisha Khan (BR_002-3). Solved my account issue quickly.
+FB_20467,TKN_12349,BR_002,2026-09-25 11:45:07,Cash Deposit/Withdrawal,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20468,TKN_12352,BR_002,2026-09-25 12:53:38,Account Services & KYC,5,Very fast service today at counter C_3! Staff was very helpful.
+FB_20469,TKN_12361,BR_003,2026-09-25 10:23:47,Account Services & KYC,3,Heavy crowd at Old Town Commercial. Needs better queue management and extra counters.
+FB_20470,TKN_12362,BR_003,2026-09-25 12:21:56,Loan & Mortgage Advisory,5,"Smooth experience with Loan & Mortgage Advisory, barely waited 5 minutes."
+FB_20471,TKN_12366,BR_003,2026-09-25 12:57:44,Passbook / Statement Printing,3,Waited in line just to deposit a small cheque. Self-service machine was empty!
+FB_20472,TKN_12372,BR_003,2026-09-25 15:08:47,Loan & Mortgage Advisory,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20473,TKN_12375,BR_003,2026-09-25 12:14:00,Cash Deposit/Withdrawal,3,Heavy crowd at Old Town Commercial. Needs better queue management and extra counters.
+FB_20474,TKN_12376,BR_003,2026-09-25 13:09:07,Passbook / Statement Printing,2,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20475,TKN_12379,BR_003,2026-09-25 12:57:38,Loan & Mortgage Advisory,4,"Smooth experience with Loan & Mortgage Advisory, barely waited 5 minutes."
+FB_20476,TKN_12380,BR_003,2026-09-25 09:50:26,Cash Deposit/Withdrawal,4,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20477,TKN_12397,BR_003,2026-09-25 10:52:00,Account Services & KYC,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20478,TKN_12399,BR_003,2026-09-25 11:11:24,Wealth & Investment Planning,5,Very fast service today at counter C_2! Staff was very helpful.
+FB_20479,TKN_12400,BR_003,2026-09-25 10:53:48,Loan & Mortgage Advisory,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20480,TKN_12406,BR_003,2026-09-25 13:37:18,Wealth & Investment Planning,5,Excellent support by James O'Connor (BR_003-8). Solved my account issue quickly.
+FB_20481,TKN_12407,BR_003,2026-09-25 11:17:16,Passbook / Statement Printing,2,Heavy crowd at Old Town Commercial. Needs better queue management and extra counters.
+FB_20482,TKN_12408,BR_003,2026-09-25 14:08:38,Loan & Mortgage Advisory,3,Heavy crowd at Old Town Commercial. Needs better queue management and extra counters.
+FB_20483,TKN_12414,BR_003,2026-09-25 12:10:31,Cash Deposit/Withdrawal,5,Very fast service today at counter C_2! Staff was very helpful.
+FB_20484,TKN_12417,BR_003,2026-09-25 09:39:20,Card Services & Pin Reset,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20485,TKN_12420,BR_003,2026-09-25 14:42:34,Cash Deposit/Withdrawal,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20486,TKN_12424,BR_003,2026-09-25 11:22:33,Loan & Mortgage Advisory,5,Excellent support by Priya Sharma (BR_003-6). Solved my account issue quickly.
+FB_20487,TKN_12434,BR_003,2026-09-25 14:38:06,Cash Deposit/Withdrawal,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20488,TKN_12441,BR_004,2026-09-25 10:20:32,Forex & Trade Finance,5,Very fast service today at counter C_5! Staff was very helpful.
+FB_20489,TKN_12444,BR_004,2026-09-25 15:18:12,Passbook / Statement Printing,1,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20490,TKN_12453,BR_004,2026-09-25 12:15:30,Cash Deposit/Withdrawal,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20491,TKN_12454,BR_004,2026-09-25 14:49:10,Account Services & KYC,3,Heavy crowd at Green Valley Residential. Needs better queue management and extra counters.
+FB_20492,TKN_12460,BR_004,2026-09-25 13:23:23,Card Services & Pin Reset,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20493,TKN_12461,BR_004,2026-09-25 12:49:45,Cash Deposit/Withdrawal,1,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20494,TKN_12464,BR_004,2026-09-25 09:59:56,Loan & Mortgage Advisory,5,Very fast service today at counter C_5! Staff was very helpful.
+FB_20495,TKN_12465,BR_004,2026-09-25 16:00:49,Passbook / Statement Printing,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20496,TKN_12480,BR_004,2026-09-25 11:39:35,Passbook / Statement Printing,5,"Smooth experience with Passbook / Statement Printing, barely waited 5 minutes."
+FB_20497,TKN_12482,BR_004,2026-09-25 12:18:28,Loan & Mortgage Advisory,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20498,TKN_12484,BR_004,2026-09-25 16:07:28,Cash Deposit/Withdrawal,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20499,TKN_12485,BR_004,2026-09-25 11:41:02,Cash Deposit/Withdrawal,3,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20500,TKN_12490,BR_004,2026-09-25 15:29:40,Loan & Mortgage Advisory,3,Heavy crowd at Green Valley Residential. Needs better queue management and extra counters.
+FB_20501,TKN_12491,BR_004,2026-09-25 14:55:59,Account Services & KYC,4,Excellent support by Aisha Khan (BR_004-4). Solved my account issue quickly.
+FB_20502,TKN_12492,BR_004,2026-09-25 14:11:24,Cash Deposit/Withdrawal,5,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20503,TKN_12498,BR_004,2026-09-25 12:25:54,Cash Deposit/Withdrawal,4,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20504,TKN_12502,BR_005,2026-09-25 12:42:52,Loan & Mortgage Advisory,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20505,TKN_12503,BR_005,2026-09-25 14:18:09,Account Services & KYC,3,Waited in line just to deposit a small cheque. Self-service machine was empty!
+FB_20506,TKN_12507,BR_005,2026-09-25 11:01:35,Account Services & KYC,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20507,TKN_12525,BR_005,2026-09-25 10:25:49,Card Services & Pin Reset,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20508,TKN_12528,BR_005,2026-09-25 12:53:33,Account Services & KYC,2,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20509,TKN_12531,BR_005,2026-09-25 15:36:26,Loan & Mortgage Advisory,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20510,TKN_12539,BR_005,2026-09-25 15:44:57,Account Services & KYC,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20511,TKN_12540,BR_005,2026-09-25 13:02:22,Cash Deposit/Withdrawal,2,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20512,TKN_12543,BR_005,2026-09-25 12:44:13,Wealth & Investment Planning,4,"Smooth experience with Wealth & Investment Planning, barely waited 5 minutes."
+FB_20513,TKN_12544,BR_005,2026-09-25 12:24:11,Card Services & Pin Reset,2,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20514,TKN_12547,BR_005,2026-09-25 10:55:01,Card Services & Pin Reset,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20515,TKN_12548,BR_005,2026-09-25 13:24:59,Cash Deposit/Withdrawal,1,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20516,TKN_12552,BR_005,2026-09-25 10:28:10,Card Services & Pin Reset,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20517,TKN_12553,BR_005,2026-09-25 11:37:05,Cash Deposit/Withdrawal,4,Excellent support by Priya Sharma (BR_005-8). Solved my account issue quickly.
+FB_20518,TKN_12563,BR_005,2026-09-25 12:53:47,Card Services & Pin Reset,2,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20519,TKN_12564,BR_005,2026-09-25 13:03:08,Cash Deposit/Withdrawal,4,Excellent support by David Miller (BR_005-2). Solved my account issue quickly.
+FB_20520,TKN_12569,BR_005,2026-09-25 12:16:26,Forex & Trade Finance,3,Heavy crowd at Airport Transit Branch. Needs better queue management and extra counters.
+FB_20521,TKN_12578,BR_001,2026-09-28 14:25:43,Forex & Trade Finance,4,Very fast service today at counter C_8! Staff was very helpful.
+FB_20522,TKN_12579,BR_001,2026-09-28 13:09:05,Cash Deposit/Withdrawal,2,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20523,TKN_12593,BR_001,2026-09-28 12:41:49,Account Services & KYC,3,Waited in line just to deposit a small cheque. Self-service machine was empty!
+FB_20524,TKN_12599,BR_001,2026-09-28 14:02:51,Passbook / Statement Printing,2,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20525,TKN_12603,BR_001,2026-09-28 13:40:08,Passbook / Statement Printing,2,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20526,TKN_12607,BR_001,2026-09-28 12:58:17,Account Services & KYC,2,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20527,TKN_12608,BR_001,2026-09-28 11:44:04,Cash Deposit/Withdrawal,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20528,TKN_12616,BR_001,2026-09-28 13:19:20,Cash Deposit/Withdrawal,2,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20529,TKN_12624,BR_001,2026-09-28 12:45:43,Passbook / Statement Printing,3,Waited in line just to deposit a small cheque. Self-service machine was empty!
+FB_20530,TKN_12633,BR_001,2026-09-28 15:23:47,Passbook / Statement Printing,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20531,TKN_12635,BR_001,2026-09-28 13:09:42,Cash Deposit/Withdrawal,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20532,TKN_12647,BR_001,2026-09-28 12:08:30,Cash Deposit/Withdrawal,2,Waited in line just to deposit a small cheque. Self-service machine was empty!
+FB_20533,TKN_12649,BR_001,2026-09-28 10:00:42,Cash Deposit/Withdrawal,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20534,TKN_12659,BR_001,2026-09-28 14:22:28,Cash Deposit/Withdrawal,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20535,TKN_12668,BR_001,2026-09-28 13:06:26,Passbook / Statement Printing,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20536,TKN_12674,BR_002,2026-09-28 13:12:31,Wealth & Investment Planning,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20537,TKN_12679,BR_002,2026-09-28 14:40:53,Passbook / Statement Printing,5,Very fast service today at counter C_1! Staff was very helpful.
+FB_20538,TKN_12682,BR_002,2026-09-28 10:53:31,Account Services & KYC,4,Excellent support by Anita Desai (BR_002-8). Solved my account issue quickly.
+FB_20539,TKN_12690,BR_002,2026-09-28 10:10:19,Account Services & KYC,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20540,TKN_12693,BR_002,2026-09-28 09:43:54,Cash Deposit/Withdrawal,1,Heavy crowd at Suburban Tech Park. Needs better queue management and extra counters.
+FB_20541,TKN_12697,BR_002,2026-09-28 12:55:03,Wealth & Investment Planning,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20542,TKN_12712,BR_002,2026-09-28 10:18:07,Passbook / Statement Printing,4,"Smooth experience with Passbook / Statement Printing, barely waited 5 minutes."
+FB_20543,TKN_12713,BR_002,2026-09-28 10:35:49,Account Services & KYC,5,Excellent support by Anita Desai (BR_002-8). Solved my account issue quickly.
+FB_20544,TKN_12722,BR_002,2026-09-28 11:42:10,Passbook / Statement Printing,5,Excellent support by James O'Connor (BR_002-5). Solved my account issue quickly.
+FB_20545,TKN_12735,BR_002,2026-09-28 11:11:27,Account Services & KYC,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20546,TKN_12737,BR_002,2026-09-28 11:10:38,Forex & Trade Finance,4,Excellent support by Aisha Khan (BR_002-1). Solved my account issue quickly.
+FB_20547,TKN_12738,BR_002,2026-09-28 13:25:35,Cash Deposit/Withdrawal,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20548,TKN_12740,BR_002,2026-09-28 12:26:19,Wealth & Investment Planning,4,Excellent support by Robert Chen (BR_002-7). Solved my account issue quickly.
+FB_20549,TKN_12755,BR_003,2026-09-28 12:47:13,Forex & Trade Finance,2,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20550,TKN_12758,BR_003,2026-09-28 11:59:15,Cash Deposit/Withdrawal,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20551,TKN_12765,BR_003,2026-09-28 16:26:55,Account Services & KYC,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20552,TKN_12766,BR_003,2026-09-28 12:53:07,Cash Deposit/Withdrawal,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20553,TKN_12767,BR_003,2026-09-28 14:24:20,Loan & Mortgage Advisory,5,"Smooth experience with Loan & Mortgage Advisory, barely waited 5 minutes."
+FB_20554,TKN_12770,BR_003,2026-09-28 15:09:41,Cash Deposit/Withdrawal,3,Heavy crowd at Old Town Commercial. Needs better queue management and extra counters.
+FB_20555,TKN_12771,BR_003,2026-09-28 12:41:58,Account Services & KYC,2,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20556,TKN_12792,BR_003,2026-09-28 15:18:23,Loan & Mortgage Advisory,4,Excellent support by Priya Sharma (BR_003-6). Solved my account issue quickly.
+FB_20557,TKN_12793,BR_003,2026-09-28 16:17:57,Account Services & KYC,4,Very fast service today at counter C_3! Staff was very helpful.
+FB_20558,TKN_12796,BR_003,2026-09-28 14:38:49,Loan & Mortgage Advisory,2,Heavy crowd at Old Town Commercial. Needs better queue management and extra counters.
+FB_20559,TKN_12799,BR_003,2026-09-28 13:38:32,Loan & Mortgage Advisory,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20560,TKN_12805,BR_003,2026-09-28 12:39:43,Cash Deposit/Withdrawal,2,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20561,TKN_12813,BR_003,2026-09-28 13:32:37,Account Services & KYC,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20562,TKN_12817,BR_003,2026-09-28 11:19:17,Wealth & Investment Planning,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20563,TKN_12819,BR_003,2026-09-28 14:05:33,Account Services & KYC,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20564,TKN_12821,BR_003,2026-09-28 11:43:10,Card Services & Pin Reset,4,"Smooth experience with Card Services & Pin Reset, barely waited 5 minutes."
+FB_20565,TKN_12828,BR_003,2026-09-28 11:37:26,Cash Deposit/Withdrawal,3,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20566,TKN_12832,BR_004,2026-09-28 11:24:51,Account Services & KYC,3,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20567,TKN_12836,BR_004,2026-09-28 12:51:24,Cash Deposit/Withdrawal,2,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20568,TKN_12839,BR_004,2026-09-28 12:49:23,Cash Deposit/Withdrawal,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20569,TKN_12851,BR_004,2026-09-28 13:14:19,Passbook / Statement Printing,4,"Smooth experience with Passbook / Statement Printing, barely waited 5 minutes."
+FB_20570,TKN_12859,BR_004,2026-09-28 12:37:16,Card Services & Pin Reset,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20571,TKN_12868,BR_004,2026-09-28 12:35:06,Forex & Trade Finance,2,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20572,TKN_12874,BR_004,2026-09-28 10:27:12,Account Services & KYC,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20573,TKN_12876,BR_004,2026-09-28 15:00:07,Account Services & KYC,3,Waited in line just to deposit a small cheque. Self-service machine was empty!
+FB_20574,TKN_12877,BR_004,2026-09-28 16:33:28,Forex & Trade Finance,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20575,TKN_12880,BR_004,2026-09-28 14:50:26,Forex & Trade Finance,2,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20576,TKN_12883,BR_004,2026-09-28 14:02:09,Account Services & KYC,3,Waited in line just to deposit a small cheque. Self-service machine was empty!
+FB_20577,TKN_12884,BR_004,2026-09-28 14:01:39,Passbook / Statement Printing,2,Heavy crowd at Green Valley Residential. Needs better queue management and extra counters.
+FB_20578,TKN_12886,BR_004,2026-09-28 13:44:11,Cash Deposit/Withdrawal,2,Waited in line just to deposit a small cheque. Self-service machine was empty!
+FB_20579,TKN_12887,BR_004,2026-09-28 14:08:29,Forex & Trade Finance,4,Excellent support by Robert Chen (BR_004-3). Solved my account issue quickly.
+FB_20580,TKN_12892,BR_004,2026-09-28 10:05:05,Card Services & Pin Reset,4,"Smooth experience with Card Services & Pin Reset, barely waited 5 minutes."
+FB_20581,TKN_12901,BR_005,2026-09-28 15:53:03,Loan & Mortgage Advisory,2,Heavy crowd at Airport Transit Branch. Needs better queue management and extra counters.
+FB_20582,TKN_12904,BR_005,2026-09-28 13:05:21,Cash Deposit/Withdrawal,3,Heavy crowd at Airport Transit Branch. Needs better queue management and extra counters.
+FB_20583,TKN_12906,BR_005,2026-09-28 11:31:35,Passbook / Statement Printing,4,Excellent support by James O'Connor (BR_005-3). Solved my account issue quickly.
+FB_20584,TKN_12907,BR_005,2026-09-28 11:58:17,Cash Deposit/Withdrawal,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20585,TKN_12915,BR_005,2026-09-28 13:36:11,Card Services & Pin Reset,2,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20586,TKN_12919,BR_005,2026-09-28 15:44:35,Cash Deposit/Withdrawal,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20587,TKN_12922,BR_005,2026-09-28 12:13:11,Cash Deposit/Withdrawal,2,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20588,TKN_12923,BR_005,2026-09-28 14:41:16,Loan & Mortgage Advisory,2,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20589,TKN_12925,BR_005,2026-09-28 14:16:15,Account Services & KYC,2,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20590,TKN_12928,BR_005,2026-09-28 11:19:05,Cash Deposit/Withdrawal,5,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20591,TKN_12933,BR_005,2026-09-28 12:31:23,Passbook / Statement Printing,2,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20592,TKN_12951,BR_005,2026-09-28 14:37:11,Cash Deposit/Withdrawal,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20593,TKN_12961,BR_005,2026-09-28 09:26:47,Account Services & KYC,5,Very fast service today at counter C_1! Staff was very helpful.
+FB_20594,TKN_12967,BR_005,2026-09-28 13:03:35,Cash Deposit/Withdrawal,4,"Smooth experience with Cash Deposit/Withdrawal, barely waited 5 minutes."
+FB_20595,TKN_12969,BR_005,2026-09-28 10:13:36,Cash Deposit/Withdrawal,4,Very fast service today at counter C_1! Staff was very helpful.
+FB_20596,TKN_12972,BR_005,2026-09-28 13:06:01,Cash Deposit/Withdrawal,2,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20597,TKN_12974,BR_005,2026-09-28 15:25:27,Card Services & Pin Reset,1,Heavy crowd at Airport Transit Branch. Needs better queue management and extra counters.
+FB_20598,TKN_12981,BR_005,2026-09-28 11:13:50,Account Services & KYC,4,Very fast service today at counter C_3! Staff was very helpful.
+FB_20599,TKN_12982,BR_005,2026-09-28 12:11:09,Cash Deposit/Withdrawal,2,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20600,TKN_12984,BR_005,2026-09-28 11:10:16,Account Services & KYC,2,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20601,TKN_12995,BR_005,2026-09-28 11:35:51,Card Services & Pin Reset,3,"Branch visit was just to verify KYC documents, hope they enable video KYC soon."
+FB_20602,TKN_12997,BR_005,2026-09-28 11:22:13,Cash Deposit/Withdrawal,2,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20603,TKN_12999,BR_005,2026-09-28 13:54:04,Account Services & KYC,2,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20604,TKN_13006,BR_005,2026-09-28 12:48:38,Cash Deposit/Withdrawal,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20605,TKN_13011,BR_001,2026-09-29 13:23:03,Account Services & KYC,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20606,TKN_13017,BR_001,2026-09-29 12:13:45,Account Services & KYC,2,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20607,TKN_13020,BR_001,2026-09-29 12:53:24,Account Services & KYC,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20608,TKN_13026,BR_001,2026-09-29 12:25:14,Loan & Mortgage Advisory,2,Heavy crowd at Downtown Financial Hub. Needs better queue management and extra counters.
+FB_20609,TKN_13032,BR_001,2026-09-29 14:22:42,Forex & Trade Finance,4,Excellent support by James O'Connor (BR_001-5). Solved my account issue quickly.
+FB_20610,TKN_13036,BR_001,2026-09-29 10:06:46,Forex & Trade Finance,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20611,TKN_13037,BR_001,2026-09-29 15:21:43,Loan & Mortgage Advisory,5,Excellent support by Elena Rostova (BR_001-11). Solved my account issue quickly.
+FB_20612,TKN_13038,BR_001,2026-09-29 13:40:14,Passbook / Statement Printing,2,Heavy crowd at Downtown Financial Hub. Needs better queue management and extra counters.
+FB_20613,TKN_13040,BR_001,2026-09-29 11:23:01,Card Services & Pin Reset,5,Excellent support by Marcus Vance (BR_001-8). Solved my account issue quickly.
+FB_20614,TKN_13041,BR_001,2026-09-29 15:26:13,Account Services & KYC,3,Waited in line just to deposit a small cheque. Self-service machine was empty!
+FB_20615,TKN_13045,BR_001,2026-09-29 13:52:20,Forex & Trade Finance,4,"Smooth experience with Forex & Trade Finance, barely waited 5 minutes."
+FB_20616,TKN_13067,BR_001,2026-09-29 12:46:42,Account Services & KYC,2,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20617,TKN_13072,BR_002,2026-09-29 12:39:10,Cash Deposit/Withdrawal,3,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20618,TKN_13073,BR_002,2026-09-29 16:01:47,Wealth & Investment Planning,5,"Smooth experience with Wealth & Investment Planning, barely waited 5 minutes."
+FB_20619,TKN_13076,BR_002,2026-09-29 14:26:49,Account Services & KYC,2,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20620,TKN_13078,BR_002,2026-09-29 16:30:14,Card Services & Pin Reset,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20621,TKN_13085,BR_002,2026-09-29 15:42:03,Cash Deposit/Withdrawal,4,Excellent support by Robert Chen (BR_002-7). Solved my account issue quickly.
+FB_20622,TKN_13088,BR_002,2026-09-29 11:38:40,Passbook / Statement Printing,2,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20623,TKN_13096,BR_002,2026-09-29 11:10:30,Account Services & KYC,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20624,TKN_13097,BR_002,2026-09-29 10:42:45,Account Services & KYC,4,"Smooth experience with Account Services & KYC, barely waited 5 minutes."
+FB_20625,TKN_13098,BR_002,2026-09-29 12:53:06,Cash Deposit/Withdrawal,3,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20626,TKN_13108,BR_002,2026-09-29 11:47:10,Card Services & Pin Reset,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20627,TKN_13109,BR_002,2026-09-29 15:00:56,Loan & Mortgage Advisory,5,Very fast service today at counter C_1! Staff was very helpful.
+FB_20628,TKN_13117,BR_002,2026-09-29 15:23:44,Cash Deposit/Withdrawal,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20629,TKN_13118,BR_002,2026-09-29 13:01:03,Cash Deposit/Withdrawal,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20630,TKN_13121,BR_002,2026-09-29 14:57:58,Account Services & KYC,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20631,TKN_13132,BR_002,2026-09-29 11:58:01,Passbook / Statement Printing,3,Heavy crowd at Suburban Tech Park. Needs better queue management and extra counters.
+FB_20632,TKN_13135,BR_002,2026-09-29 14:34:17,Forex & Trade Finance,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20633,TKN_13140,BR_002,2026-09-29 13:33:30,Account Services & KYC,2,Heavy crowd at Suburban Tech Park. Needs better queue management and extra counters.
+FB_20634,TKN_13147,BR_002,2026-09-29 13:51:50,Card Services & Pin Reset,2,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20635,TKN_13148,BR_002,2026-09-29 12:25:28,Cash Deposit/Withdrawal,1,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20636,TKN_13153,BR_002,2026-09-29 10:22:59,Cash Deposit/Withdrawal,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20637,TKN_13162,BR_002,2026-09-29 14:19:58,Wealth & Investment Planning,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20638,TKN_13167,BR_002,2026-09-29 10:40:04,Account Services & KYC,5,Excellent support by Anita Desai (BR_002-8). Solved my account issue quickly.
+FB_20639,TKN_13174,BR_003,2026-09-29 12:24:38,Account Services & KYC,3,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20640,TKN_13175,BR_003,2026-09-29 15:42:52,Forex & Trade Finance,2,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20641,TKN_13194,BR_003,2026-09-29 14:07:10,Account Services & KYC,4,"Smooth experience with Account Services & KYC, barely waited 5 minutes."
+FB_20642,TKN_13201,BR_003,2026-09-29 11:06:13,Cash Deposit/Withdrawal,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20643,TKN_13203,BR_003,2026-09-29 13:46:50,Account Services & KYC,2,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20644,TKN_13204,BR_003,2026-09-29 14:29:33,Passbook / Statement Printing,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20645,TKN_13212,BR_003,2026-09-29 15:43:58,Card Services & Pin Reset,5,Excellent support by Aisha Khan (BR_003-5). Solved my account issue quickly.
+FB_20646,TKN_13217,BR_003,2026-09-29 11:11:58,Cash Deposit/Withdrawal,1,Waited 35 mins just for a statement print. Why no one guided me to the kiosk?
+FB_20647,TKN_13218,BR_003,2026-09-29 14:24:05,Passbook / Statement Printing,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20648,TKN_13237,BR_003,2026-09-29 12:46:33,Account Services & KYC,3,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20649,TKN_13240,BR_003,2026-09-29 11:59:45,Forex & Trade Finance,2,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20650,TKN_13250,BR_004,2026-09-29 13:33:13,Passbook / Statement Printing,5,"Smooth experience with Passbook / Statement Printing, barely waited 5 minutes."
+FB_20651,TKN_13252,BR_004,2026-09-29 14:21:55,Passbook / Statement Printing,2,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20652,TKN_13256,BR_004,2026-09-29 12:05:33,Card Services & Pin Reset,5,"Smooth experience with Card Services & Pin Reset, barely waited 5 minutes."
+FB_20653,TKN_13257,BR_004,2026-09-29 12:57:26,Card Services & Pin Reset,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20654,TKN_13260,BR_004,2026-09-29 10:42:18,Cash Deposit/Withdrawal,5,Excellent support by David Miller (BR_004-5). Solved my account issue quickly.
+FB_20655,TKN_13262,BR_004,2026-09-29 14:38:37,Loan & Mortgage Advisory,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20656,TKN_13265,BR_004,2026-09-29 12:52:44,Forex & Trade Finance,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20657,TKN_13276,BR_004,2026-09-29 14:14:03,Loan & Mortgage Advisory,5,Very fast service today at counter C_2! Staff was very helpful.
+FB_20658,TKN_13285,BR_004,2026-09-29 13:15:02,Cash Deposit/Withdrawal,5,Very fast service today at counter C_1! Staff was very helpful.
+FB_20659,TKN_13287,BR_004,2026-09-29 13:54:21,Passbook / Statement Printing,2,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20660,TKN_13295,BR_004,2026-09-29 10:56:47,Loan & Mortgage Advisory,5,Very fast service today at counter C_1! Staff was very helpful.
+FB_20661,TKN_13301,BR_004,2026-09-29 11:43:31,Account Services & KYC,2,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20662,TKN_13302,BR_004,2026-09-29 12:48:28,Cash Deposit/Withdrawal,3,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20663,TKN_13306,BR_004,2026-09-29 13:19:40,Loan & Mortgage Advisory,2,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20664,TKN_13310,BR_004,2026-09-29 10:26:50,Loan & Mortgage Advisory,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20665,TKN_13313,BR_004,2026-09-29 15:20:02,Passbook / Statement Printing,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20666,TKN_13316,BR_004,2026-09-29 14:01:41,Cash Deposit/Withdrawal,2,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20667,TKN_13322,BR_004,2026-09-29 16:53:22,Account Services & KYC,5,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20668,TKN_13334,BR_004,2026-09-29 13:19:17,Cash Deposit/Withdrawal,4,Excellent support by Fatima Al-Sayed (BR_004-6). Solved my account issue quickly.
+FB_20669,TKN_13339,BR_004,2026-09-29 11:58:26,Forex & Trade Finance,2,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20670,TKN_13341,BR_004,2026-09-29 13:40:07,Cash Deposit/Withdrawal,2,"I only came to update my mobile number and check balance, waited 25 mins."
+FB_20671,TKN_13344,BR_004,2026-09-29 13:29:37,Loan & Mortgage Advisory,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20672,TKN_13346,BR_005,2026-09-29 13:06:53,Card Services & Pin Reset,2,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20673,TKN_13350,BR_005,2026-09-29 15:54:01,Account Services & KYC,5,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20674,TKN_13352,BR_005,2026-09-29 15:11:23,Account Services & KYC,2,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20675,TKN_13361,BR_005,2026-09-29 11:38:07,Account Services & KYC,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20676,TKN_13363,BR_005,2026-09-29 16:02:30,Loan & Mortgage Advisory,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20677,TKN_13364,BR_005,2026-09-29 11:42:02,Cash Deposit/Withdrawal,2,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20678,TKN_13371,BR_005,2026-09-29 12:37:07,Cash Deposit/Withdrawal,3,Terrible wait time for KYC update. Could have done this on the app if guided.
+FB_20679,TKN_13374,BR_005,2026-09-29 13:42:24,Cash Deposit/Withdrawal,3,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20680,TKN_13377,BR_005,2026-09-29 15:17:25,Cash Deposit/Withdrawal,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20681,TKN_13379,BR_005,2026-09-29 11:24:46,Account Services & KYC,4,Very fast service today at counter C_4! Staff was very helpful.
+FB_20682,TKN_13380,BR_005,2026-09-29 13:02:12,Account Services & KYC,2,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20683,TKN_13381,BR_005,2026-09-29 09:17:38,Cash Deposit/Withdrawal,4,Excellent support by Anita Desai (BR_005-5). Solved my account issue quickly.
+FB_20684,TKN_13388,BR_005,2026-09-29 11:55:06,Cash Deposit/Withdrawal,2,Long queue during lunch hour. Staff seemed overwhelmed.
+FB_20685,TKN_13402,BR_005,2026-09-29 12:41:31,Cash Deposit/Withdrawal,4,"Quick turnaround on my loan query, clear explanation from advisor."
+FB_20686,TKN_13408,BR_005,2026-09-29 13:55:34,Loan & Mortgage Advisory,3,Waited over 40 minutes for simple cash deposit! Only 2 counters were open.
+FB_20687,TKN_13418,BR_005,2026-09-29 12:58:13,Forex & Trade Finance,4,Kiosk made passbook printing effortless. Happy with the branch.
+FB_20688,TKN_13419,BR_005,2026-09-29 14:29:27,Passbook / Statement Printing,3,"Came for card PIN reset, learned later I could do it at the ATM outside."
+FB_20689,TKN_13425,BR_005,2026-09-29 12:51:51,Cash Deposit/Withdrawal,2,Waited in line just to deposit a small cheque. Self-service machine was empty!
+FB_20690,TKN_13434,BR_005,2026-09-29 14:49:22,Forex & Trade Finance,5,Very fast service today at counter C_1! Staff was very helpful.
