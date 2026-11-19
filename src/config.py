@@ -1,17 +1,75 @@
 """
-Configuration and Domain Constants for Intelligent Branch Optimizer.
+Centralized Configuration and Domain Constants for Bank AI Optimizer.
+Loads environment variables, database connections, and operational parameters safely.
 """
+import os
+import sys
 from pathlib import Path
+from dotenv import load_dotenv
 
 # Paths
 BASE_DIR = Path(__file__).resolve().parent.parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+
 DATA_DIR = BASE_DIR / "data"
 RAW_DATA_DIR = DATA_DIR / "raw"
 PROCESSED_DATA_DIR = DATA_DIR / "processed"
+DOCS_DIR = BASE_DIR / "docs"
 
 # Ensure directories exist
 RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
 PROCESSED_DATA_DIR.mkdir(parents=True, exist_ok=True)
+DOCS_DIR.mkdir(parents=True, exist_ok=True)
+
+# Load .env file
+load_dotenv(BASE_DIR / ".env", override=True)
+
+# Application Environment & Security Settings
+APP_ENV = os.getenv("APP_ENV", "development").lower()
+SECRET_KEY = os.getenv("SECRET_KEY", "apexbank-super-secure-production-secret-key-2026-xai")
+ALGORITHM = os.getenv("ALGORITHM", "HS256")
+ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "480"))  # 8 hours
+LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
+
+# Database Connection Helper
+def get_database_url() -> str:
+    """
+    Retrieves and normalizes DATABASE_URL from environment.
+    Converts postgresql:// to postgresql+psycopg2:// for SQLAlchemy 2.0.
+    Falls back safely to local SQLite in development mode if URL is empty.
+    """
+    load_dotenv(BASE_DIR / ".env", override=True)
+    raw_url = os.getenv("DATABASE_URL", "").strip()
+
+    # Strip surrounding quotes if present
+    if raw_url.startswith(('"', "'")) and raw_url.endswith(('"', "'")):
+        raw_url = raw_url[1:-1].strip()
+
+    if not raw_url:
+        sqlite_fallback = f"sqlite:///{DATA_DIR / 'bank_optimizer.db'}"
+        return sqlite_fallback
+
+    # Convert standard postgresql URLs for psycopg2 driver
+    if raw_url.startswith("postgres://"):
+        raw_url = raw_url.replace("postgres://", "postgresql+psycopg2://", 1)
+    elif raw_url.startswith("postgresql://") and not raw_url.startswith("postgresql+"):
+        raw_url = raw_url.replace("postgresql://", "postgresql+psycopg2://", 1)
+
+    return raw_url
+
+def get_pooled_database_url() -> str:
+    """Returns pooled connection URL if configured, otherwise default database URL."""
+    pooled = os.getenv("DATABASE_URL_POOLED", "").strip()
+    if pooled.startswith(('"', "'")) and pooled.endswith(('"', "'")):
+        pooled = pooled[1:-1].strip()
+    if pooled:
+        if pooled.startswith("postgres://"):
+            return pooled.replace("postgres://", "postgresql+psycopg2://", 1)
+        elif pooled.startswith("postgresql://") and not pooled.startswith("postgresql+"):
+            return pooled.replace("postgresql://", "postgresql+psycopg2://", 1)
+        return pooled
+    return get_database_url()
 
 # Banking Service Categories & SLAs (in minutes)
 SERVICE_CATEGORIES = {

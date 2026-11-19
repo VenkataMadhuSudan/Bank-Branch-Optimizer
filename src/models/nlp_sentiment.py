@@ -1,69 +1,104 @@
 """
-NLP Customer Feedback & Sentiment Root-Cause Engine.
-Analyzes customer reviews, detects friction topics, calculates sentiment polarity,
-and links customer feedback to staff members and counter terminals.
+NLP Customer Feedback, Sentiment Analysis & Topic Attribution Engine.
+Features:
+- Deterministic Lexicon Polarity Scoring [-1.0, 1.0].
+- Multi-Topic Friction Classification (Wait times, Staff shortages, Digital Kiosks, Service Quality).
+- Staff & Counter Entity Extraction.
+- Actionability Flagging for Managerial Operational Alarms.
+- Privacy-Preserving: Entirely local processing with zero external LLM API dependencies.
 """
+from __future__ import annotations
+
 import re
+import sys
 from collections import Counter
-import polars as pl
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Tuple
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
 POSITIVE_WORDS = {
     "fast", "quick", "helpful", "excellent", "smooth", "great", "easy", "effortless",
     "polite", "friendly", "satisfied", "prompt", "efficient", "professional", "clear",
-    "wonderful", "delighted", "superb", "courteous", "impressed", "kind"
+    "wonderful", "delighted", "superb", "courteous", "impressed", "kind", "competent",
+    "speedy", "resolved", "seamless"
 }
 
 NEGATIVE_WORDS = {
     "waited", "waiting", "long", "slow", "terrible", "crowd", "overwhelmed", "delay",
     "frustrated", "shortage", "poor", "confusing", "horrible", "awful", "rude",
-    "stuck", "useless", "broken", "angry", "tired", "ignored", "waste", "disappointed"
+    "stuck", "useless", "broken", "angry", "tired", "ignored", "waste", "disappointed",
+    "unacceptable", "unhelpful", "chaotic", "unbearable", "abandoned"
 }
 
 TOPIC_PATTERNS = {
-    "Excessive Wait Time / Bottleneck": [
-        r"wait", r"long queue", r"delay", r"minutes", r"hours", r"crowd", r"slow", r"line"
+    "Excessive Wait Time / Queue Bottleneck": [
+        r"\bwait(?:ed|ing)?\b", r"\blong (?:queue|line)\b", r"\bdelay\b", r"\b(?:hours?|minutes?)\b",
+        r"\bcrowd(?:ed)?\b", r"\bslow\b", r"\bstanding\b"
     ],
     "Staff / Counter Shortage": [
-        r"counter", r"staff", r"shortage", r"only \d counter", r"lunch hour", r"teller",
-        r"overwhelmed", r"understaffed", r"closed counter"
+        r"\bcounter\b", r"\bstaff\b", r"\bshortage\b", r"\bonly \d counter\b", r"\blunch\b",
+        r"\bteller\b", r"\boverwhelmed\b", r"\bunderstaffed\b", r"\bclosed counter\b"
     ],
-    "Digital Kiosk & Deflection Opportunity": [
-        r"kiosk", r"atm", r"app", r"mobile", r"passbook", r"online", r"statement",
-        r"video kyc", r"self[- ]service", r"cheque drop"
+    "Digital Kiosk & Lobby Hardware Friction": [
+        r"\bkiosk\b", r"\batm\b", r"\bapp\b", r"\bmobile\b", r"\bpassbook\b", r"\bonline\b",
+        r"\bstatement\b", r"\bself[- ]service\b", r"\bcard machine\b", r"\bcheque deposit\b"
     ],
     "Fast & Courteous Service Quality": [
-        r"helpful", r"polite", r"quick turnaround", r"friendly", r"great support",
-        r"smooth", r"prompt", r"efficient", r"satisfied"
+        r"\bhelpful\b", r"\bpolite\b", r"\bquick turnaround\b", r"\bfriendly\b", r"\bgreat support\b",
+        r"\bsmooth\b", r"\bprompt\b", r"\befficient\b", r"\bsatisfied\b", r"\bprofessional\b"
     ],
     "Specialist Advisory & Loan Quality": [
-        r"loan", r"mortgage", r"advisor", r"forex", r"investment", r"trade", r"wealth",
-        r"explanation", r"consultation"
+        r"\bloan\b", r"\bmortgage\b", r"\badvisor\b", r"\bforex\b", r"\binvestment\b",
+        r"\btrade\b", r"\bwealth\b", r"\bconsultation\b", r"\bexplanation\b"
     ]
 }
 
+ACTIONABLE_KEYWORDS = [
+    r"counter \d+ (?:was )?closed",
+    r"(?:broken|offline|out of order|not working) (?:atm|kiosk|printer)",
+    r"waited (?:more than|over) \d+ (?:mins|minutes|hours)",
+    r"rude (?:staff|teller|manager)",
+    r"lunch break (?:delay|rush)",
+    r"only 1 counter open"
+]
+
+
 class FeedbackSentimentAnalyzer:
+    """
+    Deterministic Rule-Based and Lexical NLP Customer Sentiment Analyzer.
+    """
+
     def __init__(self):
         self.is_trained = True
 
-    def analyze_sentiment(self, text: str, rating: int = None) -> dict:
-        """Rule & Lexicon based sentiment scoring with topic attribution and staff recognition."""
-        raw_text = str(text)
+    def analyze_sentiment(self, text: str, rating: Optional[int] = None) -> Dict[str, Any]:
+        """
+        Analyzes customer review text:
+        - Polarity score in [-1.0, 1.0]
+        - Topic classification
+        - Entity extraction (counter/staff codes)
+        - Actionability flag for operations alarms
+        """
+        raw_text = str(text or "")
         clean_text = re.sub(r"[^\w\s]", " ", raw_text.lower())
         words = clean_text.split()
-        
+
         pos_hits = [w for w in words if w in POSITIVE_WORDS]
         neg_hits = [w for w in words if w in NEGATIVE_WORDS]
-        
+
         pos_count = len(pos_hits)
         neg_count = len(neg_hits)
-        
-        # Calculate continuous polarity score [-1.0, 1.0]
+
+        # Polarity score [-1.0, 1.0]
         if pos_count > neg_count:
             sentiment = "Positive"
-            score = min(1.0, 0.4 + 0.15 * (pos_count - neg_count))
+            score = min(1.0, 0.35 + 0.15 * (pos_count - neg_count))
         elif neg_count > pos_count:
             sentiment = "Negative"
-            score = max(-1.0, -0.4 - 0.15 * (neg_count - pos_count))
+            score = max(-1.0, -0.35 - 0.15 * (neg_count - pos_count))
         else:
             if rating is not None:
                 if rating >= 4:
@@ -86,85 +121,87 @@ class FeedbackSentimentAnalyzer:
                 if re.search(p, clean_text):
                     matched_topics.append(topic)
                     break
-                    
+
         if not matched_topics:
             matched_topics.append("General Branch Experience")
 
-        # Staff / Counter recognition in text
-        counter_match = re.search(r"counter\s+(c_?\d+|[0-9]+)", clean_text)
-        mentioned_counter = counter_match.group(0).upper() if counter_match else None
+        # Entity Extraction: Counter & Staff mentions
+        counter_match = re.search(r"counter\s+(?:c_?)?(\d+)", clean_text)
+        mentioned_counter = f"C_{int(counter_match.group(1)):02d}" if counter_match else None
+
+        staff_match = re.search(r"(?:emp_?|teller\s+)(\d+)", clean_text)
+        mentioned_staff = f"EMP_{int(staff_match.group(1)):03d}" if staff_match else None
+
+        # Actionability detection
+        is_actionable = False
+        action_reason = None
+        for kw_pattern in ACTIONABLE_KEYWORDS:
+            m = re.search(kw_pattern, clean_text)
+            if m:
+                is_actionable = True
+                action_reason = f"Detected operational complaint: '{m.group(0)}'"
+                break
+
+        if rating is not None and rating <= 2 and not is_actionable:
+            is_actionable = True
+            action_reason = f"Critical low customer rating ({rating}/5 stars)"
 
         return {
             "sentiment": sentiment,
             "sentiment_score": round(score, 2),
             "topics": matched_topics,
             "mentioned_counter": mentioned_counter,
-            "positive_keywords": pos_hits,
-            "friction_keywords": neg_hits
+            "mentioned_staff": mentioned_staff,
+            "is_actionable": is_actionable,
+            "action_reason": action_reason,
+            "positive_keywords_found": pos_hits,
+            "negative_keywords_found": neg_hits,
         }
 
-    def process_feedback_batch(self, feedback_records: list) -> list:
-        """Processes list of feedback records with sentiments, topics, and counter attributions."""
-        results = []
-        for r in feedback_records:
-            rating = r.get("rating")
-            text = r.get("feedback_text", "")
-            res = self.analyze_sentiment(text, rating=rating)
-            
-            r_copy = dict(r)
-            r_copy["sentiment_label"] = res["sentiment"]
-            r_copy["sentiment_polarity"] = res["sentiment_score"]
-            r_copy["detected_topics"] = "; ".join(res["topics"])
-            r_copy["mentioned_counter"] = res["mentioned_counter"]
-            results.append(r_copy)
-        return results
-
-    def get_insights_summary(self, feedback_processed: list) -> dict:
-        """Aggregates topic frequencies, pain points, and staff compliments."""
-        if not feedback_processed:
+    def aggregate_feedback_batch(self, feedback_list: List[Dict[str, Any]]) -> Dict[str, Any]:
+        """Aggregates a batch of customer feedback records into branch-wide sentiment KPIs."""
+        if not feedback_list:
             return {
-                "sentiment_distribution": {"Positive": 0, "Negative": 0, "Neutral": 0},
-                "overall_top_topics": {},
-                "key_pain_points": {},
                 "total_reviews": 0,
-                "avg_sentiment_polarity": 0.0,
-                "counter_feedback_leaderboard": {}
+                "net_sentiment_score": 0.0,
+                "positive_pct": 0.0,
+                "neutral_pct": 0.0,
+                "negative_pct": 0.0,
+                "actionable_alerts_count": 0,
+                "top_friction_topics": [],
             }
-            
-        all_topics = []
-        sentiments = []
-        polarities = []
-        neg_topics = []
-        counter_mentions = {}
-        
-        for r in feedback_processed:
-            sentiments.append(r["sentiment_label"])
-            polarities.append(r["sentiment_polarity"])
-            
-            topics = [t.strip() for t in str(r.get("detected_topics", "")).split(";") if t.strip()]
-            all_topics.extend(topics)
-            
-            if r["sentiment_label"] == "Negative":
-                neg_topics.extend(topics)
-                
-            cnt = r.get("mentioned_counter")
-            if cnt:
-                if cnt not in counter_mentions:
-                    counter_mentions[cnt] = {"praise": 0, "complaints": 0}
-                if r["sentiment_label"] == "Positive":
-                    counter_mentions[cnt]["praise"] += 1
-                elif r["sentiment_label"] == "Negative":
-                    counter_mentions[cnt]["complaints"] += 1
-                
-        topic_counts = dict(Counter(all_topics).most_common(5))
-        sentiment_dist = dict(Counter(sentiments))
-        pain_points = dict(Counter(neg_topics).most_common(4))
+
+        analyzed = []
+        for f in feedback_list:
+            text = f.get("feedback_text", "")
+            rating = f.get("rating")
+            analyzed.append(self.analyze_sentiment(text, rating))
+
+        total = len(analyzed)
+        pos = sum(1 for a in analyzed if a["sentiment"] == "Positive")
+        neu = sum(1 for a in analyzed if a["sentiment"] == "Neutral")
+        neg = sum(1 for a in analyzed if a["sentiment"] == "Negative")
+        actionable = sum(1 for a in analyzed if a["is_actionable"])
+
+        avg_score = float(sum(a["sentiment_score"] for a in analyzed) / total)
+
+        # Count topics
+        topic_counter: Counter = Counter()
+        for a in analyzed:
+            for t in a["topics"]:
+                topic_counter[t] += 1
+
+        top_topics = [
+            {"topic": t, "count": count, "pct": round((count / total) * 100, 1)}
+            for t, count in topic_counter.most_common(5)
+        ]
 
         return {
-            "sentiment_distribution": sentiment_dist,
-            "overall_top_topics": topic_counts,
-            "key_pain_points": pain_points,
-            "total_reviews": len(feedback_processed),
-            "avg_sentiment_polarity": round(sum(polarities) / max(1, len(polarities)), 2),
-            "counter_feedback_leaderboard": counter_mentions
+            "total_reviews": total,
+            "net_sentiment_score": round(avg_score, 2),
+            "positive_pct": round((pos / total) * 100, 1),
+            "neutral_pct": round((neu / total) * 100, 1),
+            "negative_pct": round((neg / total) * 100, 1),
+            "actionable_alerts_count": actionable,
+            "top_friction_topics": top_topics,
         }

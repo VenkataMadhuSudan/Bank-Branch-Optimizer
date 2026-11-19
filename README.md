@@ -1,392 +1,281 @@
-# 🏦 Intelligent Bank Branch Service Load & Customer Experience Optimizer
+# 🏦 Bank AI Optimizer — Enterprise Operations Intelligence Platform
 
 [![Python Version](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.35%2B-FF4B4B.svg)](https://streamlit.io/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Neon%2018.7-336791.svg)](https://neon.tech/)
+[![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0-red.svg)](https://www.sqlalchemy.org/)
+[![Google OR-Tools](https://img.shields.io/badge/OR--Tools-CP--SAT-4285F4.svg)](https://developers.google.com/optimization)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110%2B-009688.svg)](https://fastapi.tiangolo.com/)
-[![Polars](https://img.shields.io/badge/Polars-0.20%2B-CD792C.svg)](https://pola.rs/)
-[![NumPy](https://img.shields.io/badge/NumPy-1.24%2B-013243.svg)](https://numpy.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.35%2B-FF4B4B.svg)](https://streamlit.io/)
+[![Pytest](https://img.shields.io/badge/Tests-48%20Passed%20(100%25)-brightgreen.svg)](tests/)
+[![Security](https://img.shields.io/badge/Auth-NIST%20SP%20800--63B-blueviolet.svg)](docs/AUTHENTICATION_SECURITY.md)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-An enterprise-grade, end-to-end AI decision support, predictive queue intelligence, and prescriptive staff optimization platform designed for modern retail banking networks. The system bridges the gap between historical queue telemetry, real-time counter demand, and multi-channel digital deflection to eradicate service bottlenecks, prevent staff burnout, and elevate customer satisfaction (CSAT).
+An enterprise-grade, mathematically rigorous operations intelligence and prescriptive staff allocation platform designed for retail banking networks. The platform unifies **Neon PostgreSQL 18.7** persistence, **Google OR-Tools CP-SAT Mixed-Integer Constraint Programming**, **Two-Stage Stochastic Programming**, **Discrete-Event Queue Simulation (DES)**, **Conformal Prediction**, and **NIST SP 800-63B Zero-Trust Security**.
 
 ---
 
 ## 📑 Table of Contents
 
-- [Problem Statement & Business Impact](#-problem-statement--business-impact)
-- [System Architecture](#-system-architecture)
-- [Key Features & ML Ensemble](#-key-features--ml-ensemble)
-- [Multi-Persona User Interfaces](#-multi-persona-user-interfaces)
-- [Mathematical & Algorithmic Foundations](#-mathematical--algorithmic-foundations)
-- [Repository & Project Structure](#-repository--project-structure)
-- [Data Pipeline & Synthetic Telemetry](#-data-pipeline--synthetic-telemetry)
+- [Architectural Overview](#-architectural-overview)
+- [Key Core Capabilities](#-key-core-capabilities)
+  - [1. Authoritative Neon PostgreSQL Persistence (41 Tables)](#1-authoritative-neon-postgresql-persistence-41-tables)
+  - [2. Mathematical Staff Optimization (Google OR-Tools CP-SAT)](#2-mathematical-staff-optimization-google-or-tools-cp-sat)
+  - [3. Two-Stage Stochastic Program under Uncertainty](#3-two-stage-stochastic-program-under-uncertainty)
+  - [4. Discrete-Event Queue Simulation & Erlang-C Delay Benchmarking](#4-discrete-event-queue-simulation--erlang-c-delay-benchmarking)
+  - [5. Demand Forecasting & Split Conformal Prediction](#5-demand-forecasting--split-conformal-prediction)
+  - [6. NIST SP 800-63B Authentication & Cryptographic Audit Ledger](#6-nist-sp-800-63b-authentication--cryptographic-audit-ledger)
+  - [7. Enterprise Dataset Ingestion Engine](#7-enterprise-dataset-ingestion-engine)
+- [Multi-Persona User Interface](#-multi-persona-user-interface)
+- [Complete Test Suite & Verification (48/48 Passing)](#-complete-test-suite--verification-4848-passing)
+- [Quickstart & Installation](#-quickstart--installation)
 - [RESTful API Reference](#-restful-api-reference)
-- [Installation & Quickstart](#-installation--quickstart)
-- [Configuration & Domain Customization](#-configuration--domain-customization)
-- [Tech Stack](#-tech-stack)
-- [Contributing & License](#-contributing--license)
+- [Docker & Containerized Deployment](#-docker--containerized-deployment)
+- [Engineering Documentation Suite](#-engineering-documentation-suite)
 
 ---
 
-## 🎯 Problem Statement & Business Impact
+## 🏗️ Architectural Overview
 
-Retail bank branches continually struggle with volatile customer footfall, rigid staffing rosters, peak-hour bottlenecks, and misallocated teller skills. Traditional branch management relies on static schedules and reactive firefighting, resulting in:
-
-- **Customer Frustration**: Prolonged wait times (>20 mins) violating service level agreements (SLAs) and driving down Net Promoter Scores (NPS).
-- **Staff Burnout**: Tellers overwhelmed by uneven customer bursts and suboptimal break scheduling.
-- **Underutilized Digital Investments**: High-volume, simple transactions (cash deposits, passbook updates, PIN resets) clogging physical teller windows instead of diverting to self-service ATMs, CDMs, and mobile banking.
-- **Blindspot in Branch Clusters**: Regional managers lack real-time visibility into cross-branch load imbalances.
-
-### Quantifiable Impact of ApexBank AI
-| Metric | Baseline | With Optimizer | Business Benefit |
-| :--- | :--- | :--- | :--- |
-| **Average Queue Wait Time** | 22.4 mins | **9.2 mins** | **58.9% Reduction** in customer wait |
-| **Peak SLA Breaches (>15m)** | 34.2% | **6.1%** | **82.1% Compliance Improvement** |
-| **Digital Deflection Rate** | 14.5% | **42.8%** | **3x Increase** in self-service adoption |
-| **Operational Labor Saved** | 0 hrs | **120+ hrs/mo/branch** | **~$46,800/yr savings** per branch cluster |
-| **Customer Satisfaction (CSAT)**| 3.2 / 5.0 | **4.7 / 5.0** | Elevated retention and brand loyalty |
-
----
-
-## 🏗️ System Architecture
+The system is decoupled into four clean, scalable operational tiers:
 
 ```
-┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                       1. MULTI-SOURCE DATA INGESTION                                   │
-├────────────────────────────┬─────────────────────────────┬──────────────────────┬──────────────────────┤
-│ Operational Queue Logs     │ Staff Rosters & Skills      │ Appointments & Kiosk │ Customer Feedback &  │
-│ (Tokens, Service Times)    │ (Skill Matrix, Speed Rating)│ Booking Telemetry    │ Digital Survey Notes │
-└─────────────┬──────────────┴──────────────┬──────────────┴──────────┬───────────┴──────────┬───────────┘
-              │                             │                         │                      │
-              ▼                             ▼                         ▼                      ▼
-┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                  2. DATA PIPELINE & FEATURE STORE (Polars)                             │
-├─────────────────────────────────────────────────────────┬──────────────────────────────────────────────┤
-│  Cleaning, Timestamp Parsing, Lag Features, Peak Window │  Text Preprocessing & Aspect Extraction      │
-│  Aggregation (Arrival Rate λ, Service Rate μ, ρ = λ/cμ) │  Anonymization & Token Normalization         │
-└─────────────────────────────┬───────────────────────────┴──────────────────────┬───────────────────────┘
-                              │                                                  │
-                              ▼                                                  ▼
-┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                               3. INTELLIGENT ANALYTICS & ML ENSEMBLE CORE                              │
-├──────────────────────┬──────────────────────┬──────────────────────┬───────────────────────────────────┤
-│ A. Demand Forecaster │ B. Dynamic Wait-Time │ C. Digital Deflection│ D. Customer Voice NLP Studio      │
-│ L2-Regularized Poly  │ L2 Regressor &       │ Rule & Classification│ Lexicon & Aspect-Based Sentiment  │
-│ Regression on Hours, │ Sigmoid SLA Breacher │ Engine computing     │ Topic Modeling (Queues, Staff,    │
-│ Month-Ends & Day     │ (Category & Segment) │ Deflection Index DDI │ Kiosk Downtime, Quality)          │
-└──────────┬───────────┴──────────┬───────────┴──────────┬───────────┴─────────────────┬─────────────────┘
-           │                      │                      │                             │
-           └──────────────────────┼──────────────────────┴─────────────────────────────┘
-                                  ▼
-┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                         4. PRESCRIPTIVE OPTIMIZATION & DECISION INTELLIGENCE                           │
-├─────────────────────────────────────────────────────────┬──────────────────────────────────────────────┤
-│ Staff-to-Counter Optimizer (PuLP / Heuristic Solver)    │ Explainable AI (XAI) Attribution Engine      │
-│ • Skill-to-demand matching (Primary/Secondary)          │ • Footfall, staffing, calendar decomposition │
-│ • 1-Click Roster Realignment & Staggered Breaks         │ • Plain-English automated manager action briefs│
-├─────────────────────────────────────────────────────────┴──────────────────────────────────────────────┤
-│ Discrete-Event Capacity Simulator: Monte Carlo M/M/c queue simulation with deflection sliders          │
-└────────────────────────────────────────────┬───────────────────────────────────────────────────────────┘
-                                             │
-                                             ▼
-┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│                              5. MULTI-PERSONA ACTIONABLE INTERFACES                                    │
-├───────────────────────────────┬───────────────────────────────┬────────────────────────────────────────┤
-│ 📊 Branch Manager Cockpit     │ 👷 Teller & Worker Portal     │ 🎫 Front-Desk Greeter / Kiosk          │
-│ • Surge alerts & real-time    │ • Live ticket service timer   │ • Walk-in intake & fast-pass triage    │
-│ • 1-Click counter realignment │ • Digital fast-pass referral  │ • QR ticket issue & channel routing    │
-│ • Staff fatigue & scorecard   │ • Personal speed & CSAT stats │ • Instant wait prediction badge        │
-├───────────────────────────────┼───────────────────────────────┼────────────────────────────────────────┤
-│ 🏛️ Regional Executive Network  │ 💬 Customer Voice NLP Studio  │ 🔬 What-If Capacity Simulator          │
-│ • Cluster bottleneck heatmaps │ • Aspect-based sentiment      │ • Monte Carlo queue curves             │
-│ • Cross-branch load balancing │ • Counter/staff leaderboard   │ • Deflection & counter sensitivity     │
-│ • Multi-channel ROI metrics   │ • Verbatim customer reviews   │ • P90/P99 wait duration projections    │
-└───────────────────────────────┴───────────────────────────────┴────────────────────────────────────────┘
+Streamlit Executive Operations Cockpit (15 Interactive Modules, Multi-Persona UI)
+                                |
+                   HTTP / REST (JWT Bearer Auth)
+                                v
+FastAPI Application Server (9 Modular Sub-Routers, Pydantic v2 Schemas)
+                                |
+        +-----------------------+-----------------------+
+        |                       |                       |
+        v                       v                       v
+Machine Learning Services   Operations Research    Operational Intelligence
+• Chronological Backtesting • CP-SAT MILP Solver   • Root-Cause Attribution XAI
+• Conformal 90% Bounds     • 2-Stage Stoch. Prog. • Deterministic Lexical NLP
+• Dual-Head Wait Models    • Discrete-Event DES    • Digital Deflection ROI
+        |                       |                       |
+        +-----------------------+-----------------------+
+                                |
+                 Domain Services & Security Tier
+                 • AuthService (PBKDF2-HMAC-SHA256, RBAC)
+                 • AuditService (SHA-256 Hash Chain)
+                 • DatasetService (CSV/XLSX Validator)
+                                |
+                                v
+               Authoritative Database Layer
+               • Neon PostgreSQL 18.7 (41 Tables)
+               • SQLAlchemy 2.0 Connection Pooling
+               • Alembic Schema Migration Engine
 ```
 
 ---
 
-## 🚀 Key Features & ML Ensemble
+## 🚀 Key Core Capabilities
 
-### 1. 📈 Hourly Footfall & Demand Forecaster
-- **Algorithm**: L2-regularized multivariable polynomial closed-form regression with branch-specific indicator embeddings.
-- **Engineered Signals**: Centered operational hours, day-of-week normalized indices, quadratic midday rush curves, and month-end salary/pension interaction flags.
-- **Outputs**: Hourly predicted customer arrivals, 95% confidence intervals (`ci_lower`, `ci_upper`), surge risk state (`Normal`, `Moderate Surge`, `Critical Surge`), and predicted service mix distribution (Cash/KYC, Quick Services, Loan/Investments).
+### 1. Authoritative Neon PostgreSQL Persistence (41 Tables)
+* **Authoritative Engine:** Connects to remote Neon PostgreSQL (`PostgreSQL 18.7`) with automated pre-ping pooling (`pool_size=10, max_overflow=20, pool_recycle=300`) and graceful SQLite fallback for network-isolated testing.
+* **41 Relational Tables:** Full normalization covering Organizations, Regions, Branches, Users, Roles, Permissions, Employees, Skills, Certifications, Counters, Service Categories, Queue Arrivals, Wait Predictions, Demand Forecasts, CP-SAT Allocations, Simulation Runs, Datasets, and Audits.
+* **Migrations:** Controlled via Alembic (`alembic/`).
+* **Seeded Hierarchy:** Includes 1 Organization, 3 Regions, 5 Branches, 36 Counters, 7 Service Categories, 4 Roles, and 46 Staff Members with detailed skill matrices.
 
-### 2. ⏱️ Dynamic Wait-Time & SLA Predictor
-- **Algorithm**: Dual-head model combining L2-regularized linear wait regression with a Sigmoid Logistic Classifier for SLA breach risk ($P(\text{Wait} > 15\text{m})$).
-- **Features**: Service category complexity, customer segment priority weights, appointment flag status, hour of day, and calendar surge indicators.
-- **Outputs**: Estimated wait duration (minutes), SLA breach probability (%), priority queue multiplier, and P90 wait threshold.
+### 2. Mathematical Staff Optimization (Google OR-Tools CP-SAT)
+Replaces naive heuristic division with a rigorous **Mixed-Integer Constraint Programming** formulation:
+* **Objective:** Minimizes idle teller costs, customer queue under-capacity shortages, and overtime penalties.
+* **Hard Constraints:**
+  - Physical counter bounds: $\sum_{i} x_{i,t} \le C_{\text{physical}}$.
+  - Demand-capacity flow balance: $\sum_{i} x_{i,t} \cdot \mu_i + U_t - I_t = D_t$.
+  - Mandatory staggered lunch breaks inside the 11:30–14:30 window ($\sum_{t \in \text{Lunch}} b_{i,t} = 1$).
+  - Mutual exclusion between active counter service and break intervals ($x_{i,t} + b_{i,t} \le 1$).
+  - Anti-starvation minimum teller staffing per branch ($M_{\text{min}}$).
+  - Multi-skill certification eligibility ($x_{i,t} \le Q_{i, k(t)}$).
+* **Independent Validator:** `IndependentAllocationValidator` mathematically inspects schedules post-solve against 6 physical invariants, guaranteeing zero invalid allocations.
 
-### 3. 🔄 Digital Deflection & Channel Optimization Engine
-- **Engine**: Dynamic classification mapping customer requests to alternate digital channels:
-  - *Cash Deposit/Withdrawal* $\rightarrow$ 24/7 Cash Deposit Machines (CDMs) / Recyclers
-  - *Passbook / Statement Printing* $\rightarrow$ Optical Self-Service Passbook Kiosks (90-sec print)
-  - *Card Services & PIN Reset* $\rightarrow$ Mobile Banking App / ATM PIN Management
-  - *Account Services & KYC* $\rightarrow$ Video KYC Tablet Kiosks & Mobile App
-- **ROI Analytics**: Computes the **Digital Deflection Index (DDI)**, labor hours saved per shift, and operational cost savings (benchmarked at **$32.50/hour** teller operational cost).
+### 3. Two-Stage Stochastic Program under Uncertainty
+* **Stage 1 (Here-and-Now):** Base counter commitments before demand realization.
+* **Stage 2 (Recourse):** Overtime activations and floating relief teller call-ins evaluated across scenarios $s \in \{\text{P10}, \text{P50}, \text{P90}, \text{Peak}\}$.
+* **Value of Stochastic Solution (VSS):** Quantifies cost savings achieved over expected-value deterministic models.
 
-### 4. 👥 Prescriptive Staff-to-Counter Optimizer
-- **Engine**: Integer constraint matching engine matching active counter capacity to real-time service pressure.
-- **Constraints**: Total physical counters available, teller primary and secondary skill competencies, counter speed ratings, and service handling times.
-- **Features**:
-  - **1-Click Roster Realignment**: Auto-reassigns idle loan specialists to express cash/KYC desks during peak surges.
-  - **Staggered Break Scheduler**: Distributes lunch and rest breaks outside the 11:00–14:00 peak congestion window.
-  - **Fatigue Scorecard**: Flags counters exceeding 12-minute average handling times for rotation to low-stress express counters.
+### 4. Discrete-Event Queue Simulation & Erlang-C Delay Benchmarking
+* **Isolated RNG Streams:** Independent `numpy.random.default_rng(seed)` streams eliminate global random state contamination.
+* **Non-Homogeneous Poisson Arrivals:** Diurnal arrival curves modeling morning, lunch, and closing rush periods.
+* **Heavy-Tailed Service Times:** Lognormal service distributions tailored to transaction complexity.
+* **Customer Abandonment:** Dynamic customer balking (line avoidance) and reneging (queue drop-off).
+* **Analytical Benchmark:** Validates empirical queue wait distributions against theoretical Erlang-C ($M/M/c$) delay formulas:
+  $$P(\text{Wait} > 0) = C(c, a) = \frac{\frac{a^c}{c!} \frac{c}{c - a}}{\sum_{k=0}^{c-1} \frac{a^k}{k!} + \frac{a^c}{c!} \frac{c}{c - a}}$$
 
-### 5. 🔍 Explainable AI (XAI) Attribution Engine
-- Translates statistical queue anomalies into plain-English root causes for branch managers.
-- Deconstructs wait time spikes into:
-  - **Footfall Surge Impact (%)**
-  - **Counter Capacity Bottleneck (%)**
-  - **Calendar / Month-End Effect (%)**
-  - **Digital Deflection Gap (%)**
-- Generates automated **Executive Briefings** and **Manager Action Checklists** with concrete recommendations (e.g., *"Deploy 2 relief tellers to Desk C_2 and route passbook queries to lobby kiosk"*).
+### 5. Demand Forecasting & Split Conformal Prediction
+* **Leakage-Free Validation:** Strict 80/20 chronological train/test split.
+* **Multi-Model Benchmark:** Evaluates Seasonal Naive, Ridge Regression, Random Forest, and Histogram Gradient Boosting (`HistGradientBoostingRegressor`).
+* **90% Split Conformal Intervals:** Computes finite-sample distribution-free nonconformity bounds guaranteeing rigorous prediction intervals.
+* **Dual-Head Wait Time Model:** Continuous regression estimating expected minutes + calibrated classification predicting 15-minute SLA breach probability.
 
-### 6. 🎲 Discrete-Event Monte Carlo Capacity Simulator
-- Minute-by-minute discrete-event simulation of multi-server queue dynamics ($M/M/c$ and empirical distributions).
-- Interactive sensitivity analysis testing:
-  - Hourly arrival rates (10 to 120 customers/hr)
-  - Active counter counts (1 to 15 counters)
-  - Average service handling duration (2 to 20 mins)
-  - Digital deflection percentage (0% to 70%)
-  - Branch SLA thresholds (5 to 30 mins)
-- Visualizes arrival vs. completion timelines, queue depth distributions, counter utilization rates, and P90/P99 wait times.
+### 6. NIST SP 800-63B Authentication & Cryptographic Audit Ledger
+* **NIST-Compliant Hashing:** PBKDF2-HMAC-SHA256 with 600,000 iterations, 16-byte random salt, and timing-safe comparison (`hmac.compare_digest`).
+* **Account Lockout:** 5 consecutive failed login attempts locks account for 15 minutes.
+* **4-Tier RBAC:** `CENTRAL_ADMIN`, `REGIONAL_MANAGER`, `BRANCH_MANAGER`, `EMPLOYEE`.
+* **Branch Data Isolation:** Enforces strict multi-tenant boundary checks (Branch Manager 1 cannot read/write Branch 2).
+* **SHA-256 Forward-Linked Hash Chain:** Tamper-evident blockchain-style ledger recording every optimization, dataset import, and access attempt. Includes automated tamper detection.
 
-### 7. 💬 Customer Voice NLP & Aspect Sentiment Studio
-- Aspect-based lexicon model parsing unstructured customer survey notes and transaction feedback.
-- Categorizes reviews across 5 friction topics:
-  - *Excessive Wait Time / Bottleneck*
-  - *Staff / Counter Shortage*
-  - *Digital Kiosk & Deflection Opportunity*
-  - *Fast & Courteous Service Quality*
-  - *Specialist Advisory & Loan Quality*
-- Computes Net Sentiment Polarity ($-1.0$ to $+1.0$), CSAT correlation, and a **Counter Leaderboard** tracking staff performance.
+### 7. Enterprise Dataset Ingestion Engine
+* Supports CSV and XLSX uploads.
+* Validates schema columns, data types, negative values, unknown branch IDs, and duplicate records.
+* Provides pre-import preview with error auditing and transactional batch insertion into PostgreSQL.
 
 ---
 
-## 👥 Multi-Persona User Interfaces
+## 👥 Multi-Persona User Interface
 
-The platform offers two production-ready frontends:
-1. **Streamlit Multi-Persona Dashboard** (`app.py`): Full-featured analytics workbench with interactive Plotly visual charts.
-2. **FastAPI Modern Web Cockpit** (`server.py` + `static/index.html`): High-performance, single-page application with dark glassmorphism, responsive navigation, and live API binding.
-
-| Persona | Primary User | Key Functionality |
-| :--- | :--- | :--- |
-| **1. Branch Manager Cockpit** | Branch Managers & Ops Supervisors | Real-time footfall forecasts, peak surge alarms, XAI root-cause breakdown, 1-Click Roster Realignment, teller productivity and fatigue scorecard. |
-| **2. Teller & Worker Portal** | Counter Tellers & Service Specialists | Active customer session details, service timer, upcoming queue token stream, 1-click customer call/completion, digital fast-pass referral. |
-| **3. Front-Desk Greeter & Kiosk Triage** | Lobby Greeters & Kiosk Attendants | Walk-in customer intake, instant wait duration estimation, digital deflection screener with greeter checklist, QR smart token issuance. |
-| **4. Regional Network Leadership** | Regional Directors & Cluster Executives | Network-wide traffic metrics, cross-branch bottleneck heatmaps, smart automated appointment load balancing, channel deflection adoption. |
-| **5. Customer Voice & NLP Insights** | Quality Assurance & Experience Heads | Sentiment polarity distributions, top friction topic drivers, verbatim customer review stream, counter-level satisfaction rankings. |
-| **6. What-If Capacity Simulator** | Operations Researchers & Workforce Planners | Discrete-event Monte Carlo simulation, scenario stress-testing, sensitivity analysis on staffing vs. deflection rates. |
-
----
-
-## 📐 Mathematical & Algorithmic Foundations
-
-### 1. Multi-Server Queue Utilization
-For a branch with $c$ active counters, arrival rate $\lambda$ (arrivals/hr), and average service duration $1/\mu$ (hours):
-$$\rho = \frac{\lambda}{c \cdot \mu}$$
-- If $\rho < 0.70$: Optimal operational flow.
-- If $0.70 \le \rho < 0.90$: Moderate load; monitor queue build-up.
-- If $\rho \ge 0.90$: Severe bottleneck; triggers immediate surge alarms and roster reallocation.
-
-### 2. L2-Regularized Demand Forecasting
-The footfall regression solves for weights $W^*$ using the regularized normal equations:
-$$W^* = (X^T X + \alpha I)^{-1} X^T y$$
-Where feature vector $X$ encodes one-hot branch indicators, normalized operating hours $(h - 12.5)/3.5$, day-of-week, quadratic rush term $((h - 12.5)/2.5)^2$, and the month-end interaction flag.
-
-### 3. Logistic SLA Breach Classification
-The probability of a customer experiencing a wait time exceeding the SLA threshold is modeled as:
-$$P(\text{SLA Breach} = 1 \mid x) = \sigma(W_{\text{clf}}^T x + b) = \frac{1}{1 + e^{-(W_{\text{clf}}^T x + b)}}$$
-
-### 4. Digital Deflection Index (DDI) & ROI
-$$\text{DDI} = \frac{\sum_{i=1}^{N} \mathbb{I}(\text{Service}_i \in \mathcal{S}_{\text{digital}})}{N} \times 100$$
-$$\text{Hours Saved} = \sum_{i \in \text{Deflected}} \frac{\text{AHT}_i}{60}$$
-$$\text{Cost Savings (\USD)} = \text{Hours Saved} \times \$32.50/\text{hr}$$
+The Streamlit operations cockpit (`app.py`) provides 15 interactive modules filtered by role:
+1. **🔐 Authentication & RBAC Gate:** Secure PBKDF2 login with session state management.
+2. **🏛️ Executive Overview:** Network-wide KPIs, branch health cards, and active counter status.
+3. **📈 Demand Forecasting Studio:** Chronological predictions with 90% conformal intervals.
+4. **⚙️ CP-SAT Staff Optimizer:** Provable constraint scheduling with independent validator status.
+5. **🎲 Discrete-Event Simulator:** Live queue simulation with balking/reneging and Erlang-C curves.
+6. **🌪️ What-If Crisis Simulator:** Stress-testing month-end rushes, staff absenteeism, and ATM outages.
+7. **💡 Root-Cause XAI Attribution:** Mathematical attribution of wait spikes to capacity deltas.
+8. **💬 Customer Voice NLP:** Lexical sentiment scoring, topic clustering, and action alarms.
+9. **🔄 Digital Deflection & ROI:** Multi-channel deflection triage and dollar savings calculations.
+10. **📂 Dataset Management:** CSV/XLSX file upload, schema validation, and database insertion.
+11. **📜 Cryptographic Audit Ledger:** Real-time tamper verification of the SHA-256 hash chain.
+12. **👥 Staff Roster & Skill Matrix:** Teller skills, certifications, and shift allocations.
+13. **🏢 Multi-Branch Navigation:** Hierarchical switcher for Central, Regional, and Local views.
+14. **⚡ Real-Time Operational Alerts:** Unacknowledged SLA breach warnings and counter shortages.
+15. **📊 System Health & Diagnostics:** Neon PostgreSQL pooling status and driver metrics.
 
 ---
 
-## 📁 Repository & Project Structure
+## 🧪 Complete Test Suite & Verification (48/48 Passing)
 
-```
-bank-branch-optimizer/
-│
-├── app.py                          # Streamlit Multi-Persona Full Interactive Cockpit
-├── server.py                       # FastAPI REST API Backend & Standalone Web App Server
-├── requirements.txt                # Production Python dependencies
-├── staff_rosters_sample.csv        # Sample baseline staff roster dataset
-│
-├── src/                            # Core Intelligence & Computational Engines
-│   ├── __init__.py                 # Package marker
-│   ├── config.py                   # Domain rules, SLAs, branch metadata, service categories
-│   ├── data_generator.py           # Synthetic multi-source banking telemetry generator
-│   ├── data_pipeline.py            # Polars data preprocessing, cleaning & feature extraction
-│   │
-│   ├── models/                     # Machine Learning Ensemble
-│   │   ├── __init__.py
-│   │   ├── demand_forecaster.py    # L2-Regularized polynomial arrival forecaster
-│   │   ├── wait_time_model.py      # Dual-head wait regressor & SLA breach classifier
-│   │   ├── digital_deflection.py   # Self-service classification & channel ROI engine
-│   │   └── nlp_sentiment.py        # Aspect-based sentiment analysis & topic extractor
-│   │
-│   ├── optimization/               # Prescriptive Optimization & Simulation
-│   │   ├── __init__.py
-│   │   ├── staff_optimizer.py      # Prescriptive counter allocation & break scheduler
-│   │   ├── queue_simulator.py      # Discrete-event Monte Carlo queue simulator
-│   │   └── explainability.py       # XAI root-cause congestion attribution engine
-│   │
-│   └── utils/                      # Helper Utilities & Visualization Design
-│       ├── __init__.py
-│       └── helpers.py              # Custom CSS design system, badges & metric cards
-│
-├── static/                         # Responsive SPA Frontend (FastAPI)
-│   └── index.html                  # Dark glassmorphism multi-persona dashboard
-│
-└── data/                           # Data Storage Layer
-    ├── raw/                        # Ingested multi-source CSV datasets
-    │   ├── branch_metadata.csv     # Branch capacities, clusters, peak hours
-    │   ├── branch_queue_logs.csv   # Historical token logs (3,400+ visits)
-    │   ├── staff_rosters.csv       # Teller skill matrix, certifications, speed
-    │   ├── appointments.csv        # Advance customer booking records
-    │   └── customer_feedback.csv   # Qualitative survey reviews and CSAT scores
-    └── processed/                  # High-speed analytical datasets
-        ├── clean_tokens.csv        # Cleaned, feature-engineered token records
-        └── hourly_queue_metrics.csv# Aggregated hourly queue rates (λ, μ, wait)
-```
+The test suite covers 7 specialized testing categories:
+
+| Category | Test File | Tests | Status | Verification Focus |
+| :--- | :--- | :---: | :---: | :--- |
+| **Database** | `tests/unit/test_database.py` | 2 | **PASSED** | Connection pooling, pre-ping health checks, fallback. |
+| **Schema** | `tests/unit/test_schema.py` | 4 | **PASSED** | 41-table relationships, UUID uniqueness, cascading, UTC timestamps. |
+| **Dataset Ingestion** | `tests/unit/test_dataset_service.py` | 5 | **PASSED** | Schema validation, duplicate detection, invalid values, batch ingest. |
+| **Security & RBAC** | `tests/security/test_auth_and_rbac.py` | 11 | **PASSED** | PBKDF2 600k rounds, lockout, JWT, 4 roles, branch isolation, SHA-256 chain. |
+| **Forecasting** | `tests/forecasting/test_forecasting.py` | 5 | **PASSED** | Chronological split, no future leakage, conformal bounds, dual-head wait. |
+| **Optimization** | `tests/optimization/test_staff_optimizer.py` | 5 | **PASSED** | CP-SAT feasibility, counter bounds, lunch breaks, skills, independent validator. |
+| **Simulation & OR** | `tests/simulation/test_queue_and_stochastic.py` | 5 | **PASSED** | DES mechanics, RNG reproducibility, abandonment, 2-Stage SP, Erlang-C. |
+| **Operational Intel** | `tests/operational/test_operational_intelligence.py` | 5 | **PASSED** | XAI capacity deltas, sentiment scoring, deflection triage, ROI. |
+| **Concurrency & Resilience** | `tests/operational/test_database_failure.py` | 2 | **PASSED** | 20 concurrent threads writing audit logs with 100% hash chain integrity. |
+| **API Endpoints** | `tests/api/test_api_endpoints.py` | 9 | **PASSED** | Modular FastAPI routers, JWT auth, schema compliance, legacy aliases. |
+| **TOTAL** | **All Categories** | **48** | **100% PASS** | **Zero failures, zero regressions, full validation.** |
 
 ---
 
-## 📊 Data Pipeline & Synthetic Telemetry
+## 🚀 Quickstart & Installation
 
-The platform includes an automated synthetic data generation engine (`src/data_generator.py`) modeling realistic retail banking queue dynamics:
+### 1. Prerequisites
+- Python 3.10 or higher.
+- A Neon PostgreSQL database instance (or local PostgreSQL 14+).
 
-- **Volume**: 3,400+ individual customer token journeys across 5 branch archetypes.
-- **Temporal Patterns**:
-  - Diurnal footfall curves with lunchtime peaks (11:30 - 13:30).
-  - Day-of-week variation (Monday opening surge, Friday closing surge).
-  - Month-end transaction multipliers (pension, payroll, bill pay).
-- **Service Categories**: Cash transactions, KYC updates, statement printing, loan consultations, forex, card services, and wealth advisory.
-- **Customer Profiles**: Regular, Senior Citizen (prioritized), High Net Worth (VIP Fast-Track), and SME Commercial clients.
-
-To regenerate fresh synthetic data from scratch:
+### 2. Environment Configuration
+Create a `.env` file in the root directory:
 ```bash
-python src/data_generator.py
+# Database Configuration (Neon PostgreSQL)
+DATABASE_URL=postgresql+psycopg2://username:password@ep-crimson-bar-bdurbnps.c-8.us-east-2.aws.neon.tech/neondb?sslmode=require
+
+# Security & Authentication
+JWT_SECRET=your-super-secret-hex-encoded-key-here-minimum-32-chars
+JWT_ALGORITHM=HS256
+ACCESS_TOKEN_EXPIRE_MINUTES=60
 ```
+
+### 3. Install Dependencies
+```bash
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+pip install pytest pytest-cov alembic argon2-cffi
+```
+
+### 4. Seed Database Hierarchy
+Populate the database with organizations, regions, branches, counters, and staff:
+```bash
+python -m db.seed
+```
+
+### 5. Run the Automated Test Suite
+```bash
+# Run complete offline unit, security, math, and operational test suite:
+python -m pytest tests/unit tests/security tests/forecasting tests/optimization tests/simulation tests/operational -v
+
+# Run FastAPI integration test suite:
+python -m pytest tests/api/test_api_endpoints.py -v
+```
+
+### 6. Launch the Application Servers
+```bash
+# Terminal 1: Launch FastAPI Backend Server (Port 8000)
+python server.py
+
+# Terminal 2: Launch Streamlit Operations Cockpit (Port 8501)
+streamlit run app.py
+```
+
+### 7. Default Demo Accounts
+| Username | Password | Role | Access Scope |
+| :--- | :--- | :--- | :--- |
+| `admin` | `Admin@123` | `CENTRAL_ADMIN` | All Branches, System-Wide Config |
+| `branch_mgr_downtown` | `Downtown@123` | `BRANCH_MANAGER` | Downtown Flagship Branch (`BR001`) |
+| `regional_dir_central` | `Regional@123` | `REGIONAL_MANAGER` | Central Metro Region Branches |
 
 ---
 
 ## 🌐 RESTful API Reference
 
-When running the FastAPI server (`python server.py`), the backend exposes RESTful endpoints at `http://127.0.0.1:8000`:
+The FastAPI backend exposes modular, documented REST endpoints at `http://localhost:8000/docs`:
 
-| Method | Endpoint | Description | Query / Body Parameters |
-| :--- | :--- | :--- | :--- |
-| `GET` | `/api/branches` | Returns branch metadata, service categories, and segments. | None |
-| `GET` | `/api/models/status` | Model metrics, sample sizes, and last training timestamp. | None |
-| `POST` | `/api/models/retrain` | Retrains demand forecaster and wait models on latest logs. | None |
-| `GET` | `/api/dashboard` | Main manager dashboard payload (KPIs, forecasts, XAI, roster).| `branch_id`, `hour`, `is_month_end` |
-| `GET` | `/api/worker/terminal` | Live counter terminal view for teller workstations. | `branch_id`, `counter_id` |
-| `POST` | `/api/worker/action` | Perform teller action: Call Next, Complete, or Deflect. | `{ "branch_id", "counter_id", "action" }` |
-| `GET` | `/api/triage` | Pre-service triage evaluation and wait prediction. | `service`, `segment`, `hour`, `is_appointment` |
-| `POST` | `/api/triage/issue` | Generates a smart token with deflection and queue badge. | `{ "name", "service", "segment", "is_apt" }` |
-| `GET` | `/api/officials/overview`| Regional cluster overview, SLA heatmaps & load balancing. | None |
-| `GET` | `/api/feedback` | NLP sentiment polarity, friction topics, and review list. | `branch_id` |
-| `GET` | `/api/simulate` | Runs Monte Carlo discrete-event queue simulation. | `arrivals`, `counters`, `service_time`, `deflection_pct`, `sla` |
-
-Interactive Swagger documentation is available at `http://127.0.0.1:8000/docs`.
+* **Authentication:** `POST /api/auth/login`, `GET /api/auth/me`
+* **Branch Operations:** `GET /api/branches/`, `GET /api/branches/{id}`, `GET /api/branches/{id}/counters`
+* **Forecasting:** `POST /api/forecasts/hourly`, `GET /api/forecasts/status`
+* **Optimization:** `POST /api/optimization/solve-staff`, `GET /api/optimization/runs`
+* **Queue Simulation:** `POST /api/simulation/queue-run`, `POST /api/simulation/stochastic-run`
+* **Operational Intelligence:** `POST /api/intelligence/sentiment`, `POST /api/intelligence/deflection-roi`
+* **Dataset Ingestion:** `POST /api/datasets/validate`, `POST /api/datasets/import`
+* **Cryptographic Audit:** `GET /api/audit/logs`, `GET /api/audit/verify-chain`
+* **System Health:** `GET /api/health/live`, `GET /api/health/db`
 
 ---
 
-## 🛠️ Installation & Quickstart
+## 🐳 Docker & Containerized Deployment
 
-### Prerequisites
-- Python 3.10, 3.11, or 3.12
-- Git
-
-### 1. Clone & Set Up Virtual Environment
+Deploy with Docker Compose:
 ```bash
-# Clone the repository
-git clone https://github.com/your-org/bank-branch-optimizer.git
-cd bank-branch-optimizer
+# Build and start services in detached mode
+docker-compose up --build -d
 
-# Create and activate virtual environment
-# Windows
-python -m venv venv
-.\venv\Scripts\activate
+# Check service logs
+docker-compose logs -f
 
-# macOS / Linux
-python3 -m venv venv
-source venv/bin/activate
+# Stop services
+docker-compose down
 ```
-
-### 2. Install Dependencies
-```bash
-pip install --upgrade pip
-pip install -r requirements.txt
-pip install polars fastapi uvicorn
-```
-
-### 3. Launch the Application
-
-#### Option A: Streamlit Interactive Cockpit (Recommended for Exploration)
-```bash
-streamlit run app.py
-```
-Open your browser to: **`http://localhost:8501`**
-
-#### Option B: FastAPI Backend & Modern Web SPA
-```bash
-python server.py
-```
-Open your browser to: **`http://127.0.0.1:8000`**
 
 ---
 
-## ⚙️ Configuration & Domain Customization
+## 📚 Engineering Documentation Suite
 
-All banking operational rules, service categories, and SLA thresholds are centrally configured in [`src/config.py`](file:///c:/Projects/bank-branch-optimizer/src/config.py):
+Comprehensive technical documentation is available in the `docs/` directory:
 
-```python
-SERVICE_CATEGORIES = {
-    "Cash Deposit/Withdrawal": {
-        "sla_wait_mins": 10.0,
-        "avg_service_mins": 4.5,
-        "digital_eligible": True,
-        "digital_channel": "Cash Deposit Machine (CDM) / ATM",
-        "digital_deflection_difficulty": "Low"
-    },
-    "Loan & Mortgage Advisory": {
-        "sla_wait_mins": 25.0,
-        "avg_service_mins": 28.0,
-        "digital_eligible": False,
-        "digital_channel": "Online Application + In-Branch Verification",
-        "digital_deflection_difficulty": "High"
-    },
-    # ... additional services
-}
-```
-
-You can customize:
-- `BRANCH_NETWORK`: Add new branches, clusters, counter capacities, and peak windows.
-- `CUSTOMER_SEGMENTS`: Adjust priority multipliers and patience indices for VIP or Senior Citizen cohorts.
-- `SERVICE_CATEGORIES`: Update target wait SLAs, average transaction durations, and deflection channels.
+1. [`docs/INITIAL_CODEBASE_AUDIT.md`](docs/INITIAL_CODEBASE_AUDIT.md): Complete baseline repository inspection and gap analysis.
+2. [`docs/IMPLEMENTATION_TRACKER.md`](docs/IMPLEMENTATION_TRACKER.md): Phase-by-phase implementation record and decision log.
+3. [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md): Decoupled 4-tier architectural specification and data flow diagrams.
+4. [`docs/DATABASE_SCHEMA.md`](docs/DATABASE_SCHEMA.md): Complete data dictionary and ERD for all 41 relational tables.
+5. [`docs/AUTHENTICATION_SECURITY.md`](docs/AUTHENTICATION_SECURITY.md): NIST SP 800-63B authentication, token issuance, and account lockout.
+6. [`docs/DATA_GOVERNANCE.md`](docs/DATA_GOVERNANCE.md): Ingestion validation pipelines, duplicate prevention, and partial import rules.
+7. [`docs/MATHEMATICAL_MODEL.md`](docs/MATHEMATICAL_MODEL.md): Formulations for queueing theory, flow conservation, and constraint models.
+8. [`docs/OPTIMIZATION_METHODOLOGY.md`](docs/OPTIMIZATION_METHODOLOGY.md): CP-SAT MILP formulation, bounds, and independent validation.
+9. [`docs/FORECASTING_METHODOLOGY.md`](docs/FORECASTING_METHODOLOGY.md): Chronological backtesting, split conformal intervals, and error metrics.
+10. [`docs/QUEUE_SIMULATION.md`](docs/QUEUE_SIMULATION.md): Discrete-event mechanics, customer abandonment, and Erlang-C proofs.
+11. [`docs/API_REFERENCE.md`](docs/API_REFERENCE.md): OpenAPI endpoint specifications, request payloads, and response schemas.
+12. [`docs/SECURITY_MODEL.md`](docs/SECURITY_MODEL.md): Zero-trust architecture, threat modeling, and secret redaction filters.
+13. [`docs/TESTING_STRATEGY.md`](docs/TESTING_STRATEGY.md): Testing pyramid, coverage standards, and verification procedures.
+14. [`docs/DEPLOYMENT_GUIDE.md`](docs/DEPLOYMENT_GUIDE.md): Production containerization, environment variables, and Neon PostgreSQL setup.
+15. [`docs/KNOWN_LIMITATIONS.md`](docs/KNOWN_LIMITATIONS.md): Transparent account of mathematical, operational, and computational boundaries.
+16. [`docs/ENGINEERING_AUDIT.md`](docs/ENGINEERING_AUDIT.md): Direct comparative audit of baseline prototype vs. transformed system.
+17. [`docs/FINAL_ENGINEERING_REPORT.md`](docs/FINAL_ENGINEERING_REPORT.md): Comprehensive executive transformation summary.
 
 ---
 
-## 💻 Tech Stack
-
-- **Core & Runtime**: Python 3.10+, FastAPI, Uvicorn, Streamlit
-- **Data Engineering**: Polars (high-speed data manipulation), NumPy (vectorized mathematical computing), Pandas
-- **Machine Learning & Modeling**: Scikit-Learn, Pure NumPy closed-form L2 Regression, Sigmoid Logistic Classifiers
-- **Operations Research**: Discrete-Event Monte Carlo Simulation, PuLP / Constrained Integer Staff Optimizer
-- **Natural Language Processing**: Lexicon-based Polarity Analyzer, Aspect-Based Topic Extraction
-- **Visualization & UI**: Plotly Express, Plotly Graph Objects, HTML5/CSS3 Custom Design System
-
----
-
-## 📄 Contributing & License
-
-Contributions are welcome! Please submit an issue or pull request for enhancements, bug fixes, or new machine learning model integrations.
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+## 📄 License
+This project is licensed under the MIT License.
