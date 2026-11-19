@@ -156,3 +156,4 @@ def test_empty_staff_handling():
     assert result["solver_status"] == "INFEASIBLE"
     assert result["allocated_counters"] == 0
     assert result["assignments"] == []
+

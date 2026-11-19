@@ -66,3 +66,4 @@ To handle uncertain demand, the engine formulates a Two-Stage Stochastic Program
 $$\min \sum_{c} C_{\text{base}} N_c + \sum_{s \in \mathcal{S}} p_s \left[ \sum_c C_{\text{flex}} v_{s, c} + \sum_k W_k u_{s, k} \right]$$
 
 This balances base labor expenditure against recourse overtime costs under demand variance.
+

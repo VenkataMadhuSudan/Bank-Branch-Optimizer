@@ -43,3 +43,4 @@ def explain_branch_congestion(req: ExplainabilityRequest):
         digital_deflection_rate=req.digital_deflection_rate,
         unassigned_staff=req.unassigned_staff,
     )
+

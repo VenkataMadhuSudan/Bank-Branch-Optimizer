@@ -110,3 +110,4 @@ def test_deterministic_fallback_before_training():
     predictor = WaitTimePredictor()
     ticket = predictor.predict_ticket("Cash Deposit/Withdrawal")
     assert ticket["expected_wait_minutes"] > 0.0
+

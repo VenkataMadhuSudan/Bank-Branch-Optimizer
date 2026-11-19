@@ -64,3 +64,4 @@ python db/seed.py
 docker-compose up --build -d
 ```
 Access the application at `http://localhost:8501` and FastAPI docs at `http://localhost:8000/docs`.
+

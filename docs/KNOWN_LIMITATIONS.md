@@ -72,3 +72,4 @@ This document provides a transparent, scientifically honest account of known tec
 ### 5.2 Read/Write Database Replicas
 * **Current State:** The database layer (`db/connection.py`) maintains a single authoritative connection pool to Neon PostgreSQL with automated failover and fallback to local SQLite for isolated sandbox or offline testing.
 * **Limitation:** Read/write splitting (routing reporting queries to read replicas and transactions to primary) is not configured; high-volume simultaneous analytical reporting during peak morning hours may compete for database connection pool capacity.
+

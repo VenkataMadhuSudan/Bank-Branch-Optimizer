@@ -60,3 +60,4 @@ def test_database_health_structure():
     assert "latency_ms" in health
     assert "table_count" in health
     assert isinstance(health["table_count"], int)
+

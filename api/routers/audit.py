@@ -44,3 +44,4 @@ def get_recent_audit_logs(
             }
             for r in records
         ]
+

@@ -94,3 +94,4 @@ def test_stress_scenario_simulator():
     assert res["post_shock"]["hourly_arrivals"] > res["baseline"]["hourly_arrivals"]
     assert "recommended_actions" in res
     assert len(res["recommended_actions"]) > 0
+

@@ -79,3 +79,4 @@ $$\text{SpeedBonus}(i) = \lfloor 10 \cdot \text{Speed}_i \rfloor$$
    - No counter ID is shared.
    - All assigned skills match employee profiles.
    - Every working employee has an assigned break slot.
+

@@ -687,3 +687,4 @@ class DatasetValidationReport(Base):
     generated_at: Mapped[datetime] = mapped_column(DateTime, default=func.now(), nullable=False)
 
     import_record: Mapped["DatasetImport"] = relationship("DatasetImport", back_populates="validation_reports")
+

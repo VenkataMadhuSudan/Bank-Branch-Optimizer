@@ -53,3 +53,4 @@ $$\hat{q} = \text{Quantile}\left( \{R_i\}, \frac{\lceil (n+1)(1-\alpha) \rceil}{
 Generating distribution-free prediction bounds:
 $$C(x) = [\hat{y}(x) - \hat{q}, \quad \hat{y}(x) + \hat{q}]$$
 Guaranteeing $\mathbb{P}(y \in C(x)) \ge 1 - \alpha$.
+

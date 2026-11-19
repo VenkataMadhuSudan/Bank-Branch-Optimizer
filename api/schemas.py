@@ -139,3 +139,4 @@ class HealthResponse(BaseModel):
     timestamp: str
     app_env: str
     database: Dict[str, Any]
+

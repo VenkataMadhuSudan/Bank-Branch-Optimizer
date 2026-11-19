@@ -98,3 +98,4 @@ def test_branch_deflection_kpi_computation():
     assert kpis["hours_saved"] > 0.0
     assert kpis["estimated_cost_savings_usd"] == round(kpis["hours_saved"] * 28.0, 2)
     assert kpis["ddi_score"] > 0.0
+

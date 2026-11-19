@@ -98,3 +98,4 @@
 
 ### `GET /api/health`
 - **Description:** Returns database health, dialect, and query latency.
+

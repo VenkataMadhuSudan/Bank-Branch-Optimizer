@@ -104,3 +104,4 @@ def get_model_status():
         "demand_forecaster": forecaster.metrics,
         "wait_predictor": wait_predictor.metrics,
     }
+

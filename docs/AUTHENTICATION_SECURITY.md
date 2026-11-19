@@ -33,3 +33,4 @@ All passwords stored in the `users` table are hashed using PBKDF2-HMAC-SHA256 ad
 | `simulation.run` | ✅ | ❌ | ✅ | ❌ |
 | `tokens.process` | ❌ | ❌ | ❌ | ✅ |
 | `schedule.view` | ✅ | ✅ | ✅ | ✅ (own schedule) |
+

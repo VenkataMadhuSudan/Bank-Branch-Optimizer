@@ -130,3 +130,4 @@ The database architecture is designed with strict 3NF normalization, foreign key
 39. `dataset_imports`: Upload audit trail tracking source, record counts, and status.
 40. `dataset_import_errors`: Row-by-row validation error details.
 41. `dataset_validation_reports`: Structured JSON diagnostic reports.
+

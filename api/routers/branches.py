@@ -40,3 +40,4 @@ def get_branches():
         "segments": list(CUSTOMER_SEGMENTS.keys()),
         "service_metadata": SERVICE_CATEGORIES,
     }
+

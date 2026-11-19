@@ -75,3 +75,4 @@ def require_branch_access(branch_id: int, capability: str = "can_view"):
             )
         return user
     return dependency
+

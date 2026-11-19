@@ -217,3 +217,4 @@ class BankingScenarioSimulator:
             "post_shock_optimization": shocked_opt,
             "recommended_actions": actions,
         }
+

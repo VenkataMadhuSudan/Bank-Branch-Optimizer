@@ -45,3 +45,4 @@ def get_erlang_c_benchmark(
         "is_stable_queue": rho < 1.0,
         "erlang_expected_wait_minutes": round(wait_mins, 2) if wait_mins is not None else None,
     }
+

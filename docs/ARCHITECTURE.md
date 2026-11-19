@@ -57,3 +57,4 @@
 4. **Authoritative ACID Persistence:** Replaces static CSV memory reads with normalized relational PostgreSQL tables.
 5. **Non-Destructive Initialization:** Tables, constraints, and initial seeds are verified idempotently without dropping tables or discarding operational records.
 6. **Scientific Rigor & Honest Reporting:** Heuristic fallbacks are explicitly labeled as `HEURISTIC_FALLBACK` and never falsely reported as optimal mathematical proofs.
+

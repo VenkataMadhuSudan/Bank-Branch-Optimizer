@@ -242,3 +242,4 @@ class TwoStageStochasticOptimizer:
             "worst_case_scenario": scenarios[-1].name if scenarios else "Peak",
             "value_of_stochastic_solution_usd": 0.0,
         }
+

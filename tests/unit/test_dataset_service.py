@@ -49,3 +49,4 @@ def test_invalid_negative_wait_time_detection():
     assert report["is_valid"] is False
     assert report["invalid_rows"] == 1
     assert any("Negative wait time" in e["message"] for e in report["errors"])
+

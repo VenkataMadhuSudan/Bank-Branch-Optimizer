@@ -138,3 +138,4 @@ def test_explainability_endpoint():
     data = response.json()
     assert "root_cause_drivers" in data
     assert "recommended_actions" in data
+

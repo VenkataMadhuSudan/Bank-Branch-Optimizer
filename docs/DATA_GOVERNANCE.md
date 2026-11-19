@@ -39,3 +39,4 @@
             ▼
    6. Cryptographic Audit Log Emitted (AuditService)
 ```
+

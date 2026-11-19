@@ -90,3 +90,4 @@ def test_audit_log_fields(test_db_session):
     assert retrieved is not None
     assert len(retrieved.prev_hash) == 64
     assert len(retrieved.record_hash) == 64
+

@@ -36,3 +36,4 @@ def check_branch_access(user: Dict[str, Any], branch_id: int, required_capabilit
     return False
 ```
 Proved by automated tests in `tests/security/test_auth_and_rbac.py`.
+

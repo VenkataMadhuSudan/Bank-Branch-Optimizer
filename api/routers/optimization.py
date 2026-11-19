@@ -54,3 +54,4 @@ def run_stress_scenario(req: ScenarioStressRequest):
         available_counters=req.available_counters,
         base_hourly_arrivals=req.base_hourly_arrivals,
     )
+

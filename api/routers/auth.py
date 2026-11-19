@@ -50,3 +50,4 @@ def login(req: LoginRequest, request: Request):
 def get_current_user_profile(user=Depends(get_current_user)):
     """Returns the verified profile and branch permissions of the currently authenticated user."""
     return user
+

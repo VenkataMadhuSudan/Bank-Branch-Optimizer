@@ -142,3 +142,4 @@ def test_audit_hash_chain_computation():
     )
     assert len(h2) == 64
     assert h2 != h1
+

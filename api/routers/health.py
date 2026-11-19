@@ -22,3 +22,4 @@ def get_system_health():
         "app_env": APP_ENV,
         "database": db_status,
     }
+
